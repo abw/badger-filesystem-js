@@ -1,4 +1,4 @@
-# badger-filesystem
+# Badger Filesystem
 
 This provides a number of utility modules to make it easier working with
 directories and files in a node.js project.
