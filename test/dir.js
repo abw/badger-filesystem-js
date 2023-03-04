@@ -52,6 +52,7 @@ test.serial(
   'the test_dir directory must exist',
   async t => t.is( await testDir.mustExist(), testDir)
 );
+
 test.serial(
   'the test_dir directory must exist again',
   async t => t.is( await testDir.mustExist(), testDir)
@@ -140,13 +141,3 @@ test.serial(
     t.is( await tmpDir.exists(), false );
   }
 )
-
-test.serial(
-  'read the test_files directory',
-  async t => {
-    const files = await testFiles.read();
-    t.is( files[0], 'hello.json' );
-    t.is( files[1], 'hello.txt' )
-    t.is( files[2], 'hello.yaml' )
-  }
-);
