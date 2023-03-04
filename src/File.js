@@ -3,12 +3,18 @@ import Path from './Path.js'
 import { dir } from './Directory.js'
 import { codec } from '@abw/badger-codecs'
 import { readFile, writeFile, rm } from 'node:fs/promises'
+import { FILE } from './Constants.js'
 
 /**
  * The File class implements a wrapper around a filesystem
  * file.
  */
 export class File extends Path {
+  constructor(path, options={}) {
+    super(path, options);
+    this.state.type = FILE;
+  }
+
   /**
    * Returns a new {@link Directory} object for the parent directory of the file
    * @param {Object} [options] - directory configuration options
