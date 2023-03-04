@@ -1,0 +1,165 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Badger Filesystem</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-badger.css"><meta name="description" content="Filesystem utilities"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Badger Filesystem"><meta property="twitter:description" content="Filesystem utilities"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/abw/badger-filesystem-js"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/directories.html"><a href="manual/directories.html" data-ice="link">Directories</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/directories.html"><a href="manual/directories.html#directory-functions" data-ice="link">Directory Functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#dir-path-" data-ice="link">dir(path)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#bin--" data-ice="link">bin()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#cwd--" data-ice="link">cwd()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/directories.html"><a href="manual/directories.html#directory-methods" data-ice="link">Directory methods</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#file-name-" data-ice="link">file(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#dir-name-" data-ice="link">dir(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#parent--" data-ice="link">parent()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#up-n-" data-ice="link">up(n)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#path--" data-ice="link">path()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#exists--" data-ice="link">exists()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#mustexist-options-" data-ice="link">mustExist(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#isempty--" data-ice="link">isEmpty()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#notempty--" data-ice="link">notEmpty()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#mkdir-options-" data-ice="link">mkdir(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#create--" data-ice="link">create()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#rmdir-options-" data-ice="link">rmdir(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#destroy--" data-ice="link">destroy()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#empty-options-" data-ice="link">empty(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#read--" data-ice="link">read()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#entries--" data-ice="link">entries()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#files--" data-ice="link">files()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#directories--" data-ice="link">directories()</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/files.html"><a href="manual/files.html" data-ice="link">Files</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#file-functions" data-ice="link">File Functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/files.html"><a href="manual/files.html#file-path-" data-ice="link">file(path)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#file-methods" data-ice="link">File Methods</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#read-options-" data-ice="link">read(options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#write-options-" data-ice="link">write(options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#delete-options-" data-ice="link">delete(options)</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/path.html"><a href="manual/path.html" data-ice="link">Path Base Class</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#path-methods" data-ice="link">Path Methods</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#path-name-" data-ice="link">path(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#type--" data-ice="link">type()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#parse--" data-ice="link">parse()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#unparse--" data-ice="link">unparse()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#dirname--" data-ice="link">dirname()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#base--" data-ice="link">base()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#name--" data-ice="link">name()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#ext--" data-ice="link">ext()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#relativepath-name-" data-ice="link">relativePath(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#exists--" data-ice="link">exists()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#stat--" data-ice="link">stat()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#unstat--" data-ice="link">unstat()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#isfile--" data-ice="link">isFile()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#isdirectory--" data-ice="link">isDirectory()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#mode--" data-ice="link">mode()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#size--" data-ice="link">size()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#accessed--" data-ice="link">accessed()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#modified--" data-ice="link">modified()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#changed--" data-ice="link">changed()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#created--" data-ice="link">created()</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/codecs.html"><a href="manual/codecs.html" data-ice="link">Data Codecs</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#read-data-files" data-ice="link">Read Data Files</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#write-data-files" data-ice="link">Write Data Files</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="data-codecs">Data Codecs</h1><p>Codecs are used to encode and decode data to and from serialised text.</p>
+<p>The badger toolkit comes with two built-in codecs for <code>json</code> and <code>yaml</code> files.</p>
+<ul>
+<li><a href="#read-data-files">Read Data File</a></li>
+<li><a href="#write-data-files">Write Data Files</a></li>
+</ul>
+<h2 id="read-data-files">Read Data Files</h2><p>Suppose that you have a <code>badger.yaml</code> file that you want to read.</p>
+<pre><code class="lang-yaml"><code class="source-code prettyprint">name:   Brian
+animal: Badger</code></code></pre>
+<p>All you have to do is add the <code>{ codec: 'yaml' }</code>
+option to the <code>file()</code> function.  The <code>read()</code>
+method will then automatically decode the YAML text.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger'
+
+file('badger.yaml', { codec: 'yaml' })
+  .read()
+  .then(
+    data =&gt; console.log(data.name, 'is a', data.animal)
+  )</code></code></pre>
+<p>This prints the string "Brian is a Badger" to the console.</p>
+<p>You can also do the same thing using the <code>file()</code> method on a directory
+object.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger'
+
+dir('data')
+  .file('badger.yaml', { codec: 'yaml' })
+  .read()
+  .then(
+    data =&gt; console.log(data.name, 'is a', data.animal)
+  )</code></code></pre>
+<h2 id="write-data-files">Write Data Files</h2><p>The <code>codec</code> option also works when writing data.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger'
+
+file('giraffe.yaml', { codec: 'yaml' })
+  .write({
+    name:   "Gerald",
+    animal: "Giraffe",
+  })</code></code></pre>
+<p>You should now have a <code>giraffe.yaml</code> file containing the following:</p>
+<pre><code class="lang-yaml"><code class="source-code prettyprint">name: Gerald
+animal: Giraffe</code></code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+
+
+</body></html>

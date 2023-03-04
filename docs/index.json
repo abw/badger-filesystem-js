@@ -1,0 +1,4850 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/Constants.js",
+    "content": "export const PATH      = 'path'\nexport const FILE      = 'file'\nexport const DIRECTORY = 'directory'",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/Constants.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "PATH",
+    "memberof": "src/Constants.js",
+    "static": true,
+    "longname": "src/Constants.js~PATH",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{PATH}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "FILE",
+    "memberof": "src/Constants.js",
+    "static": true,
+    "longname": "src/Constants.js~FILE",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{FILE}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "DIRECTORY",
+    "memberof": "src/Constants.js",
+    "static": true,
+    "longname": "src/Constants.js~DIRECTORY",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DIRECTORY}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/DirPath.js",
+    "content": "import { splitList } from \"@abw/badger-utils\";\nimport { dir as fsDir } from \"./Directory.js\";\n\n/**\n * The DirPath class implements a base class for objects that\n * can search one or more directories.\n */\nexport class DirPath {\n  /**\n   * Constructor for filesystem paths.\n   * @param {String|Array} dir - comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects\n   * @return {Object} the {@link DirPath} object\n   */\n  constructor(dir) {\n    const dirs = this.initDirs(dir);\n    this.state = {\n      dirs\n    }\n  }\n\n  /**\n   * Internal method to initialise the directories.  If the `dir` argument is a string then it will be split on\n   * commas and/or whitespace and converted to an array of {@link Directory} objects.  If the `dir` is a\n   * {@link Directory} object then it will be wrapped in an array.  If the `dir` argument is already an array\n   * (presumably of {@link Directory} objects) then no further processing is required.\n   * @param {String|Array} dir - comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects\n   * @return {Array} an array of {@link Directory} objects\n   */\n  initDirs(dir) {\n    return splitList(dir).map( dir => fsDir(dir) );\n  }\n\n  /**\n   * Internal method to return an array of the directories in the `dirs` argument passed to the constructor that\n   * actually exist in the filesystem.  The checks to determine if the directories exists are only carried\n   * out the first time the method is called.  Subsequent calls will return the cached value stored in\n   * `this.state.dirsExist`.\n   * @return {Array} an array of {@link Directory} objects that exist\n   */\n  async dirs() {\n    return this.state.dirsExist\n      || ( this.state.dirsExist = await this.dirsExist() );\n  }\n\n  /**\n   * Internal method to determine which of the directories in the `dirs` argument passed to the constructor\n   * actually exist in the filesystem.\n   * @return {Array} an array of {@link Directory} objects that exist\n   */\n  async dirsExist() {\n    const dirs = this.state.dirs;\n    const exists = await Promise.all(\n      dirs.map( d => d.exists() )\n    );\n    return dirs.filter((value, index) => exists[index]);\n  }\n}\n\nexport default DirPath",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/DirPath.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "name": "DirPath",
+    "memberof": "src/DirPath.js",
+    "static": true,
+    "longname": "src/DirPath.js~DirPath",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DirPath}",
+    "description": "The DirPath class implements a base class for objects that\ncan search one or more directories.",
+    "lineNumber": 8,
+    "interface": false
+  },
+  {
+    "__docId__": 54,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/DirPath.js~DirPath",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DirPath.js~DirPath#constructor",
+    "access": "public",
+    "description": "Constructor for filesystem paths.",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dir",
+        "description": "comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link DirPath} object"
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/DirPath.js~DirPath",
+    "static": false,
+    "longname": "src/DirPath.js~DirPath#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"dirs\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "initDirs",
+    "memberof": "src/DirPath.js~DirPath",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/DirPath.js~DirPath#initDirs",
+    "access": "public",
+    "description": "Internal method to initialise the directories.  If the `dir` argument is a string then it will be split on\ncommas and/or whitespace and converted to an array of {@link Directory} objects.  If the `dir` is a\n{@link Directory} object then it will be wrapped in an array.  If the `dir` argument is already an array\n(presumably of {@link Directory} objects) then no further processing is required.",
+    "lineNumber": 29,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dir",
+        "description": "comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects"
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "dirs",
+    "memberof": "src/DirPath.js~DirPath",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/DirPath.js~DirPath#dirs",
+    "access": "public",
+    "description": "Internal method to return an array of the directories in the `dirs` argument passed to the constructor that\nactually exist in the filesystem.  The checks to determine if the directories exists are only carried\nout the first time the method is called.  Subsequent calls will return the cached value stored in\n`this.state.dirsExist`.",
+    "lineNumber": 40,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects that exist"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "dirsExist",
+    "memberof": "src/DirPath.js~DirPath",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/DirPath.js~DirPath#dirsExist",
+    "access": "public",
+    "description": "Internal method to determine which of the directories in the `dirs` argument passed to the constructor\nactually exist in the filesystem.",
+    "lineNumber": 50,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects that exist"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/Directory.js",
+    "content": "import process from 'node:process';\nimport path from 'node:path';\nimport Path from './Path.js'\nimport { file } from './File.js'\nimport { fail } from '@abw/badger-utils';\nimport { rm, mkdir, rmdir, readdir, stat } from 'node:fs/promises'\nimport { DIRECTORY, FILE } from './Constants.js';\n\n/**\n * The Directory class implements a wrapper around a filesystem\n * directory.\n */\nexport class Directory extends Path {\n  constructor(path, options={}) {\n    super(path, options);\n    this.state.type = DIRECTORY;\n  }\n\n  /**\n   * Fetch a new {@link File} object for a file in the directory.\n   * @param {string} path - file path\n   * @param {Object} [options] - file configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Object} the {@link File} object\n   */\n  file(path, options) {\n    this.debug(\"file(%s, %o)\", path, options);\n    return file(this.relativePath(path), this.options(options));\n  }\n\n  /**\n   * Fetch a new {@link Directory} object for a sub-directory in the directory.\n   * @param {string} path - directory path\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} the {@link Directory} object\n   */\n  directory(path, options) {\n    this.debug(\"directory(%s, %o)\", path, options);\n    return dir(this.relativePath(path), this.options(options));\n  }\n\n  /**\n   * An alias for the {@link directory} method for lazy people\n   * @return {Object} the {@link Directory} object\n   */\n  dir(path, options) {\n    this.debug(\"dir(%s, %o)\", path, options);\n    return this.directory(path, options);\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  parent(options) {\n    this.debug(\"parent()\");\n    return this.up(1, options);\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory up one or more levels.\n   * @param {Integer} [n] - how many levels up\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  up(n=1, options) {\n    this.debug(`up(${n})`);\n    return this.directory(\n      Array(n).fill('..').join('/'),\n      options\n    );\n  }\n\n  /**\n   * Returns the names of the files and sub-directories in the directory\n   * @return {Promise} fulfills with an array of the file and directory names\n   */\n  async read() {\n    this.debug(\"read()\");\n    return await readdir(this.path());\n  }\n\n  /**\n   * Returns an array of {@link File} and {@link Directory} objects for the\n   * contents of the directory.\n   * @return {Promise} fulfills with an array of {@link File} and {@link Directory} objects\n   */\n  async entries() {\n    this.debug(\"entries()\");\n    const names = await this.read();\n    let entries = [ ];\n\n    for (let name of names) {\n      const relpath = this.path(name);\n      const stats = await stat(relpath);\n      if (stats.isFile()) {\n        entries.push(this.file(name))\n      }\n      else if (stats.isDirectory()) {\n        entries.push(this.dir(name));\n      }\n      // ignore anything that isn't a file or directory\n    }\n    return entries;\n  }\n  /**\n   * Returns an array of {@link File} objects for the files in the directory.\n   * @return {Promise} fulfills with an array of {@link File} objects\n   */\n  async files() {\n    const entries = await this.entries();\n    return entries.filter( entry => entry.type() === FILE )\n  }\n  /**\n   * Returns an array of {@link Directory} objects for the directories in the directory.\n   * @return {Promise} fulfills with an array of {@link Directory} objects\n   */\n  async directories() {\n    const entries = await this.entries();\n    return entries.filter( entry => entry.type() === DIRECTORY )\n  }\n  /**\n   * An alias for the {@link directories} method.\n   * @return {Promise} fulfills with an array of {@link Directory} objects\n   */\n  async dirs() {\n    return this.directories();\n  }\n\n  /**\n   * Determines if the directory is empty.\n   * @return {Promise} fulfills with a boolean value true (empty) or false (not empty).\n   */\n  async isEmpty() {\n    this.debug(\"isEmpty()\");\n    const entries = await this.read();\n    return entries.length === 0;\n  }\n\n  /**\n   * Determines if the directory is not empty.\n   * @return {Promise} fulfills with a boolean value true (not empty) or false (empty).\n   */\n  async notEmpty() {\n    this.debug(\"notEmpty()\");\n    const empty = await this.isEmpty();\n    return !empty;\n  }\n\n  /**\n   * Empty the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.force] - force removal of files and directories\n   * @param {Boolean} [options.recursive] - recursively empty and delete sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async empty(options={}) {\n    this.debug(\"empty(%o)\", options);\n    if (await this.exists() && await this.notEmpty()) {\n      await rm(this.path(), options);\n    }\n    return this;\n  }\n\n  /**\n   * Make the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.recursive] - create intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async mkdir(options={}) {\n    this.debug(\"mkdir(%o)\", options);\n    const exists = await this.exists();\n    if (! exists) {\n      await mkdir(this.path(), options);\n    }\n    return this;\n  }\n\n  /**\n   * Remove the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.empty] - delete items in directory\n   * @param {Boolean} [options.force] - force delete files and directories\n   * @param {Boolean} [options.recursive] - recursively delete sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async rmdir(options={}) {\n    this.debug(\"rmdir(%o)\", options);\n    if (options.empty) {\n      await this.empty(options);\n    }\n    if (await this.exists()) {\n      await rmdir(this.path());\n    }\n    return this;\n  }\n\n  /**\n   * Create the directory and any intermediate directories.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.recursive=true] - recursively create intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  create(options={ recursive: true }) {\n    this.debug(\"create(%o)\", options);\n    return this.mkdir(options);\n  }\n\n  /**\n   * Empty and delete the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.empty=true] - empty directory of any files and sub-directories\n   * @param {Boolean} [options.recursive=true] - recursively delete sub-directories\n   * @param {Boolean} [options.force=true] - force deletion of files and sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  destroy(options={ empty: true, recursive: true, force: true }) {\n    this.debug(\"destroy(%o)\", options);\n    return this.rmdir(options);\n  }\n\n  /**\n   * Assert that a directory exists and optionally create it\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.create] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options or calling {@link create}\n   * @param {Boolean} [options.mkdir] - create the directory, add the `recursive` option to create intermediate directories - equivalent to calling {@link mkdir}\n   * @param {Boolean} [options.recursive] - when used with `mkdir`, creates any intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async mustExist(options={}) {\n    this.debug(\"mustExist(%o)\", options);\n    if (await this.exists()) {\n      return this;\n    }\n    if (options.mkdir) {\n      return this.mkdir(options);\n    }\n    if (options.create) {\n      return this.create();\n    }\n    fail(\"Directory does not exist: \", this.path());\n  }\n}\n\n/**\n * Function to create a new {@link Directory} object\n * @param {string} path - directory path\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const dir = (path, options) => {\n  return new Directory(path, options);\n}\n\n/**\n * Function to create a new {@link Directory} object for the current working directory\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const cwd = options => {\n  return dir(process.cwd(), options);\n}\n\n/**\n * Function to create a new {@link Directory} object for the directory of a JS source file\n * @param {string} url - module url - from `import.meta.url`\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const bin = (url=process.argv[1], options) => {\n  return dir(\n    path.dirname(url.replace(/^file:\\/\\//, '')),\n    options\n  );\n}\n\nexport default Directory\n",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/Directory.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "class",
+    "name": "Directory",
+    "memberof": "src/Directory.js",
+    "static": true,
+    "longname": "src/Directory.js~Directory",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{Directory}",
+    "description": "The Directory class implements a wrapper around a filesystem\ndirectory.",
+    "lineNumber": 13,
+    "interface": false,
+    "extends": [
+      "src/Path.js~Path"
+    ]
+  },
+  {
+    "__docId__": 61,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "file",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#file",
+    "access": "public",
+    "description": "Fetch a new {@link File} object for a file in the directory.",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "file path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "file configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link File} object"
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "directory",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#directory",
+    "access": "public",
+    "description": "Fetch a new {@link Directory} object for a sub-directory in the directory.",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "directory path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "dir",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#dir",
+    "access": "public",
+    "description": "An alias for the {@link directory} method for lazy people",
+    "lineNumber": 49,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    },
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "parent",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#parent",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory",
+    "lineNumber": 61,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "up",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#up",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory up one or more levels.",
+    "lineNumber": 74,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Integer"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "n",
+        "description": "how many levels up"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "read",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#read",
+    "access": "public",
+    "description": "Returns the names of the files and sub-directories in the directory",
+    "lineNumber": 86,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of the file and directory names"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "entries",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#entries",
+    "access": "public",
+    "description": "Returns an array of {@link File} and {@link Directory} objects for the\ncontents of the directory.",
+    "lineNumber": 96,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link File} and {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "files",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#files",
+    "access": "public",
+    "description": "Returns an array of {@link File} objects for the files in the directory.",
+    "lineNumber": 118,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link File} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "directories",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#directories",
+    "access": "public",
+    "description": "Returns an array of {@link Directory} objects for the directories in the directory.",
+    "lineNumber": 126,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "dirs",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#dirs",
+    "access": "public",
+    "description": "An alias for the {@link directories} method.",
+    "lineNumber": 134,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "isEmpty",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#isEmpty",
+    "access": "public",
+    "description": "Determines if the directory is empty.",
+    "lineNumber": 142,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with a boolean value true (empty) or false (not empty)."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "notEmpty",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#notEmpty",
+    "access": "public",
+    "description": "Determines if the directory is not empty.",
+    "lineNumber": 152,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with a boolean value true (not empty) or false (empty)."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "empty",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#empty",
+    "access": "public",
+    "description": "Empty the directory.",
+    "lineNumber": 165,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.force",
+        "description": "force removal of files and directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "recursively empty and delete sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "mkdir",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#mkdir",
+    "access": "public",
+    "description": "Make the directory.",
+    "lineNumber": 179,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "create intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "rmdir",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#rmdir",
+    "access": "public",
+    "description": "Remove the directory.",
+    "lineNumber": 196,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.empty",
+        "description": "delete items in directory"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.force",
+        "description": "force delete files and directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "recursively delete sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#create",
+    "access": "public",
+    "description": "Create the directory and any intermediate directories.",
+    "lineNumber": 213,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.recursive",
+        "description": "recursively create intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "destroy",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Directory.js~Directory#destroy",
+    "access": "public",
+    "description": "Empty and delete the directory.",
+    "lineNumber": 226,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.empty",
+        "description": "empty directory of any files and sub-directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.recursive",
+        "description": "recursively delete sub-directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.force",
+        "description": "force deletion of files and sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "mustExist",
+    "memberof": "src/Directory.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Directory.js~Directory#mustExist",
+    "access": "public",
+    "description": "Assert that a directory exists and optionally create it",
+    "lineNumber": 239,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.create",
+        "description": "create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options or calling {@link create}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.mkdir",
+        "description": "create the directory, add the `recursive` option to create intermediate directories - equivalent to calling {@link mkdir}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "when used with `mkdir`, creates any intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "dir",
+    "memberof": "src/Directory.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Directory.js~dir",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{dir}",
+    "description": "Function to create a new {@link Directory} object",
+    "lineNumber": 261,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "directory path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "a codec for encoding/decoding files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "name": "cwd",
+    "memberof": "src/Directory.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Directory.js~cwd",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{cwd}",
+    "description": "Function to create a new {@link Directory} object for the current working directory",
+    "lineNumber": 271,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "a codec for encoding/decoding files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "function",
+    "name": "bin",
+    "memberof": "src/Directory.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Directory.js~bin",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{bin}",
+    "description": "Function to create a new {@link Directory} object for the directory of a JS source file",
+    "lineNumber": 282,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": "module url - from `import.meta.url`"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "a codec for encoding/decoding files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "name": "src/File.js",
+    "content": "import path from 'node:path'\nimport Path from './Path.js'\nimport { dir } from './Directory.js'\nimport { codec } from '@abw/badger-codecs'\nimport { readFile, writeFile, rm } from 'node:fs/promises'\nimport { FILE } from './Constants.js'\n\n/**\n * The File class implements a wrapper around a filesystem\n * file.\n */\nexport class File extends Path {\n  constructor(path, options={}) {\n    super(path, options);\n    this.state.type = FILE;\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory of the file\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  directory(options) {\n    return dir(path.dirname(this.state.path), options);\n  }\n\n  /**\n   * An alias for the {@link directory} method for lazy people\n   * @return {Object} the parent {@link Directory} object\n   */\n  dir(...args) {\n    return this.directory(...args);\n  }\n\n  /**\n   * Reads the file content.  If a `codec` has been specified then the content is decoded.\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file content\n   * @example\n   * file('myfile.txt').read().then( text => console.log(text) );\n   * @example\n   * file('myfile.json', { codec: 'json' }).read().( data => console.log(data) );\n   * @example\n   * file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );\n   */\n  async read(options) {\n    const opts = this.options(options);\n    const text = await readFile(this.state.path, opts);\n    return opts.codec\n      ? codec(opts.codec).decode(text)\n      : text;\n  }\n\n  /**\n   * Writes the file content.  If a `codec` has been specified then the content will be encoded.\n   * @param {String|Object} data - directory configuration options\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file object\n   * @example\n   * file('myfile.txt').write('Hello World');\n   * @example\n   * file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });\n   * @example\n   * file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });\n   */\n  async write(data, options) {\n    const opts = this.options(options);\n    const text = opts.codec\n      ? codec(opts.codec).encode(data)\n      : data;\n    await writeFile(this.state.path, text, opts);\n    return this;\n  }\n\n  /**\n   * Delete the file content.\n   * @param {Object} [options] - directory configuration options\n   * @param {Boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist\n   * @return {Promise} fulfills with the file object\n   */\n  async delete(options) {\n    await rm(this.state.path, options);\n    return this;\n  }\n}\n\n/**\n * Function to create a new {@link File} object for a file\n * @param {String} path - file path\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @param {String} [options.encoding=utf8] - character encoding\n * @return {Object} the {@link File} object\n */\nexport const file = (path, options) => {\n  return new File(path, options);\n}\n\nexport default File\n",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/File.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 84,
+    "kind": "class",
+    "name": "File",
+    "memberof": "src/File.js",
+    "static": true,
+    "longname": "src/File.js~File",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{File}",
+    "description": "The File class implements a wrapper around a filesystem\nfile.",
+    "lineNumber": 12,
+    "interface": false,
+    "extends": [
+      "src/Path.js~Path"
+    ]
+  },
+  {
+    "__docId__": 85,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/File.js~File#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "directory",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/File.js~File#directory",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory of the file",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "dir",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/File.js~File#dir",
+    "access": "public",
+    "description": "An alias for the {@link directory} method for lazy people",
+    "lineNumber": 33,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the parent {@link Directory} object"
+    },
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ]
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "read",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/File.js~File#read",
+    "access": "public",
+    "description": "Reads the file content.  If a `codec` has been specified then the content is decoded.",
+    "examples": [
+      "file('myfile.txt').read().then( text => console.log(text) );",
+      "file('myfile.json', { codec: 'json' }).read().( data => console.log(data) );",
+      "file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );"
+    ],
+    "lineNumber": 50,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file content"
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "write",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/File.js~File#write",
+    "access": "public",
+    "description": "Writes the file content.  If a `codec` has been specified then the content will be encoded.",
+    "examples": [
+      "file('myfile.txt').write('Hello World');",
+      "file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });",
+      "file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });"
+    ],
+    "lineNumber": 72,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file object"
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/File.js~File#delete",
+    "access": "public",
+    "description": "Delete the file content.",
+    "lineNumber": 87,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.force",
+        "description": "when true, exceptions will be ignored if path does not exist"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file object"
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "function",
+    "name": "file",
+    "memberof": "src/File.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/File.js~file",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{file}",
+    "description": "Function to create a new {@link File} object for a file",
+    "lineNumber": 101,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "file path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "a codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link File} object"
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/Path.js",
+    "content": "import path from 'node:path';\nimport { stat } from 'node:fs/promises'\nimport { rethrow, doNothing } from '@abw/badger-utils';\nimport { PATH } from './Constants.js';\n\n/**\n * Default configuration options.\n */\nconst defaults = {\n  encoding: 'utf8'\n}\n\n/**\n * The Path class implements a base class for the {@link File} and {@link Directory}\n * classes.  It implements the common functionality for representing a filesystem path.\n */\nexport class Path {\n  /**\n   * Constructor for filesystem paths.\n   * @param {string} path - file path\n   * @param {Object} [options] - configuration options\n   * @param {String} [options.encoding=utf8] - file encoding\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @return {Object} the {@link Path} object\n   */\n  constructor(path, options={}) {\n    // allow path/file/directory to be constructed from an existing object\n    if (path instanceof Path) {\n      path = path.path();\n    }\n    this.state = { path, options: { ...defaults, ...options } };\n    this.state.type = PATH;\n    this.debug = options.debug\n      ? console.log.bind(console)\n      : doNothing\n  }\n\n  /**\n   * Accessor method to return the filesystem path.\n   * @return {String} the filesystem path\n   */\n  path(...args) {\n    return args.length\n      ? this.relativePath(...args)\n      : this.state.path;\n  }\n\n  /**\n   * Accessor method to return the path type: `path`, `file` or `directory`.\n   * @return {String} the path type\n   */\n  type() {\n    return this.state.type;\n  }\n\n\n// { root: '/',\n//   dir: '/home/user/dir',\n//   base: 'file.txt',\n//   ext: '.txt',\n//   name: 'file' }\n\n  /**\n   * Parse the full path.  Data is cached until {@link uparse()} is called.\n   * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath\n   * @return {Object} the parsed path data\n   */\n  parse() {\n    return this.state.parse ||= path.parse(this.state.path);\n  }\n  /**\n   * Method to clear internal cache of parsed path data.\n   */\n  unparse() {\n    delete this.state.parse;\n  }\n  /**\n   * Returns the name of the directory - `dir` returned by {@link parse()}.\n   */\n  dirname() {\n    return this.parse().dir;\n  }\n  /**\n   * Returns the complete file name for the path - `base` returned by {@link parse()}.\n   * @return {String} the complete file name.\n   */\n  base() {\n    return this.parse().base;\n  }\n  /**\n   * Returns the file name for the path without extension - `name` returned by {@link parse()}.\n   * @return {String} the file name without extension.\n   */\n  name() {\n    return this.parse().name;\n  }\n  /**\n   * Returns the file name extension - `ext` returned by {@link parse()}.\n   * @return {String} the file name extension.\n   */\n  ext() {\n    return this.parse().ext;\n  }\n\n  /**\n   * Create a path relative to the current path.\n   * @param {String[]} parts - part(s) of the filesystem path\n   * @return {String} the new path\n   * @example\n   * const p = new Path('/path/to/here')\n   * const q = p.relativePath('there')          // -> /path/to/here/there\n   * const r = p.relativePath('and', 'there')   // -> /path/to/here/and/there\n   */\n  relativePath(...parts) {\n    if (parts.length === 1 && parts[0] instanceof Path) {\n      return parts[0].path();\n    }\n    if (path.isAbsolute(parts[0])) {\n      return path.join(...parts);\n    }\n    return path.join(this.state.path, ...parts);\n  }\n\n  /**\n   * Internal method to merge any options with the pre-defined options passed to the\n   * constructor.  Options passed as arguments will take precedence.\n   * @param {Object} options - new options\n   * @return {Object} the merged options\n   * @example\n   * const p = new Path('/path/to/here', { option1: 'hello' })\n   * const q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }\n   */\n  options(options={}) {\n    return { ...this.state.options, ...options };\n  }\n\n  /**\n   * Method to assert that the path exists.\n   * @return {Promise} fulfills with `true` if the path exists or rejects if the path doesn't\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.exists()\n   *   .then( console.log('path exists') )\n   *   .catch( console.log('path does not exist') )\n   */\n  async exists() {\n    try {\n      this.unstat();\n      await this.stat();\n      return true;\n    }\n    catch (error) {\n      return error.code === 'ENOENT'\n        ? false\n        : rethrow(error);\n    }\n  }\n\n  /**\n   * Method to fetch stats for the path.  Uses the `stat` function from `node:fs/promises`.\n   * Stats are cached internally (subject to change)\n   * @return {Promise} fulfills with path stats returned from the `stat` function\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.stat()\n   *   .then( stats => console.log('path stats:', stats) )\n   *   .catch( console.log('path does not exist') )\n   */\n  async stat() {\n    const stats = this.state.stats ||= await stat(this.state.path);\n    return stats;\n  }\n\n  /**\n   * Method to clear internal cache of path stats (subject to change)\n   */\n  unstat() {\n    this.state.stats = undefined;\n    return this;\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a file.\n   */\n  async isFile() {\n    const stats = await this.stat();\n    return stats.isFile();\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a directory.\n   */\n  async isDirectory() {\n    const stats = await this.stat();\n    return stats.isDirectory();\n  }\n\n  /**\n   * Returns the file mode.\n   */\n  async mode() {\n    const stats = await this.stat();\n    return stats.mode;\n  }\n\n  /**\n   * Returns the size of the file in bytes.\n   */\n  async size() {\n    const stats = await this.stat();\n    return stats.size;\n  }\n\n  /**\n   * Returns a date for when the file was last accessed.\n   */\n  async accessed() {\n    const stats = await this.stat();\n    return stats.atime;\n  }\n\n  /**\n   * Returns a date for when the file content was last modified.\n   */\n  async modified() {\n    const stats = await this.stat();\n    return stats.mtime;\n  }\n\n  /**\n   * Returns a date for when the file status was last changed.\n   */\n  async changed() {\n    const stats = await this.stat();\n    return stats.ctime;\n  }\n\n  /**\n   * Returns a date for when the file was created.\n   */\n  async created() {\n    const stats = await this.stat();\n    return stats.birthtime;\n  }\n}\n\nexport default Path\n",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/Path.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "variable",
+    "name": "defaults",
+    "memberof": "src/Path.js",
+    "static": true,
+    "longname": "src/Path.js~defaults",
+    "access": "public",
+    "export": false,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": null,
+    "description": "Default configuration options.",
+    "lineNumber": 9,
+    "type": {
+      "types": [
+        "{\"encoding\": string}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "class",
+    "name": "Path",
+    "memberof": "src/Path.js",
+    "static": true,
+    "longname": "src/Path.js~Path",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{Path}",
+    "description": "The Path class implements a base class for the {@link File} and {@link Directory}\nclasses.  It implements the common functionality for representing a filesystem path.",
+    "lineNumber": 17,
+    "interface": false
+  },
+  {
+    "__docId__": 95,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#constructor",
+    "access": "public",
+    "description": "Constructor for filesystem paths.",
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "file path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "file encoding"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Path} object"
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/Path.js~Path",
+    "static": false,
+    "longname": "src/Path.js~Path#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"path\": *, \"options\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "name": "debug",
+    "memberof": "src/Path.js~Path",
+    "static": false,
+    "longname": "src/Path.js~Path#debug",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "path",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#path",
+    "access": "public",
+    "description": "Accessor method to return the filesystem path.",
+    "lineNumber": 42,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the filesystem path"
+    },
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ]
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "type",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#type",
+    "access": "public",
+    "description": "Accessor method to return the path type: `path`, `file` or `directory`.",
+    "lineNumber": 52,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the path type"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 100,
+    "kind": "external",
+    "name": "path.parse(path)",
+    "externalLink": "https://nodejs.org/api/path.html#pathparsepath",
+    "memberof": "src/Path.js",
+    "static": false,
+    "longname": "src/Path.js~path.parse(path)",
+    "access": "public",
+    "description": "Parse the full path.  Data is cached until {@link uparse()} is called.",
+    "lineNumber": 68,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the parsed path data"
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "unparse",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#unparse",
+    "access": "public",
+    "description": "Method to clear internal cache of parsed path data.",
+    "lineNumber": 74,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "dirname",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#dirname",
+    "access": "public",
+    "description": "Returns the name of the directory - `dir` returned by {@link parse()}.",
+    "lineNumber": 80,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "base",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#base",
+    "access": "public",
+    "description": "Returns the complete file name for the path - `base` returned by {@link parse()}.",
+    "lineNumber": 87,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the complete file name."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 104,
+    "kind": "method",
+    "name": "name",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#name",
+    "access": "public",
+    "description": "Returns the file name for the path without extension - `name` returned by {@link parse()}.",
+    "lineNumber": 94,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the file name without extension."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 105,
+    "kind": "method",
+    "name": "ext",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#ext",
+    "access": "public",
+    "description": "Returns the file name extension - `ext` returned by {@link parse()}.",
+    "lineNumber": 101,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the file name extension."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "relativePath",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#relativePath",
+    "access": "public",
+    "description": "Create a path relative to the current path.",
+    "examples": [
+      "const p = new Path('/path/to/here')\nconst q = p.relativePath('there')          // -> /path/to/here/there\nconst r = p.relativePath('and', 'there')   // -> /path/to/here/and/there"
+    ],
+    "lineNumber": 114,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "parts",
+        "description": "part(s) of the filesystem path"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the new path"
+    }
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "options",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#options",
+    "access": "public",
+    "description": "Internal method to merge any options with the pre-defined options passed to the\nconstructor.  Options passed as arguments will take precedence.",
+    "examples": [
+      "const p = new Path('/path/to/here', { option1: 'hello' })\nconst q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }"
+    ],
+    "lineNumber": 133,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "new options"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the merged options"
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "exists",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#exists",
+    "access": "public",
+    "description": "Method to assert that the path exists.",
+    "examples": [
+      "const p = new Path('/path/to/here')\np.exists()\n  .then( console.log('path exists') )\n  .catch( console.log('path does not exist') )"
+    ],
+    "lineNumber": 146,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with `true` if the path exists or rejects if the path doesn't"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 109,
+    "kind": "method",
+    "name": "stat",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#stat",
+    "access": "public",
+    "description": "Method to fetch stats for the path.  Uses the `stat` function from `node:fs/promises`.\nStats are cached internally (subject to change)",
+    "examples": [
+      "const p = new Path('/path/to/here')\np.stat()\n  .then( stats => console.log('path stats:', stats) )\n  .catch( console.log('path does not exist') )"
+    ],
+    "lineNumber": 169,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with path stats returned from the `stat` function"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "unstat",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#unstat",
+    "access": "public",
+    "description": "Method to clear internal cache of path stats (subject to change)",
+    "lineNumber": 177,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "isFile",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#isFile",
+    "access": "public",
+    "description": "Returns a boolean flag to indicate if the item is a file.",
+    "lineNumber": 185,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "method",
+    "name": "isDirectory",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#isDirectory",
+    "access": "public",
+    "description": "Returns a boolean flag to indicate if the item is a directory.",
+    "lineNumber": 193,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "method",
+    "name": "mode",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#mode",
+    "access": "public",
+    "description": "Returns the file mode.",
+    "lineNumber": 201,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "size",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#size",
+    "access": "public",
+    "description": "Returns the size of the file in bytes.",
+    "lineNumber": 209,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "accessed",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#accessed",
+    "access": "public",
+    "description": "Returns a date for when the file was last accessed.",
+    "lineNumber": 217,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "modified",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#modified",
+    "access": "public",
+    "description": "Returns a date for when the file content was last modified.",
+    "lineNumber": 225,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "changed",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#changed",
+    "access": "public",
+    "description": "Returns a date for when the file status was last changed.",
+    "lineNumber": 233,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "created",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#created",
+    "access": "public",
+    "description": "Returns a date for when the file was created.",
+    "lineNumber": 241,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export * from './Constants.js';\nexport * from './Directory.js';\nexport * from './DirPath.js';\nexport * from './File.js';\nexport * from './Path.js';\n",
+    "static": true,
+    "longname": "/Users/abw/js/badger-filesystem-js/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 125,
+    "kind": "variable",
+    "name": "PATH",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~PATH",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{PATH}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "variable",
+    "name": "FILE",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~FILE",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{FILE}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "variable",
+    "name": "DIRECTORY",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~DIRECTORY",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DIRECTORY}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "class",
+    "name": "Directory",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Directory",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{Directory}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/Path.js~Path"
+    ]
+  },
+  {
+    "__docId__": 129,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true
+  },
+  {
+    "__docId__": 130,
+    "kind": "method",
+    "name": "file",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#file",
+    "access": "public",
+    "description": "Fetch a new {@link File} object for a file in the directory.",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "file path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "file configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link File} object"
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "method",
+    "name": "directory",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#directory",
+    "access": "public",
+    "description": "Fetch a new {@link Directory} object for a sub-directory in the directory.",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "directory path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
+    "name": "dir",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#dir",
+    "access": "public",
+    "description": "An alias for the {@link directory} method for lazy people",
+    "lineNumber": 49,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Directory} object"
+    },
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "parent",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#parent",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory",
+    "lineNumber": 61,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 134,
+    "kind": "method",
+    "name": "up",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#up",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory up one or more levels.",
+    "lineNumber": 74,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Integer"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "n",
+        "description": "how many levels up"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "default codec for encoding/decoding files"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "default character encoding for files"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "method",
+    "name": "read",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#read",
+    "access": "public",
+    "description": "Returns the names of the files and sub-directories in the directory",
+    "lineNumber": 86,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of the file and directory names"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 136,
+    "kind": "method",
+    "name": "entries",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#entries",
+    "access": "public",
+    "description": "Returns an array of {@link File} and {@link Directory} objects for the\ncontents of the directory.",
+    "lineNumber": 96,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link File} and {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "files",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#files",
+    "access": "public",
+    "description": "Returns an array of {@link File} objects for the files in the directory.",
+    "lineNumber": 118,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link File} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 138,
+    "kind": "method",
+    "name": "directories",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#directories",
+    "access": "public",
+    "description": "Returns an array of {@link Directory} objects for the directories in the directory.",
+    "lineNumber": 126,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
+    "name": "dirs",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#dirs",
+    "access": "public",
+    "description": "An alias for the {@link directories} method.",
+    "lineNumber": 134,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with an array of {@link Directory} objects"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "isEmpty",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#isEmpty",
+    "access": "public",
+    "description": "Determines if the directory is empty.",
+    "lineNumber": 142,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with a boolean value true (empty) or false (not empty)."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "notEmpty",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#notEmpty",
+    "access": "public",
+    "description": "Determines if the directory is not empty.",
+    "lineNumber": 152,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with a boolean value true (not empty) or false (empty)."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 142,
+    "kind": "method",
+    "name": "empty",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#empty",
+    "access": "public",
+    "description": "Empty the directory.",
+    "lineNumber": 165,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.force",
+        "description": "force removal of files and directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "recursively empty and delete sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "method",
+    "name": "mkdir",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#mkdir",
+    "access": "public",
+    "description": "Make the directory.",
+    "lineNumber": 179,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "create intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "method",
+    "name": "rmdir",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#rmdir",
+    "access": "public",
+    "description": "Remove the directory.",
+    "lineNumber": 196,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.empty",
+        "description": "delete items in directory"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.force",
+        "description": "force delete files and directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "recursively delete sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 145,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#create",
+    "access": "public",
+    "description": "Create the directory and any intermediate directories.",
+    "lineNumber": 213,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.recursive",
+        "description": "recursively create intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "method",
+    "name": "destroy",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Directory#destroy",
+    "access": "public",
+    "description": "Empty and delete the directory.",
+    "lineNumber": 226,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.empty",
+        "description": "empty directory of any files and sub-directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.recursive",
+        "description": "recursively delete sub-directories"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.force",
+        "description": "force deletion of files and sub-directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "method",
+    "name": "mustExist",
+    "memberof": "src/index.js~Directory",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Directory#mustExist",
+    "access": "public",
+    "description": "Assert that a directory exists and optionally create it",
+    "lineNumber": 239,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.create",
+        "description": "create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options or calling {@link create}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.mkdir",
+        "description": "create the directory, add the `recursive` option to create intermediate directories - equivalent to calling {@link mkdir}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.recursive",
+        "description": "when used with `mkdir`, creates any intermediate directories"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills to the {@link Directory} object"
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "function",
+    "name": "dir",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~dir",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{dir}",
+    "description": null,
+    "lineNumber": 261,
+    "undocument": true,
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "function",
+    "name": "cwd",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~cwd",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{cwd}",
+    "description": null,
+    "lineNumber": 271,
+    "undocument": true,
+    "params": [
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "function",
+    "name": "bin",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~bin",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{bin}",
+    "description": null,
+    "lineNumber": 282,
+    "undocument": true,
+    "params": [
+      {
+        "name": "url",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 151,
+    "kind": "class",
+    "name": "DirPath",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~DirPath",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DirPath}",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 152,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/index.js~DirPath",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~DirPath#constructor",
+    "access": "public",
+    "description": "Constructor for filesystem paths.",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dir",
+        "description": "comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link DirPath} object"
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/index.js~DirPath",
+    "static": false,
+    "longname": "src/index.js~DirPath#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"dirs\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "method",
+    "name": "initDirs",
+    "memberof": "src/index.js~DirPath",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~DirPath#initDirs",
+    "access": "public",
+    "description": "Internal method to initialise the directories.  If the `dir` argument is a string then it will be split on\ncommas and/or whitespace and converted to an array of {@link Directory} objects.  If the `dir` is a\n{@link Directory} object then it will be wrapped in an array.  If the `dir` argument is already an array\n(presumably of {@link Directory} objects) then no further processing is required.",
+    "lineNumber": 29,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dir",
+        "description": "comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects"
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "method",
+    "name": "dirs",
+    "memberof": "src/index.js~DirPath",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~DirPath#dirs",
+    "access": "public",
+    "description": "Internal method to return an array of the directories in the `dirs` argument passed to the constructor that\nactually exist in the filesystem.  The checks to determine if the directories exists are only carried\nout the first time the method is called.  Subsequent calls will return the cached value stored in\n`this.state.dirsExist`.",
+    "lineNumber": 40,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects that exist"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 156,
+    "kind": "method",
+    "name": "dirsExist",
+    "memberof": "src/index.js~DirPath",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~DirPath#dirsExist",
+    "access": "public",
+    "description": "Internal method to determine which of the directories in the `dirs` argument passed to the constructor\nactually exist in the filesystem.",
+    "lineNumber": 50,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "an array of {@link Directory} objects that exist"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 157,
+    "kind": "class",
+    "name": "File",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~File",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{File}",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/Path.js~Path"
+    ]
+  },
+  {
+    "__docId__": 158,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~File#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true
+  },
+  {
+    "__docId__": 159,
+    "kind": "method",
+    "name": "directory",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~File#directory",
+    "access": "public",
+    "description": "Returns a new {@link Directory} object for the parent directory of the file",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "a {@link Directory} object for the parent"
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "method",
+    "name": "dir",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~File#dir",
+    "access": "public",
+    "description": "An alias for the {@link directory} method for lazy people",
+    "lineNumber": 33,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the parent {@link Directory} object"
+    },
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ]
+  },
+  {
+    "__docId__": 161,
+    "kind": "method",
+    "name": "read",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~File#read",
+    "access": "public",
+    "description": "Reads the file content.  If a `codec` has been specified then the content is decoded.",
+    "examples": [
+      "file('myfile.txt').read().then( text => console.log(text) );",
+      "file('myfile.json', { codec: 'json' }).read().( data => console.log(data) );",
+      "file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );"
+    ],
+    "lineNumber": 50,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file content"
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "method",
+    "name": "write",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~File#write",
+    "access": "public",
+    "description": "Writes the file content.  If a `codec` has been specified then the content will be encoded.",
+    "examples": [
+      "file('myfile.txt').write('Hello World');",
+      "file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });",
+      "file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });"
+    ],
+    "lineNumber": 72,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "character encoding"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file object"
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~File#delete",
+    "access": "public",
+    "description": "Delete the file content.",
+    "lineNumber": 87,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "directory configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.force",
+        "description": "when true, exceptions will be ignored if path does not exist"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with the file object"
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "function",
+    "name": "file",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~file",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{file}",
+    "description": null,
+    "lineNumber": 101,
+    "undocument": true,
+    "params": [
+      {
+        "name": "path",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "class",
+    "name": "Path",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Path",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{Path}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 166,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#constructor",
+    "access": "public",
+    "description": "Constructor for filesystem paths.",
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "file path"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": "configuration options"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "utf8",
+        "defaultRaw": "utf8",
+        "name": "options.encoding",
+        "description": "file encoding"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options.codec",
+        "description": "codec for encoding/decoding file data"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the {@link Path} object"
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/index.js~Path",
+    "static": false,
+    "longname": "src/index.js~Path#state",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"path\": *, \"options\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "member",
+    "name": "debug",
+    "memberof": "src/index.js~Path",
+    "static": false,
+    "longname": "src/index.js~Path#debug",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 169,
+    "kind": "method",
+    "name": "path",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#path",
+    "access": "public",
+    "description": "Accessor method to return the filesystem path.",
+    "lineNumber": 42,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the filesystem path"
+    },
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ]
+  },
+  {
+    "__docId__": 170,
+    "kind": "method",
+    "name": "type",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#type",
+    "access": "public",
+    "description": "Accessor method to return the path type: `path`, `file` or `directory`.",
+    "lineNumber": 52,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the path type"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 171,
+    "kind": "external",
+    "name": "path.parse(path)",
+    "externalLink": "https://nodejs.org/api/path.html#pathparsepath",
+    "memberof": "src/index.js",
+    "static": false,
+    "longname": "src/index.js~path.parse(path)",
+    "access": "public",
+    "description": "Parse the full path.  Data is cached until {@link uparse()} is called.",
+    "lineNumber": 68,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the parsed path data"
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "method",
+    "name": "unparse",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#unparse",
+    "access": "public",
+    "description": "Method to clear internal cache of parsed path data.",
+    "lineNumber": 74,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 173,
+    "kind": "method",
+    "name": "dirname",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#dirname",
+    "access": "public",
+    "description": "Returns the name of the directory - `dir` returned by {@link parse()}.",
+    "lineNumber": 80,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "method",
+    "name": "base",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#base",
+    "access": "public",
+    "description": "Returns the complete file name for the path - `base` returned by {@link parse()}.",
+    "lineNumber": 87,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the complete file name."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 175,
+    "kind": "method",
+    "name": "name",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#name",
+    "access": "public",
+    "description": "Returns the file name for the path without extension - `name` returned by {@link parse()}.",
+    "lineNumber": 94,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the file name without extension."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 176,
+    "kind": "method",
+    "name": "ext",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#ext",
+    "access": "public",
+    "description": "Returns the file name extension - `ext` returned by {@link parse()}.",
+    "lineNumber": 101,
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the file name extension."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 177,
+    "kind": "method",
+    "name": "relativePath",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#relativePath",
+    "access": "public",
+    "description": "Create a path relative to the current path.",
+    "examples": [
+      "const p = new Path('/path/to/here')\nconst q = p.relativePath('there')          // -> /path/to/here/there\nconst r = p.relativePath('and', 'there')   // -> /path/to/here/and/there"
+    ],
+    "lineNumber": 114,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "parts",
+        "description": "part(s) of the filesystem path"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "the new path"
+    }
+  },
+  {
+    "__docId__": 178,
+    "kind": "method",
+    "name": "options",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#options",
+    "access": "public",
+    "description": "Internal method to merge any options with the pre-defined options passed to the\nconstructor.  Options passed as arguments will take precedence.",
+    "examples": [
+      "const p = new Path('/path/to/here', { option1: 'hello' })\nconst q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }"
+    ],
+    "lineNumber": 133,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "new options"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "the merged options"
+    }
+  },
+  {
+    "__docId__": 179,
+    "kind": "method",
+    "name": "exists",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#exists",
+    "access": "public",
+    "description": "Method to assert that the path exists.",
+    "examples": [
+      "const p = new Path('/path/to/here')\np.exists()\n  .then( console.log('path exists') )\n  .catch( console.log('path does not exist') )"
+    ],
+    "lineNumber": 146,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with `true` if the path exists or rejects if the path doesn't"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 180,
+    "kind": "method",
+    "name": "stat",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#stat",
+    "access": "public",
+    "description": "Method to fetch stats for the path.  Uses the `stat` function from `node:fs/promises`.\nStats are cached internally (subject to change)",
+    "examples": [
+      "const p = new Path('/path/to/here')\np.stat()\n  .then( stats => console.log('path stats:', stats) )\n  .catch( console.log('path does not exist') )"
+    ],
+    "lineNumber": 169,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "fulfills with path stats returned from the `stat` function"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 181,
+    "kind": "method",
+    "name": "unstat",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#unstat",
+    "access": "public",
+    "description": "Method to clear internal cache of path stats (subject to change)",
+    "lineNumber": 177,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 182,
+    "kind": "method",
+    "name": "isFile",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#isFile",
+    "access": "public",
+    "description": "Returns a boolean flag to indicate if the item is a file.",
+    "lineNumber": 185,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 183,
+    "kind": "method",
+    "name": "isDirectory",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#isDirectory",
+    "access": "public",
+    "description": "Returns a boolean flag to indicate if the item is a directory.",
+    "lineNumber": 193,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 184,
+    "kind": "method",
+    "name": "mode",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#mode",
+    "access": "public",
+    "description": "Returns the file mode.",
+    "lineNumber": 201,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 185,
+    "kind": "method",
+    "name": "size",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#size",
+    "access": "public",
+    "description": "Returns the size of the file in bytes.",
+    "lineNumber": 209,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 186,
+    "kind": "method",
+    "name": "accessed",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#accessed",
+    "access": "public",
+    "description": "Returns a date for when the file was last accessed.",
+    "lineNumber": 217,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 187,
+    "kind": "method",
+    "name": "modified",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#modified",
+    "access": "public",
+    "description": "Returns a date for when the file content was last modified.",
+    "lineNumber": 225,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 188,
+    "kind": "method",
+    "name": "changed",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#changed",
+    "access": "public",
+    "description": "Returns a date for when the file status was last changed.",
+    "lineNumber": 233,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 189,
+    "kind": "method",
+    "name": "created",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#created",
+    "access": "public",
+    "description": "Returns a date for when the file was created.",
+    "lineNumber": 241,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# badger-filesystem\n\nThis provides a number of utility modules to make it easier working with\ndirectories and files in a node.js project.\n\n## Installation\n\nInstall `badger-filesystem` using your favourite package manager.\n\n### npm\n\n    npm install @abw/badger-filesystem\n\n### pnpm\n\n    pnpm install @abw/badger-filesystem\n\n### yarn\n\n    yarn add @abw/badger-filesystem\n\n## Manual\n\nRead the [Manual](https://abw.github.io/badger-filesystem-js/docs/manual/)\nfor an introduction to the utilities and examples of use.\n\n## API Documentation\n\nRead the [API documentation](https://abw.github.io/badger-filesystem-js/docs/)\nfor further information about the classes, methods and utility functions provided.\n\n## Author\n\nAndy Wardley https://github.com/abw",
+    "longname": "/Users/abw/js/badger-filesystem-js/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@abw/badger-filesystem\",\n  \"version\": \"1.0.1\",\n  \"description\": \"Filesystem utilities\",\n  \"type\": \"module\",\n  \"main\": \"dist/badger-filesystem.cjs.js\",\n  \"module\": \"dist/badger-filesystem.esm.js\",\n  \"exports\": \"./dist/badger-filesystem.esm.js\",\n  \"author\": \"Andy Wardley\",\n  \"license\": \"MIT\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/abw/badger-filesystem-js.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/abw/badger-filesystem-js/issues\"\n  },\n  \"scripts\": {\n    \"build\": \"rollup -c\",\n    \"dev\": \"rollup -c -w\",\n    \"lint\": \"eslint 'src/**/*'\",\n    \"docs:build\": \"esdoc\",\n    \"docs:serve\": \"serve docs\",\n    \"test\": \"ava --serial\",\n    \"pretest\": \"pnpm run build\"\n  },\n  \"keywords\": [\n    \"badger\",\n    \"filesystem\",\n    \"utility\"\n  ],\n  \"dependencies\": {\n    \"@abw/badger-codecs\": \"^1.0.1\",\n    \"@abw/badger-utils\": \"^1.0.16\"\n  },\n  \"devDependencies\": {\n    \"@itsjamie/esdoc-cli\": \"^0.5.0\",\n    \"@itsjamie/esdoc-core\": \"^0.5.0\",\n    \"@itsjamie/esdoc-importpath-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-inject-style-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-standard-plugin\": \"^0.5.0\",\n    \"@rollup/plugin-commonjs\": \"^24.0.1\",\n    \"@rollup/plugin-node-resolve\": \"^15.0.1\",\n    \"@rollup/plugin-terser\": \"^0.4.0\",\n    \"ava\": \"^5.2.0\",\n    \"eslint\": \"^8.35.0\",\n    \"rollup\": \"^3.18.0\"\n  }\n}\n",
+    "longname": "/Users/abw/js/badger-filesystem-js/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "content": "# Badger Filesystem\n\n<img src=\"./manual/asset/badger2.svg\" width=\"300\"/>\n\nThis is the manual for the `badger-filesystem` Javascript toolkit.\n\nIt provides a number of classes and functions to simplify the process of\nworking with directories and files in a Node.js project.\n\n* [Directories](manual/directories.html)\n* [Files](manual/files.html)\n* [Path](manual/path.html)\n* [Codecs](manual/codecs.html)\n\n# Author\n[Andy Wardley](https://github.com/abw)\n",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/index.md",
+    "name": "./manual/index.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualAsset",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/asset",
+    "name": "./manual/asset",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/directories.md",
+    "name": "./manual/directories.md",
+    "content": "# Directories\n\nThe [Directory](class/src/Directory.js~Directory) object and helper functions\nsimplify the process of working with directories.\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\n// a config directory\nconst config = dir('config');\n\n// check it exists and create it if not\nawait config.mustExist({ create: true });\n\n// create a JSON file in the directory\nconst hello = config.file('hello.json', { codec: 'json' });\n\n// write some data to it\nawait hello.write({ message: 'Hello World!' });\n\n// read data from it\nconst data = await hello.read();\n```\n\n- [Directory Functions](#directory-functions)\n- [Directory Methods](#directory-methods)\n\n## Directory Functions\n\n### dir(path)\n\nThe [dir](function#static-function-dir) function can be used to create a\n[Directory](class/src/Directory.js~Directory) object which represents a\ndirectory in your file system.\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\nconst images = dir('web/images');\n```\n\nIf you specify a relative path (i.e. not starting with a leading slash) then\nit is assumed to be relative to the current working directory.\n\nYou can also provide an absolute path to a directory.\n\n```js\nconst images = dir('/home/abw/project123/web/images');\n```\n\nThis function is a short cut for creating a\n[Directory](class/src/Directory.js~Directory) object, but you can do\nthat yourself if you prefer.\n\n```js\nimport { Directory } from '@abw/badger-filesystem'\n\nconst images = new Directory('web/images');\n```\n\nNote that the directory does not have to exist at the time you create the\nobject.  It might be that you want to check if a directory exists and create\nit if it doesn't (or perhaps delete it if it does).\n\n### bin()\n\nThe [bin](function#static-function-bin) function returns a\n[Directory](class/src/Directory.js~Directory) object\nrepresenting the directory of the script you're running (`process.argv[1]`).\nThis is useful when you want to access files relative to the script\nlocation, regardless of where you run the script from.  The function\nis so named because the traditional location for executable files in\nUnix systems is the `bin` directory.\n\n```js\nimport { bin } from '@abw/badger-filesystem'\n\n// current directory where the main execution script is located\nconst thisDir = bin();\n```\n\nYou can also use it to access the directory of the current source file,\neven if it's not the main script you're running.  In this case pass\n`import.meta.url` as an argument.\n\n```js\nimport { bin } from '@abw/badger-filesystem'\n\n// current directory where the current source file is located\nconst thisDir = bin(import.meta.url);\n```\n\n### cwd()\n\nThe [cwd](function#static-function-cwd) function returns a\n[Directory](class/src/Directory.js~Directory) object\nrepresenting the current working directory.\n\n```js\nimport { cwd } from '@abw/badger-filesystem'\n\n// current directory where the main execution script is located\nconst currentDir = cwd();\n```\n\n## Directory methods\n\n### file(name)\n\nThe [file()](class/src/Directory.js~Directory#instance-method-file)\nmethod returns a [File](class/src/File.js~File) object for a file in or under to it.\n\n```js\nconst web = dir('web');\nconst logo = web.file('images/logo.png');   // => web/images/logo.png\n```\n\n### dir(name)\n\nThe [dir()](class/src/Directory.js~Directory#instance-method-dir)\nmethod returns a [Directory](class/src/Directory.js~Directory)\nobject for a directory in or under it.\n\n```js\nconst web = dir('web');\nconst images = web.dir('images');   // => web/images\n```\n\n### parent()\n\nThe [parent()](class/src/Directory.js~Directory#instance-method-parent)\nmethod returns a [Directory](class/src/Directory.js~Directory) object\nrepresenting the parent directory of a directory.\n\nFor example, you might have a script in a `bin` directory in your project\nand you want to resolve some directories or files relative to the parent\ndirectory, i.e. the project base directory.\n\n```js\nimport { bin } from '@abw/badger-filesystem'\n\nconst root = bin().parent();\n```\n\n### up(n)\n\nThe [up(n)](class/src/Directory.js~Directory#instance-method-up) method returns a\n[Directory](class/src/Directory.js~Directory) object\nrepresenting the directory one or more levels above it.\n\nThe default value for `n` is `1`, meaning that it does the same thing as\nthe [parent()](#parent--) method.\n\nFolling on from the previous example, if you have a script in the `bin/foo`\ndirectory and you want to go two levels up to get to the project base directory:\n\n```js\nimport { bin } from '@abw/badger-filesystem'\nconst root = bin().up(2);\n```\n\n### path()\n\nThe [path()](/class/src/Path.js~Path#instance-method-path) method\nreturns the current path to the directory.\n\n```js\nconst web = dir('web');\nconsole.log(web.path());      // => web\n\nconst path = web.dir('images');\nconsole.log(images.path());   // => web/images\n```\n\nYou can pass an argument to the method to get a path relative to the\ndirectory.\n\n```js\nconst web = dir('web');\nconst logo = web.path('images/logo.png');   // => web/images/logo.png\n```\n\nMultiple arguments are assumed to be separate path elements.\n\n```js\nconst web = dir('web');\nconst logo = web.path('images', 'logo.png');   // => web/images/logo.png\n```\n\n### exists()\n\nThis asynchronous method checks if the directory exists.\n\n```js\nconst web = dir('web');\nconst exists = await web.exists();\n```\n\n### mustExist(options)\n\nAsynchronous method to test if the directory exists.  If no options are\nspecified then it will return `true` if the directory exists or throw an\nerror if not.\n\nThe `mkdir` and optionally `recursive` options can be set to instead have\nit make the directory (and any intermediate directories when `recursive` is\nset).  The `create` option is a short-hand for setting both.\n\n```js\n// create the tmp/output directory if it doesn't already exists\nconst output = await dir('tmp/output').mustExist({ create: true });\n```\n\n### isEmpty()\n\nAsynchronous method to test if the directory is empty.\n\n```js\nconst empty = await dir('foo/bar').isEmpty()\n```\n\n### notEmpty()\n\nAsynchronous method to test if the directory is NOT empty.\n\n```js\nconst full = await dir('foo/bar').notEmpty()\n```\n\n### mkdir(options)\n\nAsynchronous method to create the directory.\n\nThe `recursive` option can be specified to have it recursively create any\nintermediate directories.\n\n```js\nawait dir('foo/bar').mkdir({ recursive: true })\n```\n\n### create()\n\nAsynchronous method to create the directory.  It is a wrapper around\n[mkdir()](#mkdir-options-) which defaults the `recursive` flag to `true`.\n\n### rmdir(options)\n\nAsynchronous method to delete the directory.\n\nThe `empty` option can be specified to have it first empty the directory of\nany files and directories.\n\nThe `force` option can be specified to force the removal of files and\ndirectories.\n\nThe `recursive` can be specified to recursively empty and delete\nsub-directories\n\n```js\nawait dir('foo/bar').rmdir({ empty: true, recursive: true, force: true })\n```\n\n### destroy()\n\nAsynchronous method to empty and delete the directory.  It is a wrapper\naround [rmdir()](#emdir-options-) which defaults the `empty`, `force` and\n`recursive` flag to all be `true`.\n\n### empty(options)\n\nAsynchronous method to empty the directory of any files and directories.\n\nThe `force` option can be specified to force the removal of files and\ndirectories.\n\nThe `recursive` can be specified to recursively empty and delete\nsub-directories\n\n```js\nawait dir('foo/bar').empty({ recursive: true, force: true })\n```\n\n### read()\n\nAsynchronous method to read the directory and return an array of the names of\nfiles and directories in it.\n\n```js\nconst contents = await dir('foo/bar').read()\n```\n\n### entries()\n\nAsynchronous method to read the directory and return an array of\n[File](class/src/File.js~File) and [Directory](class/src/Directory.js~Directory)\nobject representing the contents.  Only files and directories will be returned.\nDevices, FIFOs and sockets will be ignored.\n\n```js\nconst entries = await dir('foo/bar').entries()\n```\n\n### files()\n\nAsynchronous method to read the directory and return an array of any\n[File](class/src/File.js~File) objects.\n\n```js\nconst files = await dir('foo/bar').files()\n```\n\n### directories()\n\nAsynchronous method to read the directory and return an array of any\n[Directory](class/src/Directory.js~Directory) objects.  The `dirs()` method\nis an alias for this method.\n\n```js\nconst dirs = await dir('foo/bar').directories()\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/files.md",
+    "name": "./manual/files.md",
+    "content": "# Files\n\nThe [File](class/src/File.js~File) object and helper functions\nsimplify the process of working with files.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// create a JSON file\nconst hello = file('hello.json', { codec: 'json' });\n\n// write some data to it\nawait hello.write({ message: 'Hello World!' });\n\n// read data from it\nconst data = await hello.read();\n```\n\n\n- [File Functions](#file-functions)\n- [File Methods](#file-methods)\n\n## File Functions\n\n### file(path)\n\nThe [file](function#static-function-file) function can be used to create a\n[File](class/src/File.js~File) object which represents a file in your file\nsystem.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst hello = file('hello.txt');\n```\n\nIf you specify a relative path (i.e. not starting with a leading slash) then\nit is assumed to be relative to the current working directory.\n\nYou can also provide an absolute path to a file.\n\n```js\nconst hello = dir('/home/abw/project123/hello.txt');\n```\n\nThis function is a short cut for creating a\n[File](class/src/File.js~File) object, but you can do\nthat yourself if you prefer.\n\n```js\nimport { File } from '@abw/badger-filesystem'\n\nconst hello = new File('hello.txt');\n```\n\nNote that the file does not have to exist at the time you create the\nobject.  It might be that you want to check if a file exists and write\nit if it doesn't (or perhaps delete it if it does).\n\nYou can also use the [file()](class/src/Directory.js~Directory#instance-method-file)\nmethod on a [Directory](class/src/Directory.js~Directory) object to create\na file.\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\nconst images = dir('web/images');\nconst logo = images.file('logo.png');\n```\n\n## File Methods\n\n## read(options)\n\nAsynchronous method to read the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst text = await file('hello.txt').read();\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be decoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nconst data = await file('hello.json', { codec: 'json' }).read();\n\n// ...or\nconst data = await file('hello.json').read({ codec: 'json' });\n```\n\n## write(options)\n\nAsynchronous method to write the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nawait file('hello.txt').write('Hello World!');\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be encoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nawait file('hello.json', { codec: 'json' }).write({ message: 'Hello World!' });\n\n// ...or\nawait file('hello.json').write({ message: 'Hello World!' }), { codec: 'json' });\n```\n\n## delete(options)\n\nAsynchronous method to delete the file.\n\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/path.md",
+    "name": "./manual/path.md",
+    "content": "# Path Base Class\n\nThe [File](class/src/File.js~File) and\n[Directory](class/src/Directory.js~Directory) objects are subclasses of\nthe [Path](class/src/Path.js~Path) base class which implements some common\nfunctionality.\n\n## Path Methods\n\n### path(name)\n\nWhen called without arguments it returns the current value for the path.\n\nWhen passed one or more arguments it constructs a path relative to the current\none.\n\n### type()\n\nReturns the type of file that the path represents: `file`, `directory` or\n`path`.\n\nThis is set by the constructors for the [File](class/src/File.js~File)\nand [Directory](class/src/Directory.js~Directory) objects and only represents\nthe type of subclass object that was created.\n\nThere is no guarantee that the actual file or directory represented by the\npath exists in the filesystem and has the same type.  Use the\n[isFile()](#isfile--) and [isDirectory()](#isdirectory--) methods if you want\nto check the filesystem to be sure.\n\n### parse()\n\nParses the path using [Path.parse()](https://nodejs.org/api/path.html#pathparsepath)\nto return the constituent parts.  This is cached internally.  You can call\n[unparse()](#unparse--) to clear the cache.\n\n### unparse()\n\nDeletes any cache results from [parse()](#parse--).\n\n### dirname()\n\nReturns the name of the directory.\n\n### base()\n\nReturns the complete file or directory name, including any extension.\n\n### name()\n\nReturns the name of the directory or file without any extension.\n\n### ext()\n\nReturns the filename extension including the period.\n\n### relativePath(name)\n\nReturns a path relative to the current one.\n\n### exists()\n\nAsynchronous method to test if the path exists.\n\n### stat()\n\nAsynchronous method to fetch stats for the path.  By calling\n[fsPromises.stat()](https://nodejs.org/api/fs.html#fspromisesstatpath-options).\n\nStats are cached internally.  You can call [unstat()](#unstat--) to clear\nthe cache.\n\n### unstat()\n\nDeletes any cached results from [stat()](#stat--).\n\n### isFile()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na file.\n\n### isDirectory()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na directory.\n\n### mode()\n\nAsynchronous method which resolves to the file mode.\n\n### size()\n\nAsynchronous method which resolves to the file size in bytes.\n\n### accessed()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas last accessed.\n\n\n## modified()\n\nAsynchronous method which resolves to a Date representing the time the file\ncontent was last modified.\n\n## changed()\n\nAsynchronous method which resolves to a Date representing the time the file\nstatus (e.g. mode, owner, etc) was last changed.\n\n## created()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas created.\n\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/Users/abw/js/badger-filesystem-js/manual/codecs.md",
+    "name": "./manual/codecs.md",
+    "content": "# Data Codecs\n\nCodecs are used to encode and decode data to and from serialised text.\n\nThe badger toolkit comes with two built-in codecs for `json` and `yaml` files.\n\n- [Read Data File](#read-data-files)\n- [Write Data Files](#write-data-files)\n\n## Read Data Files\n\nSuppose that you have a `badger.yaml` file that you want to read.\n\n```yaml\nname:   Brian\nanimal: Badger\n```\n\nAll you have to do is add the `{ codec: 'yaml' }`\noption to the `file()` function.  The `read()`\nmethod will then automatically decode the YAML text.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\nThis prints the string \"Brian is a Badger\" to the console.\n\nYou can also do the same thing using the `file()` method on a directory\nobject.\n\n```js\nimport { dir } from '@abw/badger'\n\ndir('data')\n  .file('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\n## Write Data Files\n\nThe `codec` option also works when writing data.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('giraffe.yaml', { codec: 'yaml' })\n  .write({\n    name:   \"Gerald\",\n    animal: \"Giraffe\",\n  })\n```\n\nYou should now have a `giraffe.yaml` file containing the following:\n\n```yaml\nname: Gerald\nanimal: Giraffe\n```\n\n",
+    "static": true,
+    "access": "public"
+  }
+]

@@ -1,0 +1,181 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/File.js | Badger Filesystem</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-badger.css"><meta name="description" content="Filesystem utilities"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Badger Filesystem"><meta property="twitter:description" content="Filesystem utilities"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/abw/badger-filesystem-js"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DirPath.js~DirPath.html">DirPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Directory.js~Directory.html">Directory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/File.js~File.html">File</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Path.js~Path.html">Path</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~DirPath.html">DirPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~Directory.html">Directory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~File.html">File</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~Path.html">Path</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bin">bin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cwd">cwd</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dir">dir</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-file">file</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bin">bin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cwd">cwd</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dir">dir</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-file">file</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://nodejs.org/api/path.html#pathparsepath">path.parse(path)</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://nodejs.org/api/path.html#pathparsepath">path.parse(path)</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/File.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import path from 'node:path'
+import Path from './Path.js'
+import { dir } from './Directory.js'
+import { codec } from '@abw/badger-codecs'
+import { readFile, writeFile, rm } from 'node:fs/promises'
+import { FILE } from './Constants.js'
+
+/**
+ * The File class implements a wrapper around a filesystem
+ * file.
+ */
+export class File extends Path {
+  constructor(path, options={}) {
+    super(path, options);
+    this.state.type = FILE;
+  }
+
+  /**
+   * Returns a new {@link Directory} object for the parent directory of the file
+   * @param {Object} [options] - directory configuration options
+   * @param {String} [options.codec] - codec for encoding/decoding file data
+   * @param {String} [options.encoding=utf8] - character encoding
+   * @return {Object} a {@link Directory} object for the parent
+   */
+  directory(options) {
+    return dir(path.dirname(this.state.path), options);
+  }
+
+  /**
+   * An alias for the {@link directory} method for lazy people
+   * @return {Object} the parent {@link Directory} object
+   */
+  dir(...args) {
+    return this.directory(...args);
+  }
+
+  /**
+   * Reads the file content.  If a `codec` has been specified then the content is decoded.
+   * @param {Object} [options] - directory configuration options
+   * @param {String} [options.codec] - codec for encoding/decoding file data
+   * @param {String} [options.encoding=utf8] - character encoding
+   * @return {Promise} fulfills with the file content
+   * @example
+   * file('myfile.txt').read().then( text =&gt; console.log(text) );
+   * @example
+   * file('myfile.json', { codec: 'json' }).read().( data =&gt; console.log(data) );
+   * @example
+   * file('myfile.json').read({ codec: 'json' }).then( data =&gt; console.log(data) );
+   */
+  async read(options) {
+    const opts = this.options(options);
+    const text = await readFile(this.state.path, opts);
+    return opts.codec
+      ? codec(opts.codec).decode(text)
+      : text;
+  }
+
+  /**
+   * Writes the file content.  If a `codec` has been specified then the content will be encoded.
+   * @param {String|Object} data - directory configuration options
+   * @param {Object} [options] - directory configuration options
+   * @param {String} [options.codec] - codec for encoding/decoding file data
+   * @param {String} [options.encoding=utf8] - character encoding
+   * @return {Promise} fulfills with the file object
+   * @example
+   * file('myfile.txt').write('Hello World');
+   * @example
+   * file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });
+   * @example
+   * file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });
+   */
+  async write(data, options) {
+    const opts = this.options(options);
+    const text = opts.codec
+      ? codec(opts.codec).encode(data)
+      : data;
+    await writeFile(this.state.path, text, opts);
+    return this;
+  }
+
+  /**
+   * Delete the file content.
+   * @param {Object} [options] - directory configuration options
+   * @param {Boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist
+   * @return {Promise} fulfills with the file object
+   */
+  async delete(options) {
+    await rm(this.state.path, options);
+    return this;
+  }
+}
+
+/**
+ * Function to create a new {@link File} object for a file
+ * @param {String} path - file path
+ * @param {Object} [options] - configuration options
+ * @param {Boolean} [options.codec] - a codec for encoding/decoding files
+ * @param {String} [options.encoding=utf8] - character encoding
+ * @return {Object} the {@link File} object
+ */
+export const file = (path, options) =&gt; {
+  return new File(path, options);
+}
+
+export default File
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+
+
+</body></html>

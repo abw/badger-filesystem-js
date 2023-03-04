@@ -1,0 +1,338 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 100,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 36,
+      "index": 100
+    }
+  },
+  "errors": [],
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 100,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0,
+        "index": 0
+      },
+      "end": {
+        "line": 3,
+        "column": 36,
+        "index": 100
+      }
+    },
+    "sourceType": "module",
+    "interpreter": null,
+    "body": [
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 0,
+        "end": 31,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0,
+            "index": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 31,
+            "index": 31
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 7,
+          "end": 31,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7,
+              "index": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 31,
+              "index": 31
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 13,
+              "end": 31,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 13,
+                  "index": 13
+                },
+                "end": {
+                  "line": 1,
+                  "column": 31,
+                  "index": 31
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 13,
+                "end": 17,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 13,
+                    "index": 13
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 17,
+                    "index": 17
+                  },
+                  "identifierName": "PATH"
+                },
+                "name": "PATH"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 25,
+                "end": 31,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 25,
+                    "index": 25
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 31,
+                    "index": 31
+                  }
+                },
+                "extra": {
+                  "rawValue": "path",
+                  "raw": "'path'"
+                },
+                "value": "path"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 32,
+        "end": 63,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0,
+            "index": 32
+          },
+          "end": {
+            "line": 2,
+            "column": 31,
+            "index": 63
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 39,
+          "end": 63,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 7,
+              "index": 39
+            },
+            "end": {
+              "line": 2,
+              "column": 31,
+              "index": 63
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 45,
+              "end": 63,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 13,
+                  "index": 45
+                },
+                "end": {
+                  "line": 2,
+                  "column": 31,
+                  "index": 63
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 45,
+                "end": 49,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 13,
+                    "index": 45
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 17,
+                    "index": 49
+                  },
+                  "identifierName": "FILE"
+                },
+                "name": "FILE"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 57,
+                "end": 63,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 25,
+                    "index": 57
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 31,
+                    "index": 63
+                  }
+                },
+                "extra": {
+                  "rawValue": "file",
+                  "raw": "'file'"
+                },
+                "value": "file"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 64,
+        "end": 100,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0,
+            "index": 64
+          },
+          "end": {
+            "line": 3,
+            "column": 36,
+            "index": 100
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 71,
+          "end": 100,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7,
+              "index": 71
+            },
+            "end": {
+              "line": 3,
+              "column": 36,
+              "index": 100
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 77,
+              "end": 100,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 13,
+                  "index": 77
+                },
+                "end": {
+                  "line": 3,
+                  "column": 36,
+                  "index": 100
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 77,
+                "end": 86,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 13,
+                    "index": 77
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 22,
+                    "index": 86
+                  },
+                  "identifierName": "DIRECTORY"
+                },
+                "name": "DIRECTORY"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 89,
+                "end": 100,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 25,
+                    "index": 89
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 36,
+                    "index": 100
+                  }
+                },
+                "extra": {
+                  "rawValue": "directory",
+                  "raw": "'directory'"
+                },
+                "value": "directory"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      }
+    ],
+    "directives": []
+  },
+  "comments": []
+}

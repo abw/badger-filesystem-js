@@ -1,0 +1,284 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Badger Filesystem</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-badger.css"><meta name="description" content="Filesystem utilities"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Badger Filesystem"><meta property="twitter:description" content="Filesystem utilities"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/abw/badger-filesystem-js"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/directories.html"><a href="manual/directories.html" data-ice="link">Directories</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/directories.html"><a href="manual/directories.html#directory-functions" data-ice="link">Directory Functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#dir-path-" data-ice="link">dir(path)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#bin--" data-ice="link">bin()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#cwd--" data-ice="link">cwd()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/directories.html"><a href="manual/directories.html#directory-methods" data-ice="link">Directory methods</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#file-name-" data-ice="link">file(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#dir-name-" data-ice="link">dir(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#parent--" data-ice="link">parent()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#up-n-" data-ice="link">up(n)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#path--" data-ice="link">path()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#exists--" data-ice="link">exists()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#mustexist-options-" data-ice="link">mustExist(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#isempty--" data-ice="link">isEmpty()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#notempty--" data-ice="link">notEmpty()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#mkdir-options-" data-ice="link">mkdir(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#create--" data-ice="link">create()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#rmdir-options-" data-ice="link">rmdir(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#destroy--" data-ice="link">destroy()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#empty-options-" data-ice="link">empty(options)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#read--" data-ice="link">read()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#entries--" data-ice="link">entries()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#files--" data-ice="link">files()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/directories.html"><a href="manual/directories.html#directories--" data-ice="link">directories()</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/files.html"><a href="manual/files.html" data-ice="link">Files</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#file-functions" data-ice="link">File Functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/files.html"><a href="manual/files.html#file-path-" data-ice="link">file(path)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#file-methods" data-ice="link">File Methods</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#read-options-" data-ice="link">read(options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#write-options-" data-ice="link">write(options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#delete-options-" data-ice="link">delete(options)</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/path.html"><a href="manual/path.html" data-ice="link">Path Base Class</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#path-methods" data-ice="link">Path Methods</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#path-name-" data-ice="link">path(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#type--" data-ice="link">type()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#parse--" data-ice="link">parse()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#unparse--" data-ice="link">unparse()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#dirname--" data-ice="link">dirname()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#base--" data-ice="link">base()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#name--" data-ice="link">name()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#ext--" data-ice="link">ext()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#relativepath-name-" data-ice="link">relativePath(name)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#exists--" data-ice="link">exists()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#stat--" data-ice="link">stat()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#unstat--" data-ice="link">unstat()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#isfile--" data-ice="link">isFile()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#isdirectory--" data-ice="link">isDirectory()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#mode--" data-ice="link">mode()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#size--" data-ice="link">size()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#accessed--" data-ice="link">accessed()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#modified--" data-ice="link">modified()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#changed--" data-ice="link">changed()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#created--" data-ice="link">created()</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/codecs.html"><a href="manual/codecs.html" data-ice="link">Data Codecs</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#read-data-files" data-ice="link">Read Data Files</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#write-data-files" data-ice="link">Write Data Files</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="directories">Directories</h1><p>The <a href="class/src/Directory.js~Directory">Directory</a> object and helper functions
+simplify the process of working with directories.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger-filesystem'
+
+// a config directory
+const config = dir('config');
+
+// check it exists and create it if not
+await config.mustExist({ create: true });
+
+// create a JSON file in the directory
+const hello = config.file('hello.json', { codec: 'json' });
+
+// write some data to it
+await hello.write({ message: 'Hello World!' });
+
+// read data from it
+const data = await hello.read();</code></code></pre>
+<ul>
+<li><a href="#directory-functions">Directory Functions</a></li>
+<li><a href="#directory-methods">Directory Methods</a></li>
+</ul>
+<h2 id="directory-functions">Directory Functions</h2><h3 id="dir-path-">dir(path)</h3><p>The <a href="function#static-function-dir">dir</a> function can be used to create a
+<a href="class/src/Directory.js~Directory">Directory</a> object which represents a
+directory in your file system.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger-filesystem'
+
+const images = dir('web/images');</code></code></pre>
+<p>If you specify a relative path (i.e. not starting with a leading slash) then
+it is assumed to be relative to the current working directory.</p>
+<p>You can also provide an absolute path to a directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const images = dir('/home/abw/project123/web/images');</code></code></pre>
+<p>This function is a short cut for creating a
+<a href="class/src/Directory.js~Directory">Directory</a> object, but you can do
+that yourself if you prefer.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { Directory } from '@abw/badger-filesystem'
+
+const images = new Directory('web/images');</code></code></pre>
+<p>Note that the directory does not have to exist at the time you create the
+object.  It might be that you want to check if a directory exists and create
+it if it doesn't (or perhaps delete it if it does).</p>
+<h3 id="bin--">bin()</h3><p>The <a href="function#static-function-bin">bin</a> function returns a
+<a href="class/src/Directory.js~Directory">Directory</a> object
+representing the directory of the script you're running (<code>process.argv[1]</code>).
+This is useful when you want to access files relative to the script
+location, regardless of where you run the script from.  The function
+is so named because the traditional location for executable files in
+Unix systems is the <code>bin</code> directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { bin } from '@abw/badger-filesystem'
+
+// current directory where the main execution script is located
+const thisDir = bin();</code></code></pre>
+<p>You can also use it to access the directory of the current source file,
+even if it's not the main script you're running.  In this case pass
+<code>import.meta.url</code> as an argument.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { bin } from '@abw/badger-filesystem'
+
+// current directory where the current source file is located
+const thisDir = bin(import.meta.url);</code></code></pre>
+<h3 id="cwd--">cwd()</h3><p>The <a href="function#static-function-cwd">cwd</a> function returns a
+<a href="class/src/Directory.js~Directory">Directory</a> object
+representing the current working directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { cwd } from '@abw/badger-filesystem'
+
+// current directory where the main execution script is located
+const currentDir = cwd();</code></code></pre>
+<h2 id="directory-methods">Directory methods</h2><h3 id="file-name-">file(name)</h3><p>The <a href="class/src/Directory.js~Directory#instance-method-file">file()</a>
+method returns a <a href="class/src/File.js~File">File</a> object for a file in or under to it.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+const logo = web.file('images/logo.png');   // =&gt; web/images/logo.png</code></code></pre>
+<h3 id="dir-name-">dir(name)</h3><p>The <a href="class/src/Directory.js~Directory#instance-method-dir">dir()</a>
+method returns a <a href="class/src/Directory.js~Directory">Directory</a>
+object for a directory in or under it.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+const images = web.dir('images');   // =&gt; web/images</code></code></pre>
+<h3 id="parent--">parent()</h3><p>The <a href="class/src/Directory.js~Directory#instance-method-parent">parent()</a>
+method returns a <a href="class/src/Directory.js~Directory">Directory</a> object
+representing the parent directory of a directory.</p>
+<p>For example, you might have a script in a <code>bin</code> directory in your project
+and you want to resolve some directories or files relative to the parent
+directory, i.e. the project base directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { bin } from '@abw/badger-filesystem'
+
+const root = bin().parent();</code></code></pre>
+<h3 id="up-n-">up(n)</h3><p>The <a href="class/src/Directory.js~Directory#instance-method-up">up(n)</a> method returns a
+<a href="class/src/Directory.js~Directory">Directory</a> object
+representing the directory one or more levels above it.</p>
+<p>The default value for <code>n</code> is <code>1</code>, meaning that it does the same thing as
+the <a href="#parent--">parent()</a> method.</p>
+<p>Folling on from the previous example, if you have a script in the <code>bin/foo</code>
+directory and you want to go two levels up to get to the project base directory:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { bin } from '@abw/badger-filesystem'
+const root = bin().up(2);</code></code></pre>
+<h3 id="path--">path()</h3><p>The <a href="/class/src/Path.js~Path#instance-method-path">path()</a> method
+returns the current path to the directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+console.log(web.path());      // =&gt; web
+
+const path = web.dir('images');
+console.log(images.path());   // =&gt; web/images</code></code></pre>
+<p>You can pass an argument to the method to get a path relative to the
+directory.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+const logo = web.path('images/logo.png');   // =&gt; web/images/logo.png</code></code></pre>
+<p>Multiple arguments are assumed to be separate path elements.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+const logo = web.path('images', 'logo.png');   // =&gt; web/images/logo.png</code></code></pre>
+<h3 id="exists--">exists()</h3><p>This asynchronous method checks if the directory exists.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const web = dir('web');
+const exists = await web.exists();</code></code></pre>
+<h3 id="mustexist-options-">mustExist(options)</h3><p>Asynchronous method to test if the directory exists.  If no options are
+specified then it will return <code>true</code> if the directory exists or throw an
+error if not.</p>
+<p>The <code>mkdir</code> and optionally <code>recursive</code> options can be set to instead have
+it make the directory (and any intermediate directories when <code>recursive</code> is
+set).  The <code>create</code> option is a short-hand for setting both.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// create the tmp/output directory if it doesn't already exists
+const output = await dir('tmp/output').mustExist({ create: true });</code></code></pre>
+<h3 id="isempty--">isEmpty()</h3><p>Asynchronous method to test if the directory is empty.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const empty = await dir('foo/bar').isEmpty()</code></code></pre>
+<h3 id="notempty--">notEmpty()</h3><p>Asynchronous method to test if the directory is NOT empty.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const full = await dir('foo/bar').notEmpty()</code></code></pre>
+<h3 id="mkdir-options-">mkdir(options)</h3><p>Asynchronous method to create the directory.</p>
+<p>The <code>recursive</code> option can be specified to have it recursively create any
+intermediate directories.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">await dir('foo/bar').mkdir({ recursive: true })</code></code></pre>
+<h3 id="create--">create()</h3><p>Asynchronous method to create the directory.  It is a wrapper around
+<a href="#mkdir-options-">mkdir()</a> which defaults the <code>recursive</code> flag to <code>true</code>.</p>
+<h3 id="rmdir-options-">rmdir(options)</h3><p>Asynchronous method to delete the directory.</p>
+<p>The <code>empty</code> option can be specified to have it first empty the directory of
+any files and directories.</p>
+<p>The <code>force</code> option can be specified to force the removal of files and
+directories.</p>
+<p>The <code>recursive</code> can be specified to recursively empty and delete
+sub-directories</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">await dir('foo/bar').rmdir({ empty: true, recursive: true, force: true })</code></code></pre>
+<h3 id="destroy--">destroy()</h3><p>Asynchronous method to empty and delete the directory.  It is a wrapper
+around <a href="#emdir-options-">rmdir()</a> which defaults the <code>empty</code>, <code>force</code> and
+<code>recursive</code> flag to all be <code>true</code>.</p>
+<h3 id="empty-options-">empty(options)</h3><p>Asynchronous method to empty the directory of any files and directories.</p>
+<p>The <code>force</code> option can be specified to force the removal of files and
+directories.</p>
+<p>The <code>recursive</code> can be specified to recursively empty and delete
+sub-directories</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">await dir('foo/bar').empty({ recursive: true, force: true })</code></code></pre>
+<h3 id="read--">read()</h3><p>Asynchronous method to read the directory and return an array of the names of
+files and directories in it.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const contents = await dir('foo/bar').read()</code></code></pre>
+<h3 id="entries--">entries()</h3><p>Asynchronous method to read the directory and return an array of
+<a href="class/src/File.js~File">File</a> and <a href="class/src/Directory.js~Directory">Directory</a>
+object representing the contents.  Only files and directories will be returned.
+Devices, FIFOs and sockets will be ignored.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const entries = await dir('foo/bar').entries()</code></code></pre>
+<h3 id="files--">files()</h3><p>Asynchronous method to read the directory and return an array of any
+<a href="class/src/File.js~File">File</a> objects.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const files = await dir('foo/bar').files()</code></code></pre>
+<h3 id="directories--">directories()</h3><p>Asynchronous method to read the directory and return an array of any
+<a href="class/src/Directory.js~Directory">Directory</a> objects.  The <code>dirs()</code> method
+is an alias for this method.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const dirs = await dir('foo/bar').directories()</code></code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+
+
+</body></html>
