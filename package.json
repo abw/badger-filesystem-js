@@ -1,0 +1,52 @@
+{
+  "name": "@abw/badger-filesystem",
+  "version": "1.0.1",
+  "description": "Filesystem utilities",
+  "type": "module",
+  "main": "dist/badger-filesystem.cjs.js",
+  "module": "dist/badger-filesystem.esm.js",
+  "exports": "./dist/badger-filesystem.esm.js",
+  "author": "Andy Wardley",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abw/badger-filesystem-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abw/badger-filesystem-js/issues"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint 'src/**/*'",
+    "docs:build": "esdoc",
+    "docs:serve": "serve docs",
+    "test": "ava --serial",
+    "pretest": "pnpm run build"
+  },
+  "keywords": [
+    "badger",
+    "filesystem",
+    "utility"
+  ],
+  "dependencies": {
+    "@abw/badger-codecs": "^1.0.1",
+    "@abw/badger-utils": "^1.0.16"
+  },
+  "devDependencies": {
+    "@itsjamie/esdoc-cli": "^0.5.0",
+    "@itsjamie/esdoc-core": "^0.5.0",
+    "@itsjamie/esdoc-importpath-plugin": "^0.5.0",
+    "@itsjamie/esdoc-inject-style-plugin": "^0.5.0",
+    "@itsjamie/esdoc-standard-plugin": "^0.5.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "ava": "^5.2.0",
+    "eslint": "^8.35.0",
+    "rollup": "^3.18.0"
+  }
+}
