@@ -3,13 +3,19 @@ import path from 'node:path';
 import Path from './Path.js'
 import { file } from './File.js'
 import { fail } from '@abw/badger-utils';
-import { rm, mkdir, rmdir, readdir } from 'node:fs/promises'
+import { rm, mkdir, rmdir, readdir, stat } from 'node:fs/promises'
+import { DIRECTORY, FILE } from './Constants.js';
 
 /**
  * The Directory class implements a wrapper around a filesystem
  * directory.
  */
 export class Directory extends Path {
+  constructor(path, options={}) {
+    super(path, options);
+    this.state.type = DIRECTORY;
+  }
+
   /**
    * Fetch a new {@link File} object for a file in the directory.
    * @param {string} path - file path
@@ -54,7 +60,23 @@ export class Directory extends Path {
    */
   parent(options) {
     this.debug("parent()");
-    return this.directory('..', options);
+    return this.up(1, options);
+  }
+
+  /**
+   * Returns a new {@link Directory} object for the parent directory up one or more levels.
+   * @param {Integer} [n] - how many levels up
+   * @param {Object} [options] - directory configuration options
+   * @param {String} [options.codec] - default codec for encoding/decoding files
+   * @param {String} [options.encoding=utf8] - default character encoding for files
+   * @return {Object} a {@link Directory} object for the parent
+   */
+  up(n=1, options) {
+    this.debug(`up(${n})`);
+    return this.directory(
+      Array(n).fill('..').join('/'),
+      options
+    );
   }
 
   /**
@@ -64,6 +86,53 @@ export class Directory extends Path {
   async read() {
     this.debug("read()");
     return await readdir(this.path());
+  }
+
+  /**
+   * Returns an array of {@link File} and {@link Directory} objects for the
+   * contents of the directory.
+   * @return {Promise} fulfills with an array of {@link File} and {@link Directory} objects
+   */
+  async entries() {
+    this.debug("entries()");
+    const names = await this.read();
+    let entries = [ ];
+
+    for (let name of names) {
+      const relpath = this.path(name);
+      const stats = await stat(relpath);
+      if (stats.isFile()) {
+        entries.push(this.file(name))
+      }
+      else if (stats.isDirectory()) {
+        entries.push(this.dir(name));
+      }
+      // ignore anything that isn't a file or directory
+    }
+    return entries;
+  }
+  /**
+   * Returns an array of {@link File} objects for the files in the directory.
+   * @return {Promise} fulfills with an array of {@link File} objects
+   */
+  async files() {
+    const entries = await this.entries();
+    return entries.filter( entry => entry.type() === FILE )
+  }
+  /**
+   * Returns an array of {@link Directory} objects for the directories in the directory.
+   * @return {Promise} fulfills with an array of {@link Directory} objects
+   */
+  async directories() {
+    const entries = await this.entries();
+    return entries.filter( entry => entry.type() === DIRECTORY )
+  }
+  /**
+   * An alias for the {@link directories} method.
+   * @return {Promise} fulfills with an array of {@link Directory} objects
+   */
+  async dirs() {
+    return this.directories();
   }
 
   /**
