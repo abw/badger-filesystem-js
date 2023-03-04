@@ -1,6 +1,7 @@
 import path from 'node:path';
 import { stat } from 'node:fs/promises'
 import { rethrow, doNothing } from '@abw/badger-utils';
+import { PATH } from './Constants.js';
 
 /**
  * Default configuration options.
@@ -28,6 +29,7 @@ export class Path {
       path = path.path();
     }
     this.state = { path, options: { ...defaults, ...options } };
+    this.state.type = PATH;
     this.debug = options.debug
       ? console.log.bind(console)
       : doNothing
@@ -37,8 +39,67 @@ export class Path {
    * Accessor method to return the filesystem path.
    * @return {String} the filesystem path
    */
-  path() {
-    return this.state.path;
+  path(...args) {
+    return args.length
+      ? this.relativePath(...args)
+      : this.state.path;
+  }
+
+  /**
+   * Accessor method to return the path type: `path`, `file` or `directory`.
+   * @return {String} the path type
+   */
+  type() {
+    return this.state.type;
+  }
+
+
+// { root: '/',
+//   dir: '/home/user/dir',
+//   base: 'file.txt',
+//   ext: '.txt',
+//   name: 'file' }
+
+  /**
+   * Parse the full path.  Data is cached until {@link uparse()} is called.
+   * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath
+   * @return {Object} the parsed path data
+   */
+  parse() {
+    return this.state.parse ||= path.parse(this.state.path);
+  }
+  /**
+   * Method to clear internal cache of parsed path data.
+   */
+  unparse() {
+    delete this.state.parse;
+  }
+  /**
+   * Returns the name of the directory - `dir` returned by {@link parse()}.
+   */
+  dirname() {
+    return this.parse().dir;
+  }
+  /**
+   * Returns the complete file name for the path - `base` returned by {@link parse()}.
+   * @return {String} the complete file name.
+   */
+  base() {
+    return this.parse().base;
+  }
+  /**
+   * Returns the file name for the path without extension - `name` returned by {@link parse()}.
+   * @return {String} the file name without extension.
+   */
+  name() {
+    return this.parse().name;
+  }
+  /**
+   * Returns the file name extension - `ext` returned by {@link parse()}.
+   * @return {String} the file name extension.
+   */
+  ext() {
+    return this.parse().ext;
   }
 
   /**
@@ -84,6 +145,7 @@ export class Path {
    */
   async exists() {
     try {
+      this.unstat();
       await this.stat();
       return true;
     }
@@ -105,8 +167,8 @@ export class Path {
    *   .catch( console.log('path does not exist') )
    */
   async stat() {
-    const stats = await stat(this.state.path);
-    return this.state.stats = stats;
+    const stats = this.state.stats ||= await stat(this.state.path);
+    return stats;
   }
 
   /**
@@ -115,6 +177,70 @@ export class Path {
   unstat() {
     this.state.stats = undefined;
     return this;
+  }
+
+  /**
+   * Returns a boolean flag to indicate if the item is a file.
+   */
+  async isFile() {
+    const stats = await this.stat();
+    return stats.isFile();
+  }
+
+  /**
+   * Returns a boolean flag to indicate if the item is a directory.
+   */
+  async isDirectory() {
+    const stats = await this.stat();
+    return stats.isDirectory();
+  }
+
+  /**
+   * Returns the file mode.
+   */
+  async mode() {
+    const stats = await this.stat();
+    return stats.mode;
+  }
+
+  /**
+   * Returns the size of the file in bytes.
+   */
+  async size() {
+    const stats = await this.stat();
+    return stats.size;
+  }
+
+  /**
+   * Returns a date for when the file was last accessed.
+   */
+  async accessed() {
+    const stats = await this.stat();
+    return stats.atime;
+  }
+
+  /**
+   * Returns a date for when the file content was last modified.
+   */
+  async modified() {
+    const stats = await this.stat();
+    return stats.mtime;
+  }
+
+  /**
+   * Returns a date for when the file status was last changed.
+   */
+  async changed() {
+    const stats = await this.stat();
+    return stats.ctime;
+  }
+
+  /**
+   * Returns a date for when the file was created.
+   */
+  async created() {
+    const stats = await this.stat();
+    return stats.birthtime;
   }
 }
 
