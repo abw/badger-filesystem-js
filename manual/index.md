@@ -4,10 +4,13 @@
 
 This is the manual for the `badger-filesystem` Javascript toolkit.
 
-* [Introduction](manual/introduction.html)
+It provides a number of classes and functions to simplify the process of
+working with directories and files in a Node.js project.
+
 * [Directories](manual/directories.html)
 * [Files](manual/files.html)
-* [Data Codecs](manual/codecs.html)
+* [Path](manual/path.html)
+* [Codecs](manual/codecs.html)
 
 # Author
 [Andy Wardley](https://github.com/abw)

@@ -1,8 +1,10 @@
 # Data Codecs
 
 Codecs are used to encode and decode data to and from serialised text.
+They are imported from the [@abw/badger-codecs](https://github.com/abw/badger-codecs-js)
+modulee.
 
-The badger toolkit comes with two built-in codecs for `json` and `yaml` files.
+There are two codecs commonly used for for `json` and `yaml` files.
 
 - [Read Data File](#read-data-files)
 - [Write Data Files](#write-data-files)

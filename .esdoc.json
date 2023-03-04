@@ -15,9 +15,9 @@
           "index": "./manual/index.md",
           "asset": "./manual/asset",
           "files": [
-            "./manual/introduction.md",
             "./manual/directories.md",
             "./manual/files.md",
+            "./manual/path.md",
             "./manual/codecs.md"
           ]
         }
