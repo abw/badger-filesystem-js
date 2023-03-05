@@ -9,11 +9,11 @@ Install `badger-filesystem` using your favourite package manager.
 
 ### npm
 
-    npm install @abw/badger-filesystem
+    npm add @abw/badger-filesystem
 
 ### pnpm
 
-    pnpm install @abw/badger-filesystem
+    pnpm add @abw/badger-filesystem
 
 ### yarn
 
