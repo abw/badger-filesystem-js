@@ -18,3 +18,7 @@ test(
   'relative path up and down',
   t => t.is(p1.relativePath('../wiz/bang'), '/foo/wiz/bang')
 );
+test(
+  'stringification',
+  t => t.is(`FILE: ${p1}`, 'FILE: /foo/bar')
+);

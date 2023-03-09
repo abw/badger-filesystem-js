@@ -53,13 +53,6 @@ export class Path {
     return this.state.type;
   }
 
-
-// { root: '/',
-//   dir: '/home/user/dir',
-//   base: 'file.txt',
-//   ext: '.txt',
-//   name: 'file' }
-
   /**
    * Parse the full path.  Data is cached until {@link uparse()} is called.
    * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath
@@ -241,6 +234,13 @@ export class Path {
   async created() {
     const stats = await this.stat();
     return stats.birthtime;
+  }
+
+  /**
+   * Stringification method.
+   */
+  toString() {
+    return this.path();
   }
 }
 
