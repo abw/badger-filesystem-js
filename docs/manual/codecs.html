@@ -89,9 +89,9 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#mode--" data-ice="link">mode()</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#size--" data-ice="link">size()</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#accessed--" data-ice="link">accessed()</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#modified--" data-ice="link">modified()</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#changed--" data-ice="link">changed()</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/path.html"><a href="manual/path.html#created--" data-ice="link">created()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#modified--" data-ice="link">modified()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#changed--" data-ice="link">changed()</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/path.html"><a href="manual/path.html#created--" data-ice="link">created()</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -100,16 +100,22 @@
     <li data-ice="manualNav" class="indent-h1" data-link="manual/codecs.html"><a href="manual/codecs.html" data-ice="link">Data Codecs</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#read-data-files" data-ice="link">Read Data Files</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#write-data-files" data-ice="link">Write Data Files</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#directory-codec" data-ice="link">Directory Codec</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/codecs.html"><a href="manual/codecs.html#auto-codec" data-ice="link">Auto Codec</a></li>
 </ul>
   </div>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="data-codecs">Data Codecs</h1><p>Codecs are used to encode and decode data to and from serialised text.</p>
-<p>The badger toolkit comes with two built-in codecs for <code>json</code> and <code>yaml</code> files.</p>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="data-codecs">Data Codecs</h1><p>Codecs are used to encode and decode data to and from serialised text.
+They are imported from the <a href="https://github.com/abw/badger-codecs-js">@abw/badger-codecs</a>
+modulee.</p>
+<p>There are two codecs commonly used for <code>json</code> and <code>yaml</code> files.</p>
 <ul>
 <li><a href="#read-data-files">Read Data File</a></li>
 <li><a href="#write-data-files">Write Data Files</a></li>
+<li><a href="#directory-codec">Directory Codec</a></li>
+<li><a href="#auto-codec">Auto Codec</a></li>
 </ul>
 <h2 id="read-data-files">Read Data Files</h2><p>Suppose that you have a <code>badger.yaml</code> file that you want to read.</p>
 <pre><code class="lang-yaml"><code class="source-code prettyprint">name:   Brian
@@ -135,6 +141,12 @@ dir('data')
   .then(
     data =&gt; console.log(data.name, 'is a', data.animal)
   )</code></code></pre>
+<p>You can also pass the <code>codec</code> option to the <code>read()</code> method.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">file('badger.yaml')
+  .read({ codec: 'yaml' })
+  .then(
+    data =&gt; console.log(data.name, 'is a', data.animal)
+  )</code></code></pre>
 <h2 id="write-data-files">Write Data Files</h2><p>The <code>codec</code> option also works when writing data.</p>
 <pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger'
 
@@ -146,6 +158,32 @@ file('giraffe.yaml', { codec: 'yaml' })
 <p>You should now have a <code>giraffe.yaml</code> file containing the following:</p>
 <pre><code class="lang-yaml"><code class="source-code prettyprint">name: Gerald
 animal: Giraffe</code></code></pre>
+<p>You can also pass the <code>codec</code> option to the <code>write()</code> method.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">file('giraffe.yaml')
+  .write(
+    {
+      name:   "Gerald",
+      animal: "Giraffe",
+    },
+    { codec: 'yaml' }
+  )</code></code></pre>
+<h2 id="directory-codec">Directory Codec</h2><p>You can specify the <code>codec</code> option for a directory.  Any files created by
+that directory object will automatically use that codec.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger'
+
+dir('data', { codec: 'yaml' })
+  .file('badger.yaml')
+  .read()
+  .then(
+    data =&gt; console.log(data.name, 'is a', data.animal)
+  )</code></code></pre>
+<h2 id="auto-codec">Auto Codec</h2><p>If you specify the <code>codec</code> as <code>auto</code> on either a file or directory then it
+will determine the codec from the file extension.  The extension must be
+<code>json</code> or <code>yaml</code> but can be in any case, e.g <code>yaml</code>, <code>YAML</code>,
+<code>Yaml</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const data   = dir('data', { codec: 'auto' });
+const badger = await data.file('badger.yaml').read(); // uses yaml codec
+const ferret = await data.file('ferret.json').read(); // uses json codec</code></code></pre>
 </div>
 </div>
 

@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/Constants.js",
-    "content": "export const PATH      = 'path'\nexport const FILE      = 'file'\nexport const DIRECTORY = 'directory'",
+    "content": "export const AUTO      = 'auto'\nexport const PATH      = 'path'\nexport const FILE      = 'file'\nexport const DIRECTORY = 'directory'",
     "static": true,
     "longname": "/Users/abw/js/badger-filesystem-js/src/Constants.js",
     "access": "public",
@@ -577,14 +577,14 @@
   {
     "__docId__": 49,
     "kind": "variable",
-    "name": "PATH",
+    "name": "AUTO",
     "memberof": "src/Constants.js",
     "static": true,
-    "longname": "src/Constants.js~PATH",
+    "longname": "src/Constants.js~AUTO",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{PATH}",
+    "importStyle": "{AUTO}",
     "description": null,
     "lineNumber": 1,
     "undocument": true,
@@ -597,14 +597,14 @@
   {
     "__docId__": 50,
     "kind": "variable",
-    "name": "FILE",
+    "name": "PATH",
     "memberof": "src/Constants.js",
     "static": true,
-    "longname": "src/Constants.js~FILE",
+    "longname": "src/Constants.js~PATH",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{FILE}",
+    "importStyle": "{PATH}",
     "description": null,
     "lineNumber": 2,
     "undocument": true,
@@ -617,14 +617,14 @@
   {
     "__docId__": 51,
     "kind": "variable",
-    "name": "DIRECTORY",
+    "name": "FILE",
     "memberof": "src/Constants.js",
     "static": true,
-    "longname": "src/Constants.js~DIRECTORY",
+    "longname": "src/Constants.js~FILE",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{DIRECTORY}",
+    "importStyle": "{FILE}",
     "description": null,
     "lineNumber": 3,
     "undocument": true,
@@ -636,6 +636,26 @@
   },
   {
     "__docId__": 52,
+    "kind": "variable",
+    "name": "DIRECTORY",
+    "memberof": "src/Constants.js",
+    "static": true,
+    "longname": "src/Constants.js~DIRECTORY",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DIRECTORY}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
     "kind": "file",
     "name": "src/DirPath.js",
     "content": "import { splitList } from \"@abw/badger-utils\";\nimport { dir as fsDir } from \"./Directory.js\";\n\n/**\n * The DirPath class implements a base class for objects that\n * can search one or more directories.\n */\nexport class DirPath {\n  /**\n   * Constructor for filesystem paths.\n   * @param {String|Array} dir - comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects\n   * @return {Object} the {@link DirPath} object\n   */\n  constructor(dir) {\n    const dirs = this.initDirs(dir);\n    this.state = {\n      dirs\n    }\n  }\n\n  /**\n   * Internal method to initialise the directories.  If the `dir` argument is a string then it will be split on\n   * commas and/or whitespace and converted to an array of {@link Directory} objects.  If the `dir` is a\n   * {@link Directory} object then it will be wrapped in an array.  If the `dir` argument is already an array\n   * (presumably of {@link Directory} objects) then no further processing is required.\n   * @param {String|Array} dir - comma/whitespace delimited string containing directories, or a {@link Directory} object or Array of {@link Directory} objects\n   * @return {Array} an array of {@link Directory} objects\n   */\n  initDirs(dir) {\n    return splitList(dir).map( dir => fsDir(dir) );\n  }\n\n  /**\n   * Internal method to return an array of the directories in the `dirs` argument passed to the constructor that\n   * actually exist in the filesystem.  The checks to determine if the directories exists are only carried\n   * out the first time the method is called.  Subsequent calls will return the cached value stored in\n   * `this.state.dirsExist`.\n   * @return {Array} an array of {@link Directory} objects that exist\n   */\n  async dirs() {\n    return this.state.dirsExist\n      || ( this.state.dirsExist = await this.dirsExist() );\n  }\n\n  /**\n   * Internal method to determine which of the directories in the `dirs` argument passed to the constructor\n   * actually exist in the filesystem.\n   * @return {Array} an array of {@link Directory} objects that exist\n   */\n  async dirsExist() {\n    const dirs = this.state.dirs;\n    const exists = await Promise.all(\n      dirs.map( d => d.exists() )\n    );\n    return dirs.filter((value, index) => exists[index]);\n  }\n}\n\nexport default DirPath",
@@ -646,7 +666,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 53,
+    "__docId__": 54,
     "kind": "class",
     "name": "DirPath",
     "memberof": "src/DirPath.js",
@@ -661,7 +681,7 @@
     "interface": false
   },
   {
-    "__docId__": 54,
+    "__docId__": 55,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/DirPath.js~DirPath",
@@ -695,7 +715,7 @@
     }
   },
   {
-    "__docId__": 55,
+    "__docId__": 56,
     "kind": "member",
     "name": "state",
     "memberof": "src/DirPath.js~DirPath",
@@ -712,7 +732,7 @@
     }
   },
   {
-    "__docId__": 56,
+    "__docId__": 57,
     "kind": "method",
     "name": "initDirs",
     "memberof": "src/DirPath.js~DirPath",
@@ -746,7 +766,7 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 58,
     "kind": "method",
     "name": "dirs",
     "memberof": "src/DirPath.js~DirPath",
@@ -768,7 +788,7 @@
     "params": []
   },
   {
-    "__docId__": 58,
+    "__docId__": 59,
     "kind": "method",
     "name": "dirsExist",
     "memberof": "src/DirPath.js~DirPath",
@@ -790,7 +810,7 @@
     "params": []
   },
   {
-    "__docId__": 59,
+    "__docId__": 60,
     "kind": "file",
     "name": "src/Directory.js",
     "content": "import process from 'node:process';\nimport path from 'node:path';\nimport Path from './Path.js'\nimport { file } from './File.js'\nimport { fail } from '@abw/badger-utils';\nimport { rm, mkdir, rmdir, readdir, stat } from 'node:fs/promises'\nimport { DIRECTORY, FILE } from './Constants.js';\n\n/**\n * The Directory class implements a wrapper around a filesystem\n * directory.\n */\nexport class Directory extends Path {\n  constructor(path, options={}) {\n    super(path, options);\n    this.state.type = DIRECTORY;\n  }\n\n  /**\n   * Fetch a new {@link File} object for a file in the directory.\n   * @param {string} path - file path\n   * @param {Object} [options] - file configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Object} the {@link File} object\n   */\n  file(path, options) {\n    this.debug(\"file(%s, %o)\", path, options);\n    return file(this.relativePath(path), this.options(options));\n  }\n\n  /**\n   * Fetch a new {@link Directory} object for a sub-directory in the directory.\n   * @param {string} path - directory path\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} the {@link Directory} object\n   */\n  directory(path, options) {\n    this.debug(\"directory(%s, %o)\", path, options);\n    return dir(this.relativePath(path), this.options(options));\n  }\n\n  /**\n   * An alias for the {@link directory} method for lazy people\n   * @return {Object} the {@link Directory} object\n   */\n  dir(path, options) {\n    this.debug(\"dir(%s, %o)\", path, options);\n    return this.directory(path, options);\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  parent(options) {\n    this.debug(\"parent()\");\n    return this.up(1, options);\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory up one or more levels.\n   * @param {Integer} [n] - how many levels up\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - default codec for encoding/decoding files\n   * @param {String} [options.encoding=utf8] - default character encoding for files\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  up(n=1, options) {\n    this.debug(`up(${n})`);\n    return this.directory(\n      Array(n).fill('..').join('/'),\n      options\n    );\n  }\n\n  /**\n   * Returns the names of the files and sub-directories in the directory\n   * @return {Promise} fulfills with an array of the file and directory names\n   */\n  async read() {\n    this.debug(\"read()\");\n    return await readdir(this.path());\n  }\n\n  /**\n   * Returns an array of {@link File} and {@link Directory} objects for the\n   * contents of the directory.\n   * @return {Promise} fulfills with an array of {@link File} and {@link Directory} objects\n   */\n  async entries() {\n    this.debug(\"entries()\");\n    const names = await this.read();\n    let entries = [ ];\n\n    for (let name of names) {\n      const relpath = this.path(name);\n      const stats = await stat(relpath);\n      if (stats.isFile()) {\n        entries.push(this.file(name))\n      }\n      else if (stats.isDirectory()) {\n        entries.push(this.dir(name));\n      }\n      // ignore anything that isn't a file or directory\n    }\n    return entries;\n  }\n  /**\n   * Returns an array of {@link File} objects for the files in the directory.\n   * @return {Promise} fulfills with an array of {@link File} objects\n   */\n  async files() {\n    const entries = await this.entries();\n    return entries.filter( entry => entry.type() === FILE )\n  }\n  /**\n   * Returns an array of {@link Directory} objects for the directories in the directory.\n   * @return {Promise} fulfills with an array of {@link Directory} objects\n   */\n  async directories() {\n    const entries = await this.entries();\n    return entries.filter( entry => entry.type() === DIRECTORY )\n  }\n  /**\n   * An alias for the {@link directories} method.\n   * @return {Promise} fulfills with an array of {@link Directory} objects\n   */\n  async dirs() {\n    return this.directories();\n  }\n\n  /**\n   * Determines if the directory is empty.\n   * @return {Promise} fulfills with a boolean value true (empty) or false (not empty).\n   */\n  async isEmpty() {\n    this.debug(\"isEmpty()\");\n    const entries = await this.read();\n    return entries.length === 0;\n  }\n\n  /**\n   * Determines if the directory is not empty.\n   * @return {Promise} fulfills with a boolean value true (not empty) or false (empty).\n   */\n  async notEmpty() {\n    this.debug(\"notEmpty()\");\n    const empty = await this.isEmpty();\n    return !empty;\n  }\n\n  /**\n   * Empty the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.force] - force removal of files and directories\n   * @param {Boolean} [options.recursive] - recursively empty and delete sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async empty(options={}) {\n    this.debug(\"empty(%o)\", options);\n    if (await this.exists() && await this.notEmpty()) {\n      await rm(this.path(), options);\n    }\n    return this;\n  }\n\n  /**\n   * Make the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.recursive] - create intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async mkdir(options={}) {\n    this.debug(\"mkdir(%o)\", options);\n    const exists = await this.exists();\n    if (! exists) {\n      await mkdir(this.path(), options);\n    }\n    return this;\n  }\n\n  /**\n   * Remove the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.empty] - delete items in directory\n   * @param {Boolean} [options.force] - force delete files and directories\n   * @param {Boolean} [options.recursive] - recursively delete sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async rmdir(options={}) {\n    this.debug(\"rmdir(%o)\", options);\n    if (options.empty) {\n      await this.empty(options);\n    }\n    if (await this.exists()) {\n      await rmdir(this.path());\n    }\n    return this;\n  }\n\n  /**\n   * Create the directory and any intermediate directories.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.recursive=true] - recursively create intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  create(options={ recursive: true }) {\n    this.debug(\"create(%o)\", options);\n    return this.mkdir(options);\n  }\n\n  /**\n   * Empty and delete the directory.\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.empty=true] - empty directory of any files and sub-directories\n   * @param {Boolean} [options.recursive=true] - recursively delete sub-directories\n   * @param {Boolean} [options.force=true] - force deletion of files and sub-directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  destroy(options={ empty: true, recursive: true, force: true }) {\n    this.debug(\"destroy(%o)\", options);\n    return this.rmdir(options);\n  }\n\n  /**\n   * Assert that a directory exists and optionally create it\n   * @param {Object} [options] - configuration options\n   * @param {Boolean} [options.create] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options or calling {@link create}\n   * @param {Boolean} [options.mkdir] - create the directory, add the `recursive` option to create intermediate directories - equivalent to calling {@link mkdir}\n   * @param {Boolean} [options.recursive] - when used with `mkdir`, creates any intermediate directories\n   * @return {Promise} fulfills to the {@link Directory} object\n   */\n  async mustExist(options={}) {\n    this.debug(\"mustExist(%o)\", options);\n    if (await this.exists()) {\n      return this;\n    }\n    if (options.mkdir) {\n      return this.mkdir(options);\n    }\n    if (options.create) {\n      return this.create();\n    }\n    fail(\"Directory does not exist: \", this.path());\n  }\n}\n\n/**\n * Function to create a new {@link Directory} object\n * @param {string} path - directory path\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const dir = (path, options) => {\n  return new Directory(path, options);\n}\n\n/**\n * Function to create a new {@link Directory} object for the current working directory\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const cwd = options => {\n  return dir(process.cwd(), options);\n}\n\n/**\n * Function to create a new {@link Directory} object for the directory of a JS source file\n * @param {string} url - module url - from `import.meta.url`\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @return {Object} the {@link Directory} object\n */\nexport const bin = (url=process.argv[1], options) => {\n  return dir(\n    path.dirname(url.replace(/^file:\\/\\//, '')),\n    options\n  );\n}\n\nexport default Directory\n",
@@ -801,7 +821,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 60,
+    "__docId__": 61,
     "kind": "class",
     "name": "Directory",
     "memberof": "src/Directory.js",
@@ -819,7 +839,7 @@
     ]
   },
   {
-    "__docId__": 61,
+    "__docId__": 62,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/Directory.js~Directory",
@@ -833,7 +853,7 @@
     "undocument": true
   },
   {
-    "__docId__": 62,
+    "__docId__": 63,
     "kind": "method",
     "name": "file",
     "memberof": "src/Directory.js~Directory",
@@ -898,7 +918,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 64,
     "kind": "method",
     "name": "directory",
     "memberof": "src/Directory.js~Directory",
@@ -963,7 +983,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 65,
     "kind": "method",
     "name": "dir",
     "memberof": "src/Directory.js~Directory",
@@ -998,7 +1018,7 @@
     ]
   },
   {
-    "__docId__": 65,
+    "__docId__": 66,
     "kind": "method",
     "name": "parent",
     "memberof": "src/Directory.js~Directory",
@@ -1053,7 +1073,7 @@
     }
   },
   {
-    "__docId__": 66,
+    "__docId__": 67,
     "kind": "method",
     "name": "up",
     "memberof": "src/Directory.js~Directory",
@@ -1118,7 +1138,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 68,
     "kind": "method",
     "name": "read",
     "memberof": "src/Directory.js~Directory",
@@ -1140,7 +1160,7 @@
     "params": []
   },
   {
-    "__docId__": 68,
+    "__docId__": 69,
     "kind": "method",
     "name": "entries",
     "memberof": "src/Directory.js~Directory",
@@ -1162,7 +1182,7 @@
     "params": []
   },
   {
-    "__docId__": 69,
+    "__docId__": 70,
     "kind": "method",
     "name": "files",
     "memberof": "src/Directory.js~Directory",
@@ -1184,7 +1204,7 @@
     "params": []
   },
   {
-    "__docId__": 70,
+    "__docId__": 71,
     "kind": "method",
     "name": "directories",
     "memberof": "src/Directory.js~Directory",
@@ -1206,7 +1226,7 @@
     "params": []
   },
   {
-    "__docId__": 71,
+    "__docId__": 72,
     "kind": "method",
     "name": "dirs",
     "memberof": "src/Directory.js~Directory",
@@ -1228,7 +1248,7 @@
     "params": []
   },
   {
-    "__docId__": 72,
+    "__docId__": 73,
     "kind": "method",
     "name": "isEmpty",
     "memberof": "src/Directory.js~Directory",
@@ -1250,7 +1270,7 @@
     "params": []
   },
   {
-    "__docId__": 73,
+    "__docId__": 74,
     "kind": "method",
     "name": "notEmpty",
     "memberof": "src/Directory.js~Directory",
@@ -1272,7 +1292,7 @@
     "params": []
   },
   {
-    "__docId__": 74,
+    "__docId__": 75,
     "kind": "method",
     "name": "empty",
     "memberof": "src/Directory.js~Directory",
@@ -1325,7 +1345,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 76,
     "kind": "method",
     "name": "mkdir",
     "memberof": "src/Directory.js~Directory",
@@ -1368,7 +1388,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 77,
     "kind": "method",
     "name": "rmdir",
     "memberof": "src/Directory.js~Directory",
@@ -1431,7 +1451,7 @@
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 78,
     "kind": "method",
     "name": "create",
     "memberof": "src/Directory.js~Directory",
@@ -1476,7 +1496,7 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 79,
     "kind": "method",
     "name": "destroy",
     "memberof": "src/Directory.js~Directory",
@@ -1545,7 +1565,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 80,
     "kind": "method",
     "name": "mustExist",
     "memberof": "src/Directory.js~Directory",
@@ -1608,7 +1628,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 81,
     "kind": "function",
     "name": "dir",
     "memberof": "src/Directory.js",
@@ -1664,7 +1684,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 82,
     "kind": "function",
     "name": "cwd",
     "memberof": "src/Directory.js",
@@ -1710,7 +1730,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 83,
     "kind": "function",
     "name": "bin",
     "memberof": "src/Directory.js",
@@ -1766,10 +1786,10 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 84,
     "kind": "file",
     "name": "src/File.js",
-    "content": "import path from 'node:path'\nimport Path from './Path.js'\nimport { dir } from './Directory.js'\nimport { codec } from '@abw/badger-codecs'\nimport { readFile, writeFile, rm } from 'node:fs/promises'\nimport { FILE } from './Constants.js'\n\n/**\n * The File class implements a wrapper around a filesystem\n * file.\n */\nexport class File extends Path {\n  constructor(path, options={}) {\n    super(path, options);\n    this.state.type = FILE;\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory of the file\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  directory(options) {\n    return dir(path.dirname(this.state.path), options);\n  }\n\n  /**\n   * An alias for the {@link directory} method for lazy people\n   * @return {Object} the parent {@link Directory} object\n   */\n  dir(...args) {\n    return this.directory(...args);\n  }\n\n  /**\n   * Reads the file content.  If a `codec` has been specified then the content is decoded.\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file content\n   * @example\n   * file('myfile.txt').read().then( text => console.log(text) );\n   * @example\n   * file('myfile.json', { codec: 'json' }).read().( data => console.log(data) );\n   * @example\n   * file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );\n   */\n  async read(options) {\n    const opts = this.options(options);\n    const text = await readFile(this.state.path, opts);\n    return opts.codec\n      ? codec(opts.codec).decode(text)\n      : text;\n  }\n\n  /**\n   * Writes the file content.  If a `codec` has been specified then the content will be encoded.\n   * @param {String|Object} data - directory configuration options\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file object\n   * @example\n   * file('myfile.txt').write('Hello World');\n   * @example\n   * file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });\n   * @example\n   * file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });\n   */\n  async write(data, options) {\n    const opts = this.options(options);\n    const text = opts.codec\n      ? codec(opts.codec).encode(data)\n      : data;\n    await writeFile(this.state.path, text, opts);\n    return this;\n  }\n\n  /**\n   * Delete the file content.\n   * @param {Object} [options] - directory configuration options\n   * @param {Boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist\n   * @return {Promise} fulfills with the file object\n   */\n  async delete(options) {\n    await rm(this.state.path, options);\n    return this;\n  }\n}\n\n/**\n * Function to create a new {@link File} object for a file\n * @param {String} path - file path\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @param {String} [options.encoding=utf8] - character encoding\n * @return {Object} the {@link File} object\n */\nexport const file = (path, options) => {\n  return new File(path, options);\n}\n\nexport default File\n",
+    "content": "import path from 'node:path'\nimport Path from './Path.js'\nimport { dir } from './Directory.js'\nimport { codec } from '@abw/badger-codecs'\nimport { readFile, writeFile, rm } from 'node:fs/promises'\nimport { AUTO, FILE } from './Constants.js'\n\n/**\n * The File class implements a wrapper around a filesystem\n * file.\n */\nexport class File extends Path {\n  constructor(path, options={}) {\n    super(path, options);\n    this.state.type = FILE;\n  }\n\n  /**\n   * Returns a new {@link Directory} object for the parent directory of the file\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Object} a {@link Directory} object for the parent\n   */\n  directory(options) {\n    return dir(path.dirname(this.state.path), options);\n  }\n\n  /**\n   * An alias for the {@link directory} method for lazy people\n   * @return {Object} the parent {@link Directory} object\n   */\n  dir(...args) {\n    return this.directory(...args);\n  }\n\n  /**\n   * Reads the file content.  If a `codec` has been specified then the content is decoded.\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file content\n   * @example\n   * file('myfile.txt').read().then( text => console.log(text) );\n   * @example\n   * file('myfile.json', { codec: 'json' }).read().( data => console.log(data) );\n   * @example\n   * file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );\n   */\n  async read(options) {\n    const opts = this.options(options);\n    const text = await readFile(this.state.path, opts);\n    return opts.codec\n      ? this.getCodec(opts.codec).decode(text)\n      : text;\n  }\n\n  /**\n   * Writes the file content.  If a `codec` has been specified then the content will be encoded.\n   * @param {String|Object} data - directory configuration options\n   * @param {Object} [options] - directory configuration options\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @param {String} [options.encoding=utf8] - character encoding\n   * @return {Promise} fulfills with the file object\n   * @example\n   * file('myfile.txt').write('Hello World');\n   * @example\n   * file('myfile.json', { codec: 'json' }).write({ message: 'Hello World' });\n   * @example\n   * file('myfile.json').write({ message: 'Hello World' }, { codec: 'json' });\n   */\n  async write(data, options) {\n    const opts = this.options(options);\n    const text = opts.codec\n      ? this.getCodec(opts.codec).encode(data)\n      : data;\n    await writeFile(this.state.path, text, opts);\n    return this;\n  }\n\n  /**\n   * Delete the file content.\n   * @param {Object} [options] - directory configuration options\n   * @param {Boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist\n   * @return {Promise} fulfills with the file object\n   */\n  async delete(options) {\n    await rm(this.state.path, options);\n    return this;\n  }\n\n  getCodec(type) {\n    if (type === AUTO) {\n      type = this.ext().replace('.', '');\n    }\n    return codec(type)\n  }\n}\n\n/**\n * Function to create a new {@link File} object for a file\n * @param {String} path - file path\n * @param {Object} [options] - configuration options\n * @param {Boolean} [options.codec] - a codec for encoding/decoding files\n * @param {String} [options.encoding=utf8] - character encoding\n * @return {Object} the {@link File} object\n */\nexport const file = (path, options) => {\n  return new File(path, options);\n}\n\nexport default File\n",
     "static": true,
     "longname": "/Users/abw/js/badger-filesystem-js/src/File.js",
     "access": "public",
@@ -1777,7 +1797,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 84,
+    "__docId__": 85,
     "kind": "class",
     "name": "File",
     "memberof": "src/File.js",
@@ -1795,7 +1815,7 @@
     ]
   },
   {
-    "__docId__": 85,
+    "__docId__": 86,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/File.js~File",
@@ -1809,7 +1829,7 @@
     "undocument": true
   },
   {
-    "__docId__": 86,
+    "__docId__": 87,
     "kind": "method",
     "name": "directory",
     "memberof": "src/File.js~File",
@@ -1864,7 +1884,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 88,
     "kind": "method",
     "name": "dir",
     "memberof": "src/File.js~File",
@@ -1894,7 +1914,7 @@
     ]
   },
   {
-    "__docId__": 88,
+    "__docId__": 89,
     "kind": "method",
     "name": "read",
     "memberof": "src/File.js~File",
@@ -1954,7 +1974,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 90,
     "kind": "method",
     "name": "write",
     "memberof": "src/File.js~File",
@@ -2025,7 +2045,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 91,
     "kind": "method",
     "name": "delete",
     "memberof": "src/File.js~File",
@@ -2070,7 +2090,34 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 92,
+    "kind": "method",
+    "name": "getCodec",
+    "memberof": "src/File.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/File.js~File#getCodec",
+    "access": "public",
+    "description": null,
+    "lineNumber": 92,
+    "undocument": true,
+    "params": [
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 93,
     "kind": "function",
     "name": "file",
     "memberof": "src/File.js",
@@ -2083,7 +2130,7 @@
     "importPath": "@abw/badger-filesystem",
     "importStyle": "{file}",
     "description": "Function to create a new {@link File} object for a file",
-    "lineNumber": 101,
+    "lineNumber": 108,
     "params": [
       {
         "nullable": null,
@@ -2138,10 +2185,10 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 94,
     "kind": "file",
     "name": "src/Path.js",
-    "content": "import path from 'node:path';\nimport { stat } from 'node:fs/promises'\nimport { rethrow, doNothing } from '@abw/badger-utils';\nimport { PATH } from './Constants.js';\n\n/**\n * Default configuration options.\n */\nconst defaults = {\n  encoding: 'utf8'\n}\n\n/**\n * The Path class implements a base class for the {@link File} and {@link Directory}\n * classes.  It implements the common functionality for representing a filesystem path.\n */\nexport class Path {\n  /**\n   * Constructor for filesystem paths.\n   * @param {string} path - file path\n   * @param {Object} [options] - configuration options\n   * @param {String} [options.encoding=utf8] - file encoding\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @return {Object} the {@link Path} object\n   */\n  constructor(path, options={}) {\n    // allow path/file/directory to be constructed from an existing object\n    if (path instanceof Path) {\n      path = path.path();\n    }\n    this.state = { path, options: { ...defaults, ...options } };\n    this.state.type = PATH;\n    this.debug = options.debug\n      ? console.log.bind(console)\n      : doNothing\n  }\n\n  /**\n   * Accessor method to return the filesystem path.\n   * @return {String} the filesystem path\n   */\n  path(...args) {\n    return args.length\n      ? this.relativePath(...args)\n      : this.state.path;\n  }\n\n  /**\n   * Accessor method to return the path type: `path`, `file` or `directory`.\n   * @return {String} the path type\n   */\n  type() {\n    return this.state.type;\n  }\n\n\n// { root: '/',\n//   dir: '/home/user/dir',\n//   base: 'file.txt',\n//   ext: '.txt',\n//   name: 'file' }\n\n  /**\n   * Parse the full path.  Data is cached until {@link uparse()} is called.\n   * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath\n   * @return {Object} the parsed path data\n   */\n  parse() {\n    return this.state.parse ||= path.parse(this.state.path);\n  }\n  /**\n   * Method to clear internal cache of parsed path data.\n   */\n  unparse() {\n    delete this.state.parse;\n  }\n  /**\n   * Returns the name of the directory - `dir` returned by {@link parse()}.\n   */\n  dirname() {\n    return this.parse().dir;\n  }\n  /**\n   * Returns the complete file name for the path - `base` returned by {@link parse()}.\n   * @return {String} the complete file name.\n   */\n  base() {\n    return this.parse().base;\n  }\n  /**\n   * Returns the file name for the path without extension - `name` returned by {@link parse()}.\n   * @return {String} the file name without extension.\n   */\n  name() {\n    return this.parse().name;\n  }\n  /**\n   * Returns the file name extension - `ext` returned by {@link parse()}.\n   * @return {String} the file name extension.\n   */\n  ext() {\n    return this.parse().ext;\n  }\n\n  /**\n   * Create a path relative to the current path.\n   * @param {String[]} parts - part(s) of the filesystem path\n   * @return {String} the new path\n   * @example\n   * const p = new Path('/path/to/here')\n   * const q = p.relativePath('there')          // -> /path/to/here/there\n   * const r = p.relativePath('and', 'there')   // -> /path/to/here/and/there\n   */\n  relativePath(...parts) {\n    if (parts.length === 1 && parts[0] instanceof Path) {\n      return parts[0].path();\n    }\n    if (path.isAbsolute(parts[0])) {\n      return path.join(...parts);\n    }\n    return path.join(this.state.path, ...parts);\n  }\n\n  /**\n   * Internal method to merge any options with the pre-defined options passed to the\n   * constructor.  Options passed as arguments will take precedence.\n   * @param {Object} options - new options\n   * @return {Object} the merged options\n   * @example\n   * const p = new Path('/path/to/here', { option1: 'hello' })\n   * const q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }\n   */\n  options(options={}) {\n    return { ...this.state.options, ...options };\n  }\n\n  /**\n   * Method to assert that the path exists.\n   * @return {Promise} fulfills with `true` if the path exists or rejects if the path doesn't\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.exists()\n   *   .then( console.log('path exists') )\n   *   .catch( console.log('path does not exist') )\n   */\n  async exists() {\n    try {\n      this.unstat();\n      await this.stat();\n      return true;\n    }\n    catch (error) {\n      return error.code === 'ENOENT'\n        ? false\n        : rethrow(error);\n    }\n  }\n\n  /**\n   * Method to fetch stats for the path.  Uses the `stat` function from `node:fs/promises`.\n   * Stats are cached internally (subject to change)\n   * @return {Promise} fulfills with path stats returned from the `stat` function\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.stat()\n   *   .then( stats => console.log('path stats:', stats) )\n   *   .catch( console.log('path does not exist') )\n   */\n  async stat() {\n    const stats = this.state.stats ||= await stat(this.state.path);\n    return stats;\n  }\n\n  /**\n   * Method to clear internal cache of path stats (subject to change)\n   */\n  unstat() {\n    this.state.stats = undefined;\n    return this;\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a file.\n   */\n  async isFile() {\n    const stats = await this.stat();\n    return stats.isFile();\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a directory.\n   */\n  async isDirectory() {\n    const stats = await this.stat();\n    return stats.isDirectory();\n  }\n\n  /**\n   * Returns the file mode.\n   */\n  async mode() {\n    const stats = await this.stat();\n    return stats.mode;\n  }\n\n  /**\n   * Returns the size of the file in bytes.\n   */\n  async size() {\n    const stats = await this.stat();\n    return stats.size;\n  }\n\n  /**\n   * Returns a date for when the file was last accessed.\n   */\n  async accessed() {\n    const stats = await this.stat();\n    return stats.atime;\n  }\n\n  /**\n   * Returns a date for when the file content was last modified.\n   */\n  async modified() {\n    const stats = await this.stat();\n    return stats.mtime;\n  }\n\n  /**\n   * Returns a date for when the file status was last changed.\n   */\n  async changed() {\n    const stats = await this.stat();\n    return stats.ctime;\n  }\n\n  /**\n   * Returns a date for when the file was created.\n   */\n  async created() {\n    const stats = await this.stat();\n    return stats.birthtime;\n  }\n}\n\nexport default Path\n",
+    "content": "import path from 'node:path';\nimport { stat } from 'node:fs/promises'\nimport { rethrow, doNothing } from '@abw/badger-utils';\nimport { PATH } from './Constants.js';\n\n/**\n * Default configuration options.\n */\nconst defaults = {\n  encoding: 'utf8'\n}\n\n/**\n * The Path class implements a base class for the {@link File} and {@link Directory}\n * classes.  It implements the common functionality for representing a filesystem path.\n */\nexport class Path {\n  /**\n   * Constructor for filesystem paths.\n   * @param {string} path - file path\n   * @param {Object} [options] - configuration options\n   * @param {String} [options.encoding=utf8] - file encoding\n   * @param {String} [options.codec] - codec for encoding/decoding file data\n   * @return {Object} the {@link Path} object\n   */\n  constructor(path, options={}) {\n    // allow path/file/directory to be constructed from an existing object\n    if (path instanceof Path) {\n      path = path.path();\n    }\n    this.state = { path, options: { ...defaults, ...options } };\n    this.state.type = PATH;\n    this.debug = options.debug\n      ? console.log.bind(console)\n      : doNothing\n  }\n\n  /**\n   * Accessor method to return the filesystem path.\n   * @return {String} the filesystem path\n   */\n  path(...args) {\n    return args.length\n      ? this.relativePath(...args)\n      : this.state.path;\n  }\n\n  /**\n   * Accessor method to return the path type: `path`, `file` or `directory`.\n   * @return {String} the path type\n   */\n  type() {\n    return this.state.type;\n  }\n\n  /**\n   * Parse the full path.  Data is cached until {@link uparse()} is called.\n   * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath\n   * @return {Object} the parsed path data\n   */\n  parse() {\n    return this.state.parse ||= path.parse(this.state.path);\n  }\n  /**\n   * Method to clear internal cache of parsed path data.\n   */\n  unparse() {\n    delete this.state.parse;\n  }\n  /**\n   * Returns the name of the directory - `dir` returned by {@link parse()}.\n   */\n  dirname() {\n    return this.parse().dir;\n  }\n  /**\n   * Returns the complete file name for the path - `base` returned by {@link parse()}.\n   * @return {String} the complete file name.\n   */\n  base() {\n    return this.parse().base;\n  }\n  /**\n   * Returns the file name for the path without extension - `name` returned by {@link parse()}.\n   * @return {String} the file name without extension.\n   */\n  name() {\n    return this.parse().name;\n  }\n  /**\n   * Returns the file name extension - `ext` returned by {@link parse()}.\n   * @return {String} the file name extension.\n   */\n  ext() {\n    return this.parse().ext;\n  }\n\n  /**\n   * Create a path relative to the current path.\n   * @param {String[]} parts - part(s) of the filesystem path\n   * @return {String} the new path\n   * @example\n   * const p = new Path('/path/to/here')\n   * const q = p.relativePath('there')          // -> /path/to/here/there\n   * const r = p.relativePath('and', 'there')   // -> /path/to/here/and/there\n   */\n  relativePath(...parts) {\n    if (parts.length === 1 && parts[0] instanceof Path) {\n      return parts[0].path();\n    }\n    if (path.isAbsolute(parts[0])) {\n      return path.join(...parts);\n    }\n    return path.join(this.state.path, ...parts);\n  }\n\n  /**\n   * Internal method to merge any options with the pre-defined options passed to the\n   * constructor.  Options passed as arguments will take precedence.\n   * @param {Object} options - new options\n   * @return {Object} the merged options\n   * @example\n   * const p = new Path('/path/to/here', { option1: 'hello' })\n   * const q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }\n   */\n  options(options={}) {\n    return { ...this.state.options, ...options };\n  }\n\n  /**\n   * Method to assert that the path exists.\n   * @return {Promise} fulfills with `true` if the path exists or rejects if the path doesn't\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.exists()\n   *   .then( console.log('path exists') )\n   *   .catch( console.log('path does not exist') )\n   */\n  async exists() {\n    try {\n      this.unstat();\n      await this.stat();\n      return true;\n    }\n    catch (error) {\n      return error.code === 'ENOENT'\n        ? false\n        : rethrow(error);\n    }\n  }\n\n  /**\n   * Method to fetch stats for the path.  Uses the `stat` function from `node:fs/promises`.\n   * Stats are cached internally (subject to change)\n   * @return {Promise} fulfills with path stats returned from the `stat` function\n   * @example\n   * const p = new Path('/path/to/here')\n   * p.stat()\n   *   .then( stats => console.log('path stats:', stats) )\n   *   .catch( console.log('path does not exist') )\n   */\n  async stat() {\n    const stats = this.state.stats ||= await stat(this.state.path);\n    return stats;\n  }\n\n  /**\n   * Method to clear internal cache of path stats (subject to change)\n   */\n  unstat() {\n    this.state.stats = undefined;\n    return this;\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a file.\n   */\n  async isFile() {\n    const stats = await this.stat();\n    return stats.isFile();\n  }\n\n  /**\n   * Returns a boolean flag to indicate if the item is a directory.\n   */\n  async isDirectory() {\n    const stats = await this.stat();\n    return stats.isDirectory();\n  }\n\n  /**\n   * Returns the file mode.\n   */\n  async mode() {\n    const stats = await this.stat();\n    return stats.mode;\n  }\n\n  /**\n   * Returns the size of the file in bytes.\n   */\n  async size() {\n    const stats = await this.stat();\n    return stats.size;\n  }\n\n  /**\n   * Returns a date for when the file was last accessed.\n   */\n  async accessed() {\n    const stats = await this.stat();\n    return stats.atime;\n  }\n\n  /**\n   * Returns a date for when the file content was last modified.\n   */\n  async modified() {\n    const stats = await this.stat();\n    return stats.mtime;\n  }\n\n  /**\n   * Returns a date for when the file status was last changed.\n   */\n  async changed() {\n    const stats = await this.stat();\n    return stats.ctime;\n  }\n\n  /**\n   * Returns a date for when the file was created.\n   */\n  async created() {\n    const stats = await this.stat();\n    return stats.birthtime;\n  }\n\n  /**\n   * Stringification method.\n   */\n  toString() {\n    return this.path();\n  }\n}\n\nexport default Path\n",
     "static": true,
     "longname": "/Users/abw/js/badger-filesystem-js/src/Path.js",
     "access": "public",
@@ -2149,7 +2196,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 93,
+    "__docId__": 95,
     "kind": "variable",
     "name": "defaults",
     "memberof": "src/Path.js",
@@ -2169,7 +2216,7 @@
     "ignore": true
   },
   {
-    "__docId__": 94,
+    "__docId__": 96,
     "kind": "class",
     "name": "Path",
     "memberof": "src/Path.js",
@@ -2184,7 +2231,7 @@
     "interface": false
   },
   {
-    "__docId__": 95,
+    "__docId__": 97,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/Path.js~Path",
@@ -2249,7 +2296,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 98,
     "kind": "member",
     "name": "state",
     "memberof": "src/Path.js~Path",
@@ -2266,7 +2313,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 99,
     "kind": "member",
     "name": "debug",
     "memberof": "src/Path.js~Path",
@@ -2283,7 +2330,7 @@
     }
   },
   {
-    "__docId__": 98,
+    "__docId__": 100,
     "kind": "method",
     "name": "path",
     "memberof": "src/Path.js~Path",
@@ -2313,7 +2360,7 @@
     ]
   },
   {
-    "__docId__": 99,
+    "__docId__": 101,
     "kind": "method",
     "name": "type",
     "memberof": "src/Path.js~Path",
@@ -2335,7 +2382,7 @@
     "params": []
   },
   {
-    "__docId__": 100,
+    "__docId__": 102,
     "kind": "external",
     "name": "path.parse(path)",
     "externalLink": "https://nodejs.org/api/path.html#pathparsepath",
@@ -2344,7 +2391,7 @@
     "longname": "src/Path.js~path.parse(path)",
     "access": "public",
     "description": "Parse the full path.  Data is cached until {@link uparse()} is called.",
-    "lineNumber": 68,
+    "lineNumber": 61,
     "return": {
       "nullable": null,
       "types": [
@@ -2355,7 +2402,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 103,
     "kind": "method",
     "name": "unparse",
     "memberof": "src/Path.js~Path",
@@ -2365,12 +2412,12 @@
     "longname": "src/Path.js~Path#unparse",
     "access": "public",
     "description": "Method to clear internal cache of parsed path data.",
-    "lineNumber": 74,
+    "lineNumber": 67,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 102,
+    "__docId__": 104,
     "kind": "method",
     "name": "dirname",
     "memberof": "src/Path.js~Path",
@@ -2380,7 +2427,7 @@
     "longname": "src/Path.js~Path#dirname",
     "access": "public",
     "description": "Returns the name of the directory - `dir` returned by {@link parse()}.",
-    "lineNumber": 80,
+    "lineNumber": 73,
     "params": [],
     "return": {
       "types": [
@@ -2389,7 +2436,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 105,
     "kind": "method",
     "name": "base",
     "memberof": "src/Path.js~Path",
@@ -2399,7 +2446,7 @@
     "longname": "src/Path.js~Path#base",
     "access": "public",
     "description": "Returns the complete file name for the path - `base` returned by {@link parse()}.",
-    "lineNumber": 87,
+    "lineNumber": 80,
     "return": {
       "nullable": null,
       "types": [
@@ -2411,7 +2458,7 @@
     "params": []
   },
   {
-    "__docId__": 104,
+    "__docId__": 106,
     "kind": "method",
     "name": "name",
     "memberof": "src/Path.js~Path",
@@ -2421,7 +2468,7 @@
     "longname": "src/Path.js~Path#name",
     "access": "public",
     "description": "Returns the file name for the path without extension - `name` returned by {@link parse()}.",
-    "lineNumber": 94,
+    "lineNumber": 87,
     "return": {
       "nullable": null,
       "types": [
@@ -2433,7 +2480,7 @@
     "params": []
   },
   {
-    "__docId__": 105,
+    "__docId__": 107,
     "kind": "method",
     "name": "ext",
     "memberof": "src/Path.js~Path",
@@ -2443,7 +2490,7 @@
     "longname": "src/Path.js~Path#ext",
     "access": "public",
     "description": "Returns the file name extension - `ext` returned by {@link parse()}.",
-    "lineNumber": 101,
+    "lineNumber": 94,
     "return": {
       "nullable": null,
       "types": [
@@ -2455,7 +2502,7 @@
     "params": []
   },
   {
-    "__docId__": 106,
+    "__docId__": 108,
     "kind": "method",
     "name": "relativePath",
     "memberof": "src/Path.js~Path",
@@ -2468,7 +2515,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\nconst q = p.relativePath('there')          // -> /path/to/here/there\nconst r = p.relativePath('and', 'there')   // -> /path/to/here/and/there"
     ],
-    "lineNumber": 114,
+    "lineNumber": 107,
     "params": [
       {
         "nullable": null,
@@ -2491,7 +2538,7 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 109,
     "kind": "method",
     "name": "options",
     "memberof": "src/Path.js~Path",
@@ -2504,7 +2551,7 @@
     "examples": [
       "const p = new Path('/path/to/here', { option1: 'hello' })\nconst q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }"
     ],
-    "lineNumber": 133,
+    "lineNumber": 126,
     "params": [
       {
         "nullable": null,
@@ -2527,7 +2574,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 110,
     "kind": "method",
     "name": "exists",
     "memberof": "src/Path.js~Path",
@@ -2540,7 +2587,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\np.exists()\n  .then( console.log('path exists') )\n  .catch( console.log('path does not exist') )"
     ],
-    "lineNumber": 146,
+    "lineNumber": 139,
     "return": {
       "nullable": null,
       "types": [
@@ -2552,7 +2599,7 @@
     "params": []
   },
   {
-    "__docId__": 109,
+    "__docId__": 111,
     "kind": "method",
     "name": "stat",
     "memberof": "src/Path.js~Path",
@@ -2565,7 +2612,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\np.stat()\n  .then( stats => console.log('path stats:', stats) )\n  .catch( console.log('path does not exist') )"
     ],
-    "lineNumber": 169,
+    "lineNumber": 162,
     "return": {
       "nullable": null,
       "types": [
@@ -2577,7 +2624,7 @@
     "params": []
   },
   {
-    "__docId__": 110,
+    "__docId__": 112,
     "kind": "method",
     "name": "unstat",
     "memberof": "src/Path.js~Path",
@@ -2587,45 +2634,7 @@
     "longname": "src/Path.js~Path#unstat",
     "access": "public",
     "description": "Method to clear internal cache of path stats (subject to change)",
-    "lineNumber": 177,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 111,
-    "kind": "method",
-    "name": "isFile",
-    "memberof": "src/Path.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/Path.js~Path#isFile",
-    "access": "public",
-    "description": "Returns a boolean flag to indicate if the item is a file.",
-    "lineNumber": 185,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 112,
-    "kind": "method",
-    "name": "isDirectory",
-    "memberof": "src/Path.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/Path.js~Path#isDirectory",
-    "access": "public",
-    "description": "Returns a boolean flag to indicate if the item is a directory.",
-    "lineNumber": 193,
+    "lineNumber": 170,
     "params": [],
     "return": {
       "types": [
@@ -2636,15 +2645,15 @@
   {
     "__docId__": 113,
     "kind": "method",
-    "name": "mode",
+    "name": "isFile",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#mode",
+    "longname": "src/Path.js~Path#isFile",
     "access": "public",
-    "description": "Returns the file mode.",
-    "lineNumber": 201,
+    "description": "Returns a boolean flag to indicate if the item is a file.",
+    "lineNumber": 178,
     "params": [],
     "return": {
       "types": [
@@ -2655,15 +2664,15 @@
   {
     "__docId__": 114,
     "kind": "method",
-    "name": "size",
+    "name": "isDirectory",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#size",
+    "longname": "src/Path.js~Path#isDirectory",
     "access": "public",
-    "description": "Returns the size of the file in bytes.",
-    "lineNumber": 209,
+    "description": "Returns a boolean flag to indicate if the item is a directory.",
+    "lineNumber": 186,
     "params": [],
     "return": {
       "types": [
@@ -2674,15 +2683,15 @@
   {
     "__docId__": 115,
     "kind": "method",
-    "name": "accessed",
+    "name": "mode",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#accessed",
+    "longname": "src/Path.js~Path#mode",
     "access": "public",
-    "description": "Returns a date for when the file was last accessed.",
-    "lineNumber": 217,
+    "description": "Returns the file mode.",
+    "lineNumber": 194,
     "params": [],
     "return": {
       "types": [
@@ -2693,15 +2702,15 @@
   {
     "__docId__": 116,
     "kind": "method",
-    "name": "modified",
+    "name": "size",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#modified",
+    "longname": "src/Path.js~Path#size",
     "access": "public",
-    "description": "Returns a date for when the file content was last modified.",
-    "lineNumber": 225,
+    "description": "Returns the size of the file in bytes.",
+    "lineNumber": 202,
     "params": [],
     "return": {
       "types": [
@@ -2712,15 +2721,15 @@
   {
     "__docId__": 117,
     "kind": "method",
-    "name": "changed",
+    "name": "accessed",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#changed",
+    "longname": "src/Path.js~Path#accessed",
     "access": "public",
-    "description": "Returns a date for when the file status was last changed.",
-    "lineNumber": 233,
+    "description": "Returns a date for when the file was last accessed.",
+    "lineNumber": 210,
     "params": [],
     "return": {
       "types": [
@@ -2731,15 +2740,15 @@
   {
     "__docId__": 118,
     "kind": "method",
-    "name": "created",
+    "name": "modified",
     "memberof": "src/Path.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/Path.js~Path#created",
+    "longname": "src/Path.js~Path#modified",
     "access": "public",
-    "description": "Returns a date for when the file was created.",
-    "lineNumber": 241,
+    "description": "Returns a date for when the file content was last modified.",
+    "lineNumber": 218,
     "params": [],
     "return": {
       "types": [
@@ -2748,7 +2757,64 @@
     }
   },
   {
-    "__docId__": 124,
+    "__docId__": 119,
+    "kind": "method",
+    "name": "changed",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#changed",
+    "access": "public",
+    "description": "Returns a date for when the file status was last changed.",
+    "lineNumber": 226,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "created",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/Path.js~Path#created",
+    "access": "public",
+    "description": "Returns a date for when the file was created.",
+    "lineNumber": 234,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "method",
+    "name": "toString",
+    "memberof": "src/Path.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Path.js~Path#toString",
+    "access": "public",
+    "description": "Stringification method.",
+    "lineNumber": 242,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
     "kind": "file",
     "name": "src/index.js",
     "content": "export * from './Constants.js';\nexport * from './Directory.js';\nexport * from './DirPath.js';\nexport * from './File.js';\nexport * from './Path.js';\n",
@@ -2759,16 +2825,16 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 125,
+    "__docId__": 128,
     "kind": "variable",
-    "name": "PATH",
+    "name": "AUTO",
     "memberof": "src/index.js",
     "static": true,
-    "longname": "src/index.js~PATH",
+    "longname": "src/index.js~AUTO",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{PATH}",
+    "importStyle": "{AUTO}",
     "description": null,
     "lineNumber": 1,
     "undocument": true,
@@ -2779,16 +2845,16 @@
     }
   },
   {
-    "__docId__": 126,
+    "__docId__": 129,
     "kind": "variable",
-    "name": "FILE",
+    "name": "PATH",
     "memberof": "src/index.js",
     "static": true,
-    "longname": "src/index.js~FILE",
+    "longname": "src/index.js~PATH",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{FILE}",
+    "importStyle": "{PATH}",
     "description": null,
     "lineNumber": 2,
     "undocument": true,
@@ -2799,16 +2865,16 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 130,
     "kind": "variable",
-    "name": "DIRECTORY",
+    "name": "FILE",
     "memberof": "src/index.js",
     "static": true,
-    "longname": "src/index.js~DIRECTORY",
+    "longname": "src/index.js~FILE",
     "access": "public",
     "export": true,
     "importPath": "@abw/badger-filesystem",
-    "importStyle": "{DIRECTORY}",
+    "importStyle": "{FILE}",
     "description": null,
     "lineNumber": 3,
     "undocument": true,
@@ -2819,7 +2885,27 @@
     }
   },
   {
-    "__docId__": 128,
+    "__docId__": 131,
+    "kind": "variable",
+    "name": "DIRECTORY",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~DIRECTORY",
+    "access": "public",
+    "export": true,
+    "importPath": "@abw/badger-filesystem",
+    "importStyle": "{DIRECTORY}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
     "kind": "class",
     "name": "Directory",
     "memberof": "src/index.js",
@@ -2838,7 +2924,7 @@
     ]
   },
   {
-    "__docId__": 129,
+    "__docId__": 133,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/index.js~Directory",
@@ -2852,7 +2938,7 @@
     "undocument": true
   },
   {
-    "__docId__": 130,
+    "__docId__": 134,
     "kind": "method",
     "name": "file",
     "memberof": "src/index.js~Directory",
@@ -2917,7 +3003,7 @@
     }
   },
   {
-    "__docId__": 131,
+    "__docId__": 135,
     "kind": "method",
     "name": "directory",
     "memberof": "src/index.js~Directory",
@@ -2982,7 +3068,7 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 136,
     "kind": "method",
     "name": "dir",
     "memberof": "src/index.js~Directory",
@@ -3017,7 +3103,7 @@
     ]
   },
   {
-    "__docId__": 133,
+    "__docId__": 137,
     "kind": "method",
     "name": "parent",
     "memberof": "src/index.js~Directory",
@@ -3072,7 +3158,7 @@
     }
   },
   {
-    "__docId__": 134,
+    "__docId__": 138,
     "kind": "method",
     "name": "up",
     "memberof": "src/index.js~Directory",
@@ -3137,7 +3223,7 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 139,
     "kind": "method",
     "name": "read",
     "memberof": "src/index.js~Directory",
@@ -3159,7 +3245,7 @@
     "params": []
   },
   {
-    "__docId__": 136,
+    "__docId__": 140,
     "kind": "method",
     "name": "entries",
     "memberof": "src/index.js~Directory",
@@ -3181,7 +3267,7 @@
     "params": []
   },
   {
-    "__docId__": 137,
+    "__docId__": 141,
     "kind": "method",
     "name": "files",
     "memberof": "src/index.js~Directory",
@@ -3203,7 +3289,7 @@
     "params": []
   },
   {
-    "__docId__": 138,
+    "__docId__": 142,
     "kind": "method",
     "name": "directories",
     "memberof": "src/index.js~Directory",
@@ -3225,7 +3311,7 @@
     "params": []
   },
   {
-    "__docId__": 139,
+    "__docId__": 143,
     "kind": "method",
     "name": "dirs",
     "memberof": "src/index.js~Directory",
@@ -3247,7 +3333,7 @@
     "params": []
   },
   {
-    "__docId__": 140,
+    "__docId__": 144,
     "kind": "method",
     "name": "isEmpty",
     "memberof": "src/index.js~Directory",
@@ -3269,7 +3355,7 @@
     "params": []
   },
   {
-    "__docId__": 141,
+    "__docId__": 145,
     "kind": "method",
     "name": "notEmpty",
     "memberof": "src/index.js~Directory",
@@ -3291,7 +3377,7 @@
     "params": []
   },
   {
-    "__docId__": 142,
+    "__docId__": 146,
     "kind": "method",
     "name": "empty",
     "memberof": "src/index.js~Directory",
@@ -3344,7 +3430,7 @@
     }
   },
   {
-    "__docId__": 143,
+    "__docId__": 147,
     "kind": "method",
     "name": "mkdir",
     "memberof": "src/index.js~Directory",
@@ -3387,7 +3473,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 148,
     "kind": "method",
     "name": "rmdir",
     "memberof": "src/index.js~Directory",
@@ -3450,7 +3536,7 @@
     }
   },
   {
-    "__docId__": 145,
+    "__docId__": 149,
     "kind": "method",
     "name": "create",
     "memberof": "src/index.js~Directory",
@@ -3495,7 +3581,7 @@
     }
   },
   {
-    "__docId__": 146,
+    "__docId__": 150,
     "kind": "method",
     "name": "destroy",
     "memberof": "src/index.js~Directory",
@@ -3564,7 +3650,7 @@
     }
   },
   {
-    "__docId__": 147,
+    "__docId__": 151,
     "kind": "method",
     "name": "mustExist",
     "memberof": "src/index.js~Directory",
@@ -3627,7 +3713,7 @@
     }
   },
   {
-    "__docId__": 148,
+    "__docId__": 152,
     "kind": "function",
     "name": "dir",
     "memberof": "src/index.js",
@@ -3663,7 +3749,7 @@
     }
   },
   {
-    "__docId__": 149,
+    "__docId__": 153,
     "kind": "function",
     "name": "cwd",
     "memberof": "src/index.js",
@@ -3693,7 +3779,7 @@
     }
   },
   {
-    "__docId__": 150,
+    "__docId__": 154,
     "kind": "function",
     "name": "bin",
     "memberof": "src/index.js",
@@ -3730,7 +3816,7 @@
     }
   },
   {
-    "__docId__": 151,
+    "__docId__": 155,
     "kind": "class",
     "name": "DirPath",
     "memberof": "src/index.js",
@@ -3746,7 +3832,7 @@
     "interface": false
   },
   {
-    "__docId__": 152,
+    "__docId__": 156,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/index.js~DirPath",
@@ -3780,7 +3866,7 @@
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 157,
     "kind": "member",
     "name": "state",
     "memberof": "src/index.js~DirPath",
@@ -3797,7 +3883,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 158,
     "kind": "method",
     "name": "initDirs",
     "memberof": "src/index.js~DirPath",
@@ -3831,7 +3917,7 @@
     }
   },
   {
-    "__docId__": 155,
+    "__docId__": 159,
     "kind": "method",
     "name": "dirs",
     "memberof": "src/index.js~DirPath",
@@ -3853,7 +3939,7 @@
     "params": []
   },
   {
-    "__docId__": 156,
+    "__docId__": 160,
     "kind": "method",
     "name": "dirsExist",
     "memberof": "src/index.js~DirPath",
@@ -3875,7 +3961,7 @@
     "params": []
   },
   {
-    "__docId__": 157,
+    "__docId__": 161,
     "kind": "class",
     "name": "File",
     "memberof": "src/index.js",
@@ -3894,7 +3980,7 @@
     ]
   },
   {
-    "__docId__": 158,
+    "__docId__": 162,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/index.js~File",
@@ -3908,7 +3994,7 @@
     "undocument": true
   },
   {
-    "__docId__": 159,
+    "__docId__": 163,
     "kind": "method",
     "name": "directory",
     "memberof": "src/index.js~File",
@@ -3963,7 +4049,7 @@
     }
   },
   {
-    "__docId__": 160,
+    "__docId__": 164,
     "kind": "method",
     "name": "dir",
     "memberof": "src/index.js~File",
@@ -3993,7 +4079,7 @@
     ]
   },
   {
-    "__docId__": 161,
+    "__docId__": 165,
     "kind": "method",
     "name": "read",
     "memberof": "src/index.js~File",
@@ -4053,7 +4139,7 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 166,
     "kind": "method",
     "name": "write",
     "memberof": "src/index.js~File",
@@ -4124,7 +4210,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 167,
     "kind": "method",
     "name": "delete",
     "memberof": "src/index.js~File",
@@ -4169,7 +4255,34 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 168,
+    "kind": "method",
+    "name": "getCodec",
+    "memberof": "src/index.js~File",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~File#getCodec",
+    "access": "public",
+    "description": null,
+    "lineNumber": 92,
+    "undocument": true,
+    "params": [
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 169,
     "kind": "function",
     "name": "file",
     "memberof": "src/index.js",
@@ -4182,7 +4295,7 @@
     "importPath": "@abw/badger-filesystem",
     "importStyle": "{file}",
     "description": null,
-    "lineNumber": 101,
+    "lineNumber": 108,
     "undocument": true,
     "params": [
       {
@@ -4205,7 +4318,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 170,
     "kind": "class",
     "name": "Path",
     "memberof": "src/index.js",
@@ -4221,7 +4334,7 @@
     "interface": false
   },
   {
-    "__docId__": 166,
+    "__docId__": 171,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/index.js~Path",
@@ -4286,7 +4399,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 172,
     "kind": "member",
     "name": "state",
     "memberof": "src/index.js~Path",
@@ -4303,7 +4416,7 @@
     }
   },
   {
-    "__docId__": 168,
+    "__docId__": 173,
     "kind": "member",
     "name": "debug",
     "memberof": "src/index.js~Path",
@@ -4320,7 +4433,7 @@
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 174,
     "kind": "method",
     "name": "path",
     "memberof": "src/index.js~Path",
@@ -4350,7 +4463,7 @@
     ]
   },
   {
-    "__docId__": 170,
+    "__docId__": 175,
     "kind": "method",
     "name": "type",
     "memberof": "src/index.js~Path",
@@ -4372,7 +4485,7 @@
     "params": []
   },
   {
-    "__docId__": 171,
+    "__docId__": 176,
     "kind": "external",
     "name": "path.parse(path)",
     "externalLink": "https://nodejs.org/api/path.html#pathparsepath",
@@ -4381,7 +4494,7 @@
     "longname": "src/index.js~path.parse(path)",
     "access": "public",
     "description": "Parse the full path.  Data is cached until {@link uparse()} is called.",
-    "lineNumber": 68,
+    "lineNumber": 61,
     "return": {
       "nullable": null,
       "types": [
@@ -4392,7 +4505,7 @@
     }
   },
   {
-    "__docId__": 172,
+    "__docId__": 177,
     "kind": "method",
     "name": "unparse",
     "memberof": "src/index.js~Path",
@@ -4402,12 +4515,12 @@
     "longname": "src/index.js~Path#unparse",
     "access": "public",
     "description": "Method to clear internal cache of parsed path data.",
-    "lineNumber": 74,
+    "lineNumber": 67,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 173,
+    "__docId__": 178,
     "kind": "method",
     "name": "dirname",
     "memberof": "src/index.js~Path",
@@ -4417,7 +4530,7 @@
     "longname": "src/index.js~Path#dirname",
     "access": "public",
     "description": "Returns the name of the directory - `dir` returned by {@link parse()}.",
-    "lineNumber": 80,
+    "lineNumber": 73,
     "params": [],
     "return": {
       "types": [
@@ -4426,7 +4539,7 @@
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 179,
     "kind": "method",
     "name": "base",
     "memberof": "src/index.js~Path",
@@ -4436,7 +4549,7 @@
     "longname": "src/index.js~Path#base",
     "access": "public",
     "description": "Returns the complete file name for the path - `base` returned by {@link parse()}.",
-    "lineNumber": 87,
+    "lineNumber": 80,
     "return": {
       "nullable": null,
       "types": [
@@ -4448,7 +4561,7 @@
     "params": []
   },
   {
-    "__docId__": 175,
+    "__docId__": 180,
     "kind": "method",
     "name": "name",
     "memberof": "src/index.js~Path",
@@ -4458,7 +4571,7 @@
     "longname": "src/index.js~Path#name",
     "access": "public",
     "description": "Returns the file name for the path without extension - `name` returned by {@link parse()}.",
-    "lineNumber": 94,
+    "lineNumber": 87,
     "return": {
       "nullable": null,
       "types": [
@@ -4470,7 +4583,7 @@
     "params": []
   },
   {
-    "__docId__": 176,
+    "__docId__": 181,
     "kind": "method",
     "name": "ext",
     "memberof": "src/index.js~Path",
@@ -4480,7 +4593,7 @@
     "longname": "src/index.js~Path#ext",
     "access": "public",
     "description": "Returns the file name extension - `ext` returned by {@link parse()}.",
-    "lineNumber": 101,
+    "lineNumber": 94,
     "return": {
       "nullable": null,
       "types": [
@@ -4492,7 +4605,7 @@
     "params": []
   },
   {
-    "__docId__": 177,
+    "__docId__": 182,
     "kind": "method",
     "name": "relativePath",
     "memberof": "src/index.js~Path",
@@ -4505,7 +4618,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\nconst q = p.relativePath('there')          // -> /path/to/here/there\nconst r = p.relativePath('and', 'there')   // -> /path/to/here/and/there"
     ],
-    "lineNumber": 114,
+    "lineNumber": 107,
     "params": [
       {
         "nullable": null,
@@ -4528,7 +4641,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 183,
     "kind": "method",
     "name": "options",
     "memberof": "src/index.js~Path",
@@ -4541,7 +4654,7 @@
     "examples": [
       "const p = new Path('/path/to/here', { option1: 'hello' })\nconst q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }"
     ],
-    "lineNumber": 133,
+    "lineNumber": 126,
     "params": [
       {
         "nullable": null,
@@ -4564,7 +4677,7 @@
     }
   },
   {
-    "__docId__": 179,
+    "__docId__": 184,
     "kind": "method",
     "name": "exists",
     "memberof": "src/index.js~Path",
@@ -4577,7 +4690,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\np.exists()\n  .then( console.log('path exists') )\n  .catch( console.log('path does not exist') )"
     ],
-    "lineNumber": 146,
+    "lineNumber": 139,
     "return": {
       "nullable": null,
       "types": [
@@ -4589,7 +4702,7 @@
     "params": []
   },
   {
-    "__docId__": 180,
+    "__docId__": 185,
     "kind": "method",
     "name": "stat",
     "memberof": "src/index.js~Path",
@@ -4602,7 +4715,7 @@
     "examples": [
       "const p = new Path('/path/to/here')\np.stat()\n  .then( stats => console.log('path stats:', stats) )\n  .catch( console.log('path does not exist') )"
     ],
-    "lineNumber": 169,
+    "lineNumber": 162,
     "return": {
       "nullable": null,
       "types": [
@@ -4614,7 +4727,7 @@
     "params": []
   },
   {
-    "__docId__": 181,
+    "__docId__": 186,
     "kind": "method",
     "name": "unstat",
     "memberof": "src/index.js~Path",
@@ -4624,102 +4737,7 @@
     "longname": "src/index.js~Path#unstat",
     "access": "public",
     "description": "Method to clear internal cache of path stats (subject to change)",
-    "lineNumber": 177,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 182,
-    "kind": "method",
-    "name": "isFile",
-    "memberof": "src/index.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/index.js~Path#isFile",
-    "access": "public",
-    "description": "Returns a boolean flag to indicate if the item is a file.",
-    "lineNumber": 185,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 183,
-    "kind": "method",
-    "name": "isDirectory",
-    "memberof": "src/index.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/index.js~Path#isDirectory",
-    "access": "public",
-    "description": "Returns a boolean flag to indicate if the item is a directory.",
-    "lineNumber": 193,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 184,
-    "kind": "method",
-    "name": "mode",
-    "memberof": "src/index.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/index.js~Path#mode",
-    "access": "public",
-    "description": "Returns the file mode.",
-    "lineNumber": 201,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 185,
-    "kind": "method",
-    "name": "size",
-    "memberof": "src/index.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/index.js~Path#size",
-    "access": "public",
-    "description": "Returns the size of the file in bytes.",
-    "lineNumber": 209,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 186,
-    "kind": "method",
-    "name": "accessed",
-    "memberof": "src/index.js~Path",
-    "generator": false,
-    "async": true,
-    "static": false,
-    "longname": "src/index.js~Path#accessed",
-    "access": "public",
-    "description": "Returns a date for when the file was last accessed.",
-    "lineNumber": 217,
+    "lineNumber": 170,
     "params": [],
     "return": {
       "types": [
@@ -4730,15 +4748,15 @@
   {
     "__docId__": 187,
     "kind": "method",
-    "name": "modified",
+    "name": "isFile",
     "memberof": "src/index.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/index.js~Path#modified",
+    "longname": "src/index.js~Path#isFile",
     "access": "public",
-    "description": "Returns a date for when the file content was last modified.",
-    "lineNumber": 225,
+    "description": "Returns a boolean flag to indicate if the item is a file.",
+    "lineNumber": 178,
     "params": [],
     "return": {
       "types": [
@@ -4749,15 +4767,15 @@
   {
     "__docId__": 188,
     "kind": "method",
-    "name": "changed",
+    "name": "isDirectory",
     "memberof": "src/index.js~Path",
     "generator": false,
     "async": true,
     "static": false,
-    "longname": "src/index.js~Path#changed",
+    "longname": "src/index.js~Path#isDirectory",
     "access": "public",
-    "description": "Returns a date for when the file status was last changed.",
-    "lineNumber": 233,
+    "description": "Returns a boolean flag to indicate if the item is a directory.",
+    "lineNumber": 186,
     "params": [],
     "return": {
       "types": [
@@ -4768,6 +4786,101 @@
   {
     "__docId__": 189,
     "kind": "method",
+    "name": "mode",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#mode",
+    "access": "public",
+    "description": "Returns the file mode.",
+    "lineNumber": 194,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 190,
+    "kind": "method",
+    "name": "size",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#size",
+    "access": "public",
+    "description": "Returns the size of the file in bytes.",
+    "lineNumber": 202,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 191,
+    "kind": "method",
+    "name": "accessed",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#accessed",
+    "access": "public",
+    "description": "Returns a date for when the file was last accessed.",
+    "lineNumber": 210,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 192,
+    "kind": "method",
+    "name": "modified",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#modified",
+    "access": "public",
+    "description": "Returns a date for when the file content was last modified.",
+    "lineNumber": 218,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 193,
+    "kind": "method",
+    "name": "changed",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/index.js~Path#changed",
+    "access": "public",
+    "description": "Returns a date for when the file status was last changed.",
+    "lineNumber": 226,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 194,
+    "kind": "method",
     "name": "created",
     "memberof": "src/index.js~Path",
     "generator": false,
@@ -4776,7 +4889,26 @@
     "longname": "src/index.js~Path#created",
     "access": "public",
     "description": "Returns a date for when the file was created.",
-    "lineNumber": 241,
+    "lineNumber": 234,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 195,
+    "kind": "method",
+    "name": "toString",
+    "memberof": "src/index.js~Path",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~Path#toString",
+    "access": "public",
+    "description": "Stringification method.",
+    "lineNumber": 242,
     "params": [],
     "return": {
       "types": [
@@ -4786,7 +4918,7 @@
   },
   {
     "kind": "index",
-    "content": "# badger-filesystem\n\nThis provides a number of utility modules to make it easier working with\ndirectories and files in a node.js project.\n\n## Installation\n\nInstall `badger-filesystem` using your favourite package manager.\n\n### npm\n\n    npm install @abw/badger-filesystem\n\n### pnpm\n\n    pnpm install @abw/badger-filesystem\n\n### yarn\n\n    yarn add @abw/badger-filesystem\n\n## Manual\n\nRead the [Manual](https://abw.github.io/badger-filesystem-js/docs/manual/)\nfor an introduction to the utilities and examples of use.\n\n## API Documentation\n\nRead the [API documentation](https://abw.github.io/badger-filesystem-js/docs/)\nfor further information about the classes, methods and utility functions provided.\n\n## Author\n\nAndy Wardley https://github.com/abw",
+    "content": "# Badger Filesystem\n\nThis provides a number of utility modules to make it easier working with\ndirectories and files in a node.js project.\n\n## Installation\n\nInstall `badger-filesystem` using your favourite package manager.\n\n### npm\n\n    npm add @abw/badger-filesystem\n\n### pnpm\n\n    pnpm add @abw/badger-filesystem\n\n### yarn\n\n    yarn add @abw/badger-filesystem\n\n## Example\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\n// a config directory\nconst config = dir('config');\n\n// check it exists and create it if not\nawait config.mustExist({ create: true });\n\n// create a JSON file in the directory\nconst hello = config.file('hello.json', { codec: 'json' });\n\n// write some data to it\nawait hello.write({ message: 'Hello World!' });\n\n// read data from it\nconst data = await hello.read();\n```\n\n## Manual\n\nRead the [Manual](https://abw.github.io/badger-filesystem-js/docs/manual/)\nfor an introduction to the utilities and examples of use.\n\n## API Documentation\n\nRead the [API documentation](https://abw.github.io/badger-filesystem-js/docs/)\nfor further information about the classes, methods and utility functions provided.\n\n## Author\n\nAndy Wardley https://github.com/abw",
     "longname": "/Users/abw/js/badger-filesystem-js/README.md",
     "name": "./README.md",
     "static": true,
@@ -4794,7 +4926,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@abw/badger-filesystem\",\n  \"version\": \"1.0.1\",\n  \"description\": \"Filesystem utilities\",\n  \"type\": \"module\",\n  \"main\": \"dist/badger-filesystem.cjs.js\",\n  \"module\": \"dist/badger-filesystem.esm.js\",\n  \"exports\": \"./dist/badger-filesystem.esm.js\",\n  \"author\": \"Andy Wardley\",\n  \"license\": \"MIT\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/abw/badger-filesystem-js.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/abw/badger-filesystem-js/issues\"\n  },\n  \"scripts\": {\n    \"build\": \"rollup -c\",\n    \"dev\": \"rollup -c -w\",\n    \"lint\": \"eslint 'src/**/*'\",\n    \"docs:build\": \"esdoc\",\n    \"docs:serve\": \"serve docs\",\n    \"test\": \"ava --serial\",\n    \"pretest\": \"pnpm run build\"\n  },\n  \"keywords\": [\n    \"badger\",\n    \"filesystem\",\n    \"utility\"\n  ],\n  \"dependencies\": {\n    \"@abw/badger-codecs\": \"^1.0.1\",\n    \"@abw/badger-utils\": \"^1.0.16\"\n  },\n  \"devDependencies\": {\n    \"@itsjamie/esdoc-cli\": \"^0.5.0\",\n    \"@itsjamie/esdoc-core\": \"^0.5.0\",\n    \"@itsjamie/esdoc-importpath-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-inject-style-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-standard-plugin\": \"^0.5.0\",\n    \"@rollup/plugin-commonjs\": \"^24.0.1\",\n    \"@rollup/plugin-node-resolve\": \"^15.0.1\",\n    \"@rollup/plugin-terser\": \"^0.4.0\",\n    \"ava\": \"^5.2.0\",\n    \"eslint\": \"^8.35.0\",\n    \"rollup\": \"^3.18.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"@abw/badger-filesystem\",\n  \"version\": \"1.0.2\",\n  \"description\": \"Filesystem utilities\",\n  \"type\": \"module\",\n  \"main\": \"dist/badger-filesystem.cjs.js\",\n  \"module\": \"dist/badger-filesystem.esm.js\",\n  \"exports\": \"./dist/badger-filesystem.esm.js\",\n  \"author\": \"Andy Wardley\",\n  \"license\": \"MIT\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/abw/badger-filesystem-js.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/abw/badger-filesystem-js/issues\"\n  },\n  \"scripts\": {\n    \"build\": \"rollup -c\",\n    \"dev\": \"rollup -c -w\",\n    \"lint\": \"eslint 'src/**/*'\",\n    \"docs:build\": \"esdoc\",\n    \"docs:serve\": \"serve docs\",\n    \"test\": \"ava --serial\",\n    \"pretest\": \"pnpm run build\"\n  },\n  \"keywords\": [\n    \"badger\",\n    \"filesystem\",\n    \"utility\"\n  ],\n  \"dependencies\": {\n    \"@abw/badger-codecs\": \"^1.0.1\",\n    \"@abw/badger-utils\": \"^1.0.16\"\n  },\n  \"devDependencies\": {\n    \"@itsjamie/esdoc-cli\": \"^0.5.0\",\n    \"@itsjamie/esdoc-core\": \"^0.5.0\",\n    \"@itsjamie/esdoc-importpath-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-inject-style-plugin\": \"^0.5.0\",\n    \"@itsjamie/esdoc-standard-plugin\": \"^0.5.0\",\n    \"@rollup/plugin-commonjs\": \"^24.0.1\",\n    \"@rollup/plugin-node-resolve\": \"^15.0.1\",\n    \"@rollup/plugin-terser\": \"^0.4.0\",\n    \"ava\": \"^5.2.0\",\n    \"eslint\": \"^8.35.0\",\n    \"rollup\": \"^3.18.0\"\n  }\n}\n",
     "longname": "/Users/abw/js/badger-filesystem-js/package.json",
     "name": "package.json",
     "static": true,
@@ -4827,7 +4959,7 @@
     "kind": "manual",
     "longname": "/Users/abw/js/badger-filesystem-js/manual/files.md",
     "name": "./manual/files.md",
-    "content": "# Files\n\nThe [File](class/src/File.js~File) object and helper functions\nsimplify the process of working with files.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// create a JSON file\nconst hello = file('hello.json', { codec: 'json' });\n\n// write some data to it\nawait hello.write({ message: 'Hello World!' });\n\n// read data from it\nconst data = await hello.read();\n```\n\n\n- [File Functions](#file-functions)\n- [File Methods](#file-methods)\n\n## File Functions\n\n### file(path)\n\nThe [file](function#static-function-file) function can be used to create a\n[File](class/src/File.js~File) object which represents a file in your file\nsystem.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst hello = file('hello.txt');\n```\n\nIf you specify a relative path (i.e. not starting with a leading slash) then\nit is assumed to be relative to the current working directory.\n\nYou can also provide an absolute path to a file.\n\n```js\nconst hello = dir('/home/abw/project123/hello.txt');\n```\n\nThis function is a short cut for creating a\n[File](class/src/File.js~File) object, but you can do\nthat yourself if you prefer.\n\n```js\nimport { File } from '@abw/badger-filesystem'\n\nconst hello = new File('hello.txt');\n```\n\nNote that the file does not have to exist at the time you create the\nobject.  It might be that you want to check if a file exists and write\nit if it doesn't (or perhaps delete it if it does).\n\nYou can also use the [file()](class/src/Directory.js~Directory#instance-method-file)\nmethod on a [Directory](class/src/Directory.js~Directory) object to create\na file.\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\nconst images = dir('web/images');\nconst logo = images.file('logo.png');\n```\n\n## File Methods\n\n## read(options)\n\nAsynchronous method to read the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst text = await file('hello.txt').read();\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be decoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nconst data = await file('hello.json', { codec: 'json' }).read();\n\n// ...or\nconst data = await file('hello.json').read({ codec: 'json' });\n```\n\n## write(options)\n\nAsynchronous method to write the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nawait file('hello.txt').write('Hello World!');\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be encoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nawait file('hello.json', { codec: 'json' }).write({ message: 'Hello World!' });\n\n// ...or\nawait file('hello.json').write({ message: 'Hello World!' }), { codec: 'json' });\n```\n\n## delete(options)\n\nAsynchronous method to delete the file.\n\n",
+    "content": "# Files\n\nThe [File](class/src/File.js~File) object and helper functions\nsimplify the process of working with files.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// create a JSON file\nconst hello = file('hello.json', { codec: 'json' });\n\n// write some data to it\nawait hello.write({ message: 'Hello World!' });\n\n// read data from it\nconst data = await hello.read();\n```\n\n- [File Functions](#file-functions)\n- [File Methods](#file-methods)\n\n## File Functions\n\n### file(path)\n\nThe [file](function#static-function-file) function can be used to create a\n[File](class/src/File.js~File) object which represents a file in your file\nsystem.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst hello = file('hello.txt');\n```\n\nIf you specify a relative path (i.e. not starting with a leading slash) then\nit is assumed to be relative to the current working directory.\n\nYou can also provide an absolute path to a file.\n\n```js\nconst hello = dir('/home/abw/project123/hello.txt');\n```\n\nThis function is a short cut for creating a\n[File](class/src/File.js~File) object, but you can do\nthat yourself if you prefer.\n\n```js\nimport { File } from '@abw/badger-filesystem'\n\nconst hello = new File('hello.txt');\n```\n\nNote that the file does not have to exist at the time you create the\nobject.  It might be that you want to check if a file exists and write\nit if it doesn't (or perhaps delete it if it does).\n\nYou can also use the [file()](class/src/Directory.js~Directory#instance-method-file)\nmethod on a [Directory](class/src/Directory.js~Directory) object to create\na file.\n\n```js\nimport { dir } from '@abw/badger-filesystem'\n\nconst images = dir('web/images');\nconst logo = images.file('logo.png');\n```\n\n## File Methods\n\n## read(options)\n\nAsynchronous method to read the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nconst text = await file('hello.txt').read();\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be decoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nconst data = await file('hello.json', { codec: 'json' }).read();\n\n// ...or\nconst data = await file('hello.json').read({ codec: 'json' });\n```\n\n## write(options)\n\nAsynchronous method to write the file contents.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\nawait file('hello.txt').write('Hello World!');\n```\n\nIf a [codec](manual/codecs.html) was specified as an option when the file\nobject was created, or if one is specified in the options passed to this\nmethod then the contents will be encoded using the appropriate codec.\n\n```js\nimport { file } from '@abw/badger-filesystem'\n\n// either...\nawait file('hello.json', { codec: 'json' }).write({ message: 'Hello World!' });\n\n// ...or\nawait file('hello.json').write({ message: 'Hello World!' }), { codec: 'json' });\n```\n\n## delete(options)\n\nAsynchronous method to delete the file.\n\n",
     "static": true,
     "access": "public"
   },
@@ -4835,7 +4967,7 @@
     "kind": "manual",
     "longname": "/Users/abw/js/badger-filesystem-js/manual/path.md",
     "name": "./manual/path.md",
-    "content": "# Path Base Class\n\nThe [File](class/src/File.js~File) and\n[Directory](class/src/Directory.js~Directory) objects are subclasses of\nthe [Path](class/src/Path.js~Path) base class which implements some common\nfunctionality.\n\n## Path Methods\n\n### path(name)\n\nWhen called without arguments it returns the current value for the path.\n\nWhen passed one or more arguments it constructs a path relative to the current\none.\n\n### type()\n\nReturns the type of file that the path represents: `file`, `directory` or\n`path`.\n\nThis is set by the constructors for the [File](class/src/File.js~File)\nand [Directory](class/src/Directory.js~Directory) objects and only represents\nthe type of subclass object that was created.\n\nThere is no guarantee that the actual file or directory represented by the\npath exists in the filesystem and has the same type.  Use the\n[isFile()](#isfile--) and [isDirectory()](#isdirectory--) methods if you want\nto check the filesystem to be sure.\n\n### parse()\n\nParses the path using [Path.parse()](https://nodejs.org/api/path.html#pathparsepath)\nto return the constituent parts.  This is cached internally.  You can call\n[unparse()](#unparse--) to clear the cache.\n\n### unparse()\n\nDeletes any cache results from [parse()](#parse--).\n\n### dirname()\n\nReturns the name of the directory.\n\n### base()\n\nReturns the complete file or directory name, including any extension.\n\n### name()\n\nReturns the name of the directory or file without any extension.\n\n### ext()\n\nReturns the filename extension including the period.\n\n### relativePath(name)\n\nReturns a path relative to the current one.\n\n### exists()\n\nAsynchronous method to test if the path exists.\n\n### stat()\n\nAsynchronous method to fetch stats for the path.  By calling\n[fsPromises.stat()](https://nodejs.org/api/fs.html#fspromisesstatpath-options).\n\nStats are cached internally.  You can call [unstat()](#unstat--) to clear\nthe cache.\n\n### unstat()\n\nDeletes any cached results from [stat()](#stat--).\n\n### isFile()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na file.\n\n### isDirectory()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na directory.\n\n### mode()\n\nAsynchronous method which resolves to the file mode.\n\n### size()\n\nAsynchronous method which resolves to the file size in bytes.\n\n### accessed()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas last accessed.\n\n\n## modified()\n\nAsynchronous method which resolves to a Date representing the time the file\ncontent was last modified.\n\n## changed()\n\nAsynchronous method which resolves to a Date representing the time the file\nstatus (e.g. mode, owner, etc) was last changed.\n\n## created()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas created.\n\n",
+    "content": "# Path Base Class\n\nThe [File](class/src/File.js~File) and\n[Directory](class/src/Directory.js~Directory) objects are subclasses of\nthe [Path](class/src/Path.js~Path) base class which implements some common\nfunctionality.\n\n- [Path Methods](#path-methods)\n\n## Path Methods\n\n### path(name)\n\nWhen called without arguments it returns the current value for the path.\n\nWhen passed one or more arguments it constructs a path relative to the current\none.\n\n### type()\n\nReturns the type of file that the path represents: `file`, `directory` or\n`path`.\n\nThis is set by the constructors for the [File](class/src/File.js~File)\nand [Directory](class/src/Directory.js~Directory) objects and only represents\nthe type of subclass object that was created.\n\nThere is no guarantee that the actual file or directory represented by the\npath exists in the filesystem and has the same type.  Use the\n[isFile()](#isfile--) and [isDirectory()](#isdirectory--) methods if you want\nto check the filesystem to be sure.\n\n### parse()\n\nParses the path using [Path.parse()](https://nodejs.org/api/path.html#pathparsepath)\nto return the constituent parts.  This is cached internally.  You can call\n[unparse()](#unparse--) to clear the cache.\n\n### unparse()\n\nDeletes any cache results from [parse()](#parse--).\n\n### dirname()\n\nReturns the name of the directory.\n\n### base()\n\nReturns the complete file or directory name, including any extension.\n\n### name()\n\nReturns the name of the directory or file without any extension.\n\n### ext()\n\nReturns the filename extension including the period.\n\n### relativePath(name)\n\nReturns a path relative to the current one.\n\n### exists()\n\nAsynchronous method to test if the path exists.\n\n### stat()\n\nAsynchronous method to fetch stats for the path.  By calling\n[fsPromises.stat()](https://nodejs.org/api/fs.html#fspromisesstatpath-options).\n\nStats are cached internally.  You can call [unstat()](#unstat--) to clear\nthe cache.\n\n### unstat()\n\nDeletes any cached results from [stat()](#stat--).\n\n### isFile()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na file.\n\n### isDirectory()\n\nAsynchronous method which resolves to a boolean flag to indicate if the item is\na directory.\n\n### mode()\n\nAsynchronous method which resolves to the file mode.\n\n### size()\n\nAsynchronous method which resolves to the file size in bytes.\n\n### accessed()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas last accessed.\n\n\n### modified()\n\nAsynchronous method which resolves to a Date representing the time the file\ncontent was last modified.\n\n### changed()\n\nAsynchronous method which resolves to a Date representing the time the file\nstatus (e.g. mode, owner, etc) was last changed.\n\n### created()\n\nAsynchronous method which resolves to a Date representing the time the file\nwas created.\n\n",
     "static": true,
     "access": "public"
   },
@@ -4843,7 +4975,7 @@
     "kind": "manual",
     "longname": "/Users/abw/js/badger-filesystem-js/manual/codecs.md",
     "name": "./manual/codecs.md",
-    "content": "# Data Codecs\n\nCodecs are used to encode and decode data to and from serialised text.\n\nThe badger toolkit comes with two built-in codecs for `json` and `yaml` files.\n\n- [Read Data File](#read-data-files)\n- [Write Data Files](#write-data-files)\n\n## Read Data Files\n\nSuppose that you have a `badger.yaml` file that you want to read.\n\n```yaml\nname:   Brian\nanimal: Badger\n```\n\nAll you have to do is add the `{ codec: 'yaml' }`\noption to the `file()` function.  The `read()`\nmethod will then automatically decode the YAML text.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\nThis prints the string \"Brian is a Badger\" to the console.\n\nYou can also do the same thing using the `file()` method on a directory\nobject.\n\n```js\nimport { dir } from '@abw/badger'\n\ndir('data')\n  .file('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\n## Write Data Files\n\nThe `codec` option also works when writing data.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('giraffe.yaml', { codec: 'yaml' })\n  .write({\n    name:   \"Gerald\",\n    animal: \"Giraffe\",\n  })\n```\n\nYou should now have a `giraffe.yaml` file containing the following:\n\n```yaml\nname: Gerald\nanimal: Giraffe\n```\n\n",
+    "content": "# Data Codecs\n\nCodecs are used to encode and decode data to and from serialised text.\nThey are imported from the [@abw/badger-codecs](https://github.com/abw/badger-codecs-js)\nmodulee.\n\nThere are two codecs commonly used for `json` and `yaml` files.\n\n- [Read Data File](#read-data-files)\n- [Write Data Files](#write-data-files)\n- [Directory Codec](#directory-codec)\n- [Auto Codec](#auto-codec)\n\n## Read Data Files\n\nSuppose that you have a `badger.yaml` file that you want to read.\n\n```yaml\nname:   Brian\nanimal: Badger\n```\n\nAll you have to do is add the `{ codec: 'yaml' }`\noption to the `file()` function.  The `read()`\nmethod will then automatically decode the YAML text.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\nThis prints the string \"Brian is a Badger\" to the console.\n\nYou can also do the same thing using the `file()` method on a directory\nobject.\n\n```js\nimport { dir } from '@abw/badger'\n\ndir('data')\n  .file('badger.yaml', { codec: 'yaml' })\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\nYou can also pass the `codec` option to the `read()` method.\n\n```js\nfile('badger.yaml')\n  .read({ codec: 'yaml' })\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\n## Write Data Files\n\nThe `codec` option also works when writing data.\n\n```js\nimport { file } from '@abw/badger'\n\nfile('giraffe.yaml', { codec: 'yaml' })\n  .write({\n    name:   \"Gerald\",\n    animal: \"Giraffe\",\n  })\n```\n\nYou should now have a `giraffe.yaml` file containing the following:\n\n```yaml\nname: Gerald\nanimal: Giraffe\n```\n\nYou can also pass the `codec` option to the `write()` method.\n\n```js\nfile('giraffe.yaml')\n  .write(\n    {\n      name:   \"Gerald\",\n      animal: \"Giraffe\",\n    },\n    { codec: 'yaml' }\n  )\n```\n\n## Directory Codec\n\nYou can specify the `codec` option for a directory.  Any files created by\nthat directory object will automatically use that codec.\n\n```js\nimport { dir } from '@abw/badger'\n\ndir('data', { codec: 'yaml' })\n  .file('badger.yaml')\n  .read()\n  .then(\n    data => console.log(data.name, 'is a', data.animal)\n  )\n```\n\n## Auto Codec\n\nIf you specify the `codec` as `auto` on either a file or directory then it\nwill determine the codec from the file extension.  The extension must be\n`json` or `yaml` but can be in any case, e.g `yaml`, `YAML`,\n`Yaml`.\n\n```js\nconst data   = dir('data', { codec: 'auto' });\nconst badger = await data.file('badger.yaml').read(); // uses yaml codec\nconst ferret = await data.file('ferret.json').read(); // uses json codec\n```\n",
     "static": true,
     "access": "public"
   }

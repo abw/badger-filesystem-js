@@ -1,5 +1,17 @@
 window.esdocSearchIndex = [
   [
+    "@abw/badger-filesystem~auto",
+    "variable/index.html#static-variable-AUTO",
+    "<span>AUTO</span> <span class=\"search-result-import-path\">@abw/badger-filesystem</span>",
+    "variable"
+  ],
+  [
+    "@abw/badger-filesystem~auto",
+    "variable/index.html#static-variable-AUTO",
+    "<span>AUTO</span> <span class=\"search-result-import-path\">@abw/badger-filesystem</span>",
+    "variable"
+  ],
+  [
     "@abw/badger-filesystem~directory",
     "variable/index.html#static-variable-DIRECTORY",
     "<span>DIRECTORY</span> <span class=\"search-result-import-path\">@abw/badger-filesystem</span>",
@@ -606,6 +618,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/file.js~file#getcodec",
+    "class/src/File.js~File.html#instance-method-getCodec",
+    "src/File.js~File#getCodec",
+    "method"
+  ],
+  [
     "src/file.js~file#read",
     "class/src/File.js~File.html#instance-method-read",
     "src/File.js~File#read",
@@ -742,6 +760,12 @@ window.esdocSearchIndex = [
     "class/src/Path.js~Path.html#instance-member-state",
     "src/Path.js~Path#state",
     "member"
+  ],
+  [
+    "src/path.js~path#tostring",
+    "class/src/Path.js~Path.html#instance-method-toString",
+    "src/Path.js~Path#toString",
+    "method"
   ],
   [
     "src/path.js~path#type",
@@ -942,6 +966,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/index.js~file#getcodec",
+    "class/src/index.js~File.html#instance-method-getCodec",
+    "src/index.js~File#getCodec",
+    "method"
+  ],
+  [
     "src/index.js~file#read",
     "class/src/index.js~File.html#instance-method-read",
     "src/index.js~File#read",
@@ -1072,6 +1102,12 @@ window.esdocSearchIndex = [
     "class/src/index.js~Path.html#instance-member-state",
     "src/index.js~Path#state",
     "member"
+  ],
+  [
+    "src/index.js~path#tostring",
+    "class/src/index.js~Path.html#instance-method-toString",
+    "src/index.js~Path#toString",
+    "method"
   ],
   [
     "src/index.js~path#type",

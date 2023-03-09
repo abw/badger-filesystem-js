@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 100,
+  "end": 132,
   "loc": {
     "start": {
       "line": 1,
@@ -9,16 +9,16 @@
       "index": 0
     },
     "end": {
-      "line": 3,
+      "line": 4,
       "column": 36,
-      "index": 100
+      "index": 132
     }
   },
   "errors": [],
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 100,
+    "end": 132,
     "loc": {
       "start": {
         "line": 1,
@@ -26,9 +26,9 @@
         "index": 0
       },
       "end": {
-        "line": 3,
+        "line": 4,
         "column": 36,
-        "index": 100
+        "index": 132
       }
     },
     "sourceType": "module",
@@ -100,9 +100,9 @@
                     "column": 17,
                     "index": 17
                   },
-                  "identifierName": "PATH"
+                  "identifierName": "AUTO"
                 },
-                "name": "PATH"
+                "name": "AUTO"
               },
               "init": {
                 "type": "StringLiteral",
@@ -121,10 +121,10 @@
                   }
                 },
                 "extra": {
-                  "rawValue": "path",
-                  "raw": "'path'"
+                  "rawValue": "auto",
+                  "raw": "'auto'"
                 },
-                "value": "path"
+                "value": "auto"
               }
             }
           ],
@@ -199,9 +199,9 @@
                     "column": 17,
                     "index": 49
                   },
-                  "identifierName": "FILE"
+                  "identifierName": "PATH"
                 },
-                "name": "FILE"
+                "name": "PATH"
               },
               "init": {
                 "type": "StringLiteral",
@@ -220,6 +220,105 @@
                   }
                 },
                 "extra": {
+                  "rawValue": "path",
+                  "raw": "'path'"
+                },
+                "value": "path"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 64,
+        "end": 95,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0,
+            "index": 64
+          },
+          "end": {
+            "line": 3,
+            "column": 31,
+            "index": 95
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 71,
+          "end": 95,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7,
+              "index": 71
+            },
+            "end": {
+              "line": 3,
+              "column": 31,
+              "index": 95
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 77,
+              "end": 95,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 13,
+                  "index": 77
+                },
+                "end": {
+                  "line": 3,
+                  "column": 31,
+                  "index": 95
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 77,
+                "end": 81,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 13,
+                    "index": 77
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 17,
+                    "index": 81
+                  },
+                  "identifierName": "FILE"
+                },
+                "name": "FILE"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 89,
+                "end": 95,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 25,
+                    "index": 89
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 31,
+                    "index": 95
+                  }
+                },
+                "extra": {
                   "rawValue": "file",
                   "raw": "'file'"
                 },
@@ -234,69 +333,69 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 64,
-        "end": 100,
+        "start": 96,
+        "end": 132,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 4,
             "column": 0,
-            "index": 64
+            "index": 96
           },
           "end": {
-            "line": 3,
+            "line": 4,
             "column": 36,
-            "index": 100
+            "index": 132
           }
         },
         "specifiers": [],
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 71,
-          "end": 100,
+          "start": 103,
+          "end": 132,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 4,
               "column": 7,
-              "index": 71
+              "index": 103
             },
             "end": {
-              "line": 3,
+              "line": 4,
               "column": 36,
-              "index": 100
+              "index": 132
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 77,
-              "end": 100,
+              "start": 109,
+              "end": 132,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 4,
                   "column": 13,
-                  "index": 77
+                  "index": 109
                 },
                 "end": {
-                  "line": 3,
+                  "line": 4,
                   "column": 36,
-                  "index": 100
+                  "index": 132
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 77,
-                "end": 86,
+                "start": 109,
+                "end": 118,
                 "loc": {
                   "start": {
-                    "line": 3,
+                    "line": 4,
                     "column": 13,
-                    "index": 77
+                    "index": 109
                   },
                   "end": {
-                    "line": 3,
+                    "line": 4,
                     "column": 22,
-                    "index": 86
+                    "index": 118
                   },
                   "identifierName": "DIRECTORY"
                 },
@@ -304,18 +403,18 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 89,
-                "end": 100,
+                "start": 121,
+                "end": 132,
                 "loc": {
                   "start": {
-                    "line": 3,
+                    "line": 4,
                     "column": 25,
-                    "index": 89
+                    "index": 121
                   },
                   "end": {
-                    "line": 3,
+                    "line": 4,
                     "column": 36,
-                    "index": 100
+                    "index": 132
                   }
                 },
                 "extra": {

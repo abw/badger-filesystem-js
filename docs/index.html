@@ -43,9 +43,11 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cwd">cwd</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dir">dir</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-file">file</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTO">AUTO</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTO">AUTO</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
@@ -55,10 +57,26 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="badger-filesystem">badger-filesystem</h1><p>This provides a number of utility modules to make it easier working with
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="badger-filesystem">Badger Filesystem</h1><p>This provides a number of utility modules to make it easier working with
 directories and files in a node.js project.</p>
 <h2 id="installation">Installation</h2><p>Install <code>badger-filesystem</code> using your favourite package manager.</p>
-<h3 id="npm">npm</h3><pre><code><code class="source-code prettyprint">npm install @abw/badger-filesystem</code></code></pre><h3 id="pnpm">pnpm</h3><pre><code><code class="source-code prettyprint">pnpm install @abw/badger-filesystem</code></code></pre><h3 id="yarn">yarn</h3><pre><code><code class="source-code prettyprint">yarn add @abw/badger-filesystem</code></code></pre><h2 id="manual">Manual</h2><p>Read the <a href="https://abw.github.io/badger-filesystem-js/docs/manual/">Manual</a>
+<h3 id="npm">npm</h3><pre><code><code class="source-code prettyprint">npm add @abw/badger-filesystem</code></code></pre><h3 id="pnpm">pnpm</h3><pre><code><code class="source-code prettyprint">pnpm add @abw/badger-filesystem</code></code></pre><h3 id="yarn">yarn</h3><pre><code><code class="source-code prettyprint">yarn add @abw/badger-filesystem</code></code></pre><h2 id="example">Example</h2><pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger-filesystem'
+
+// a config directory
+const config = dir('config');
+
+// check it exists and create it if not
+await config.mustExist({ create: true });
+
+// create a JSON file in the directory
+const hello = config.file('hello.json', { codec: 'json' });
+
+// write some data to it
+await hello.write({ message: 'Hello World!' });
+
+// read data from it
+const data = await hello.read();</code></code></pre>
+<h2 id="manual">Manual</h2><p>Read the <a href="https://abw.github.io/badger-filesystem-js/docs/manual/">Manual</a>
 for an introduction to the utilities and examples of use.</p>
 <h2 id="api-documentation">API Documentation</h2><p>Read the <a href="https://abw.github.io/badger-filesystem-js/docs/">API documentation</a>
 for further information about the classes, methods and utility functions provided.</p>
