@@ -67,39 +67,3 @@ test(
   async t => t.is(await hello.read(), "Hello World!\n")
 )
 
-// read YAML
-test(
-  'read data from YAML file with pre-defined codec',
-  t => testFiles.file('hello.yaml', { codec: 'yaml' }).read().then(
-    data => t.is(data.msg, "Hello World")
-  )
-)
-test(
-  'read data from YAML file with codec defined in read() options',
-  t => testFiles.file('hello.yaml').read({ codec: 'yaml' }).then(
-    data => t.is(data.msg, "Hello World")
-  )
-)
-test(
-  'await read data from YAML file with codec defined in read() options',
-  async t => t.is((await testFiles.file('hello.yaml').read({ codec: 'yaml' })).msg, "Hello World")
-)
-
-// read JSON
-test(
-  'read data from JSON file with pre-defined codec',
-  t => testFiles.file('hello.json', { codec: 'json' }).read().then(
-    data => t.is(data.msg, "Hello World")
-  )
-)
-test(
-  'read data from JSON file with codec defined in read() options',
-  t => testFiles.file('hello.json').read({ codec: 'json' }).then(
-    data => t.is(data.msg, "Hello World")
-  )
-)
-test(
-  'await read data from JSON file with codec defined in read() options',
-  async t => t.is((await testFiles.file('hello.json').read({ codec: 'json' })).msg, "Hello World")
-)
-

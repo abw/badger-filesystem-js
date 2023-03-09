@@ -3,7 +3,7 @@ import Path from './Path.js'
 import { dir } from './Directory.js'
 import { codec } from '@abw/badger-codecs'
 import { readFile, writeFile, rm } from 'node:fs/promises'
-import { FILE } from './Constants.js'
+import { AUTO, FILE } from './Constants.js'
 
 /**
  * The File class implements a wrapper around a filesystem
@@ -51,7 +51,7 @@ export class File extends Path {
     const opts = this.options(options);
     const text = await readFile(this.state.path, opts);
     return opts.codec
-      ? codec(opts.codec).decode(text)
+      ? this.getCodec(opts.codec).decode(text)
       : text;
   }
 
@@ -72,7 +72,7 @@ export class File extends Path {
   async write(data, options) {
     const opts = this.options(options);
     const text = opts.codec
-      ? codec(opts.codec).encode(data)
+      ? this.getCodec(opts.codec).encode(data)
       : data;
     await writeFile(this.state.path, text, opts);
     return this;
@@ -87,6 +87,13 @@ export class File extends Path {
   async delete(options) {
     await rm(this.state.path, options);
     return this;
+  }
+
+  getCodec(type) {
+    if (type === AUTO) {
+      type = this.ext().replace('.', '');
+    }
+    return codec(type)
   }
 }
 
