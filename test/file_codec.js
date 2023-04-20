@@ -56,6 +56,12 @@ test(
   async t => t.is(
     (await file(testFiles.path('hello.yaml'), { codec: 'auto'}).read()).msg, "Hello World")
 )
+test(
+  'read data from .yml file with pre-defined auto codec',
+  t => testFiles.file('hello.yml', { codec: 'auto' }).read().then(
+    data => t.is(data.msg, "Hello World")
+  )
+)
 
 // read JSON
 test(
@@ -92,3 +98,9 @@ test(
   async t => t.is((await testFiles.file('hello.json').read({ codec: 'auto' })).msg, "Hello World")
 )
 
+test(
+  'read data from .json file with pre-defined auto codec',
+  t => testFiles.file('hello.jsn', { codec: 'auto' }).read().then(
+    data => t.is(data.msg, "Hello World")
+  )
+)
