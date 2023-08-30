@@ -210,9 +210,9 @@ export class Directory extends Path {
    * @param {Boolean} [options.recursive=true] - recursively create intermediate directories
    * @return {Promise} fulfills to the {@link Directory} object
    */
-  create(options={ recursive: true }) {
+  async create(options={ recursive: true }) {
     this.debug("create(%o)", options);
-    return this.mkdir(options);
+    return await this.mkdir(options);
   }
 
   /**
@@ -223,9 +223,9 @@ export class Directory extends Path {
    * @param {Boolean} [options.force=true] - force deletion of files and sub-directories
    * @return {Promise} fulfills to the {@link Directory} object
    */
-  destroy(options={ empty: true, recursive: true, force: true }) {
+  async destroy(options={ empty: true, recursive: true, force: true }) {
     this.debug("destroy(%o)", options);
-    return this.rmdir(options);
+    return await this.rmdir(options);
   }
 
   /**
