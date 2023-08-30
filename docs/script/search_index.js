@@ -600,6 +600,18 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/file.js~file#copyfrom",
+    "class/src/File.js~File.html#instance-method-copyFrom",
+    "src/File.js~File#copyFrom",
+    "method"
+  ],
+  [
+    "src/file.js~file#copyto",
+    "class/src/File.js~File.html#instance-method-copyTo",
+    "src/File.js~File#copyTo",
+    "method"
+  ],
+  [
     "src/file.js~file#delete",
     "class/src/File.js~File.html#instance-method-delete",
     "src/File.js~File#delete",
@@ -945,6 +957,18 @@ window.esdocSearchIndex = [
     "src/index.js~file#constructor",
     "class/src/index.js~File.html#instance-constructor-constructor",
     "src/index.js~File#constructor",
+    "method"
+  ],
+  [
+    "src/index.js~file#copyfrom",
+    "class/src/index.js~File.html#instance-method-copyFrom",
+    "src/index.js~File#copyFrom",
+    "method"
+  ],
+  [
+    "src/index.js~file#copyto",
+    "class/src/index.js~File.html#instance-method-copyTo",
+    "src/index.js~File#copyTo",
     "method"
   ],
   [

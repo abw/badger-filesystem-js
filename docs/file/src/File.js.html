@@ -62,7 +62,7 @@
 import Path from './Path.js'
 import { dir } from './Directory.js'
 import { codec } from '@abw/badger-codecs'
-import { readFile, writeFile, rm } from 'node:fs/promises'
+import { readFile, writeFile, copyFile, rm } from 'node:fs/promises'
 import { AUTO, FILE } from './Constants.js'
 
 /**
@@ -146,6 +146,40 @@ export class File extends Path {
    */
   async delete(options) {
     await rm(this.state.path, options);
+    return this;
+  }
+
+  /**
+   * Copy the file to a new destination.
+   * @param {string} destination - destination file path
+   * @param {Object} [options] - directory configuration options
+   * @param {Boolean} [options.create=false] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options
+   * @param {Boolean} [options.mkdir=false] - create the directory, add the `recursive` option to create intermediate directories
+   * @param {Boolean} [options.recursive=false] - when used with `mkdir`, creates any intermediate directories
+   * @return {Promise} fulfills with the destination file object
+   */
+  async copyTo(destination, options) {
+    const destFile = file(destination)
+    const destDir  = destFile.dir()
+    await destDir.mustExist(options)
+    await copyFile(this.path(), destFile.path())
+    return destFile;
+  }
+
+  /**
+   * Copy the file from a source file.
+   * @param {string} source - source file path
+   * @param {Object} [options] - directory configuration options
+   * @param {Boolean} [options.create=false] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options
+   * @param {Boolean} [options.mkdir=false] - create the directory, add the `recursive` option to create intermediate directories
+   * @param {Boolean} [options.recursive=false] - when used with `mkdir`, creates any intermediate directories
+   * @return {Promise} fulfills with the file object
+   */
+  async copyFrom(source, options) {
+    const srcFile = file(source)
+    const destDir = this.dir()
+    await destDir.mustExist(options)
+    await copyFile(srcFile.path(), this.path())
     return this;
   }
 

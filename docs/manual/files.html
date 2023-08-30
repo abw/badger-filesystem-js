@@ -65,6 +65,10 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#read-options-" data-ice="link">read(options)</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#write-options-" data-ice="link">write(options)</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#delete-options-" data-ice="link">delete(options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#directory--" data-ice="link">directory()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#dir--" data-ice="link">dir()</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#copyto-destination--options-" data-ice="link">copyTo(destination, options)</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/files.html"><a href="manual/files.html#copyfrom-source--options-" data-ice="link">copyFrom(source, options)</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -178,6 +182,35 @@ await file('hello.json', { codec: 'json' }).write({ message: 'Hello World!' });
 // ...or
 await file('hello.json').write({ message: 'Hello World!' }), { codec: 'json' });</code></code></pre>
 <h2 id="delete-options-">delete(options)</h2><p>Asynchronous method to delete the file.</p>
+<h2 id="directory--">directory()</h2><p>Method to return an object for the directory in which the file is located.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger-filesystem'
+
+const f = file('hello.txt')
+const d = f.directory()</code></code></pre>
+<h2 id="dir--">dir()</h2><p>An alias for the <a href="#directory">directory()</a> method.</p>
+<h2 id="copyto-destination--options-">copyTo(destination, options)</h2><p>Asynchronous method to copy the file to a new location.  The <code>destination</code>
+can be a file object or filesystem path.</p>
+<p>The <code>mkdir</code> option can be set to have the parent directory created if it
+doesn't already exist.  The <code>recursive</code> option will also tell it to create
+any intermediate directories. The <code>create</code> option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.</p>
+<p>The newly created destination file object is returned.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger-filesystem'
+
+const f = file('hello.txt')
+const n = await f.copyTo('/some/other/place', { create: true })</code></code></pre>
+<p>In this example the <code>/some</code> and <code>/some/other</code> directories would be created
+if they don't already exist.</p>
+<h2 id="copyfrom-source--options-">copyFrom(source, options)</h2><p>Asynchronous method to copy the file from another file location.
+The <code>source</code> can be a file object or filesystem path.</p>
+<p>The <code>mkdir</code> option can be set to have the parent directory created if it
+doesn't already exist.  The <code>recursive</code> option will also tell it to create
+any intermediate directories. The <code>create</code> option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.</p>
+<p>The file object is returned.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { file } from '@abw/badger-filesystem'
+
+const f = await file('hello.txt').copyFrom('/some/other/place')</code></code></pre>
 </div>
 </div>
 

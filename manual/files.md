@@ -121,3 +121,57 @@ await file('hello.json').write({ message: 'Hello World!' }), { codec: 'json' });
 
 Asynchronous method to delete the file.
 
+## directory()
+
+Method to return an object for the directory in which the file is located.
+
+```js
+import { file } from '@abw/badger-filesystem'
+
+const f = file('hello.txt')
+const d = f.directory()
+```
+
+## dir()
+
+An alias for the [directory()](#directory) method.
+
+## copyTo(destination, options)
+
+Asynchronous method to copy the file to a new location.  The `destination`
+can be a file object or filesystem path.
+
+The `mkdir` option can be set to have the parent directory created if it
+doesn't already exist.  The `recursive` option will also tell it to create
+any intermediate directories. The `create` option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.
+
+The newly created destination file object is returned.
+
+```js
+import { file } from '@abw/badger-filesystem'
+
+const f = file('hello.txt')
+const n = await f.copyTo('/some/other/place', { create: true })
+```
+
+In this example the `/some` and `/some/other` directories would be created
+if they don't already exist.
+
+## copyFrom(source, options)
+
+Asynchronous method to copy the file from another file location.
+The `source` can be a file object or filesystem path.
+
+The `mkdir` option can be set to have the parent directory created if it
+doesn't already exist.  The `recursive` option will also tell it to create
+any intermediate directories. The `create` option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.
+
+The file object is returned.
+
+```js
+import { file } from '@abw/badger-filesystem'
+
+const f = await file('hello.txt').copyFrom('/some/other/place')
+```
