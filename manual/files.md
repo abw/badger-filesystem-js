@@ -139,7 +139,8 @@ An alias for the [directory()](#directory) method.
 ## copyTo(destination, options)
 
 Asynchronous method to copy the file to a new location.  The `destination`
-can be a file object or filesystem path.
+can be a file object or filesystem path.  If it is a relative path then it
+will be resolved relative to the current directory of the file.
 
 The `mkdir` option can be set to have the parent directory created if it
 doesn't already exist.  The `recursive` option will also tell it to create
@@ -161,7 +162,8 @@ if they don't already exist.
 ## copyFrom(source, options)
 
 Asynchronous method to copy the file from another file location.
-The `source` can be a file object or filesystem path.
+The `source` can be a file object or filesystem path.  If it is a relative
+path then it will be resolved relative to the current directory of the file.
 
 The `mkdir` option can be set to have the parent directory created if it
 doesn't already exist.  The `recursive` option will also tell it to create
@@ -174,4 +176,46 @@ The file object is returned.
 import { file } from '@abw/badger-filesystem'
 
 const f = await file('hello.txt').copyFrom('/some/other/place')
+```
+
+## moveTo(destination, options)
+
+Asynchronous method to move the file to a new location.  The `destination`
+can be a file object or filesystem path.  If it is a relative path then it
+will be resolved relative to the current directory of the file.
+
+The `mkdir` option can be set to have the parent directory created if it
+doesn't already exist.  The `recursive` option will also tell it to create
+any intermediate directories. The `create` option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.
+
+The newly created destination file object is returned.
+
+```js
+import { file } from '@abw/badger-filesystem'
+
+const f = file('hello.txt')
+const n = await f.moveTo('/some/other/place', { create: true })
+```
+
+In this example the `/some` and `/some/other` directories would be created
+if they don't already exist.
+
+## moveFrom(source, options)
+
+Asynchronous method to move the file from another file location.
+The `source` can be a file object or filesystem path.  If it is a relative
+path then it will be resolved relative to the current directory of the file.
+
+The `mkdir` option can be set to have the parent directory created if it
+doesn't already exist.  The `recursive` option will also tell it to create
+any intermediate directories. The `create` option is a short-hand for setting
+both.  If the directory already exists then you don't need to pass any options.
+
+The file object is returned.
+
+```js
+import { file } from '@abw/badger-filesystem'
+
+const f = await file('hello.txt').moveFrom('/some/other/place')
 ```

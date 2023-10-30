@@ -75,3 +75,21 @@ test(
   }
 );
 
+test(
+  'copyTo to local name',
+  async t => {
+    // delete any destination file
+    const oldFile = tmpDir.file('goodbye.txt')
+    if (await oldFile.exists()) {
+      await oldFile.delete()
+    }
+    t.false( await oldFile.exists() )
+    await oldFile.copyFrom(hello)
+    t.true( await oldFile.exists() )
+    const goodbye = await oldFile.copyTo('goodbye.txt')
+    t.true( await goodbye.exists() )
+    const text = await goodbye.read()
+    t.is(text, 'Hello World!\n')
+  }
+);
+

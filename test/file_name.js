@@ -1,5 +1,5 @@
 import test from 'ava';
-import { file, bin } from '../src/index.js'
+import { bin } from '../src/index.js'
 
 // current directory where this script is located
 const thisDir = bin(import.meta.url);
