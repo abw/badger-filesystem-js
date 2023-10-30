@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-filesystem",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Filesystem utilities",
   "type": "module",
   "main": "dist/badger-filesystem.cjs.js",
