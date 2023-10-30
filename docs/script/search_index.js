@@ -636,6 +636,18 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/file.js~file#movefrom",
+    "class/src/File.js~File.html#instance-method-moveFrom",
+    "src/File.js~File#moveFrom",
+    "method"
+  ],
+  [
+    "src/file.js~file#moveto",
+    "class/src/File.js~File.html#instance-method-moveTo",
+    "src/File.js~File#moveTo",
+    "method"
+  ],
+  [
     "src/file.js~file#read",
     "class/src/File.js~File.html#instance-method-read",
     "src/File.js~File#read",
@@ -993,6 +1005,18 @@ window.esdocSearchIndex = [
     "src/index.js~file#getcodec",
     "class/src/index.js~File.html#instance-method-getCodec",
     "src/index.js~File#getCodec",
+    "method"
+  ],
+  [
+    "src/index.js~file#movefrom",
+    "class/src/index.js~File.html#instance-method-moveFrom",
+    "src/index.js~File#moveFrom",
+    "method"
+  ],
+  [
+    "src/index.js~file#moveto",
+    "class/src/index.js~File.html#instance-method-moveTo",
+    "src/index.js~File#moveTo",
     "method"
   ],
   [

@@ -62,7 +62,7 @@
 import Path from './Path.js'
 import { dir } from './Directory.js'
 import { codec } from '@abw/badger-codecs'
-import { readFile, writeFile, copyFile, rm } from 'node:fs/promises'
+import { readFile, writeFile, copyFile, rename, rm } from 'node:fs/promises'
 import { AUTO, FILE } from './Constants.js'
 
 /**
@@ -159,7 +159,7 @@ export class File extends Path {
    * @return {Promise} fulfills with the destination file object
    */
   async copyTo(destination, options) {
-    const destFile = file(destination)
+    const destFile = this.dir().file(destination)
     const destDir  = destFile.dir()
     await destDir.mustExist(options)
     await copyFile(this.path(), destFile.path())
@@ -176,12 +176,47 @@ export class File extends Path {
    * @return {Promise} fulfills with the file object
    */
   async copyFrom(source, options) {
-    const srcFile = file(source)
+    const srcFile = this.dir().file(source)
     const destDir = this.dir()
     await destDir.mustExist(options)
     await copyFile(srcFile.path(), this.path())
     return this;
   }
+
+  /**
+   * Move the file to a new location.
+   * @param {string} destination - new file path
+   * @param {Object} [options] - directory configuration options
+   * @param {Boolean} [options.create=false] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options
+   * @param {Boolean} [options.mkdir=false] - create the directory, add the `recursive` option to create intermediate directories
+   * @param {Boolean} [options.recursive=false] - when used with `mkdir`, creates any intermediate directories
+   * @return {Promise} fulfills with the file object
+   */
+  async moveTo(destination, options) {
+    const destFile = this.dir().file(destination)
+    const destDir = destFile.dir()
+    await destDir.mustExist(options)
+    await rename(this.path(), destFile.path())
+    return this;
+  }
+
+  /**
+   * Copy the file from a source file.
+   * @param {string} source - source file path
+   * @param {Object} [options] - directory configuration options
+   * @param {Boolean} [options.create=false] - create the directory and any intermediate directories if it doesn't exist - equivalent to adding `mkdir` and `recursive` options
+   * @param {Boolean} [options.mkdir=false] - create the directory, add the `recursive` option to create intermediate directories
+   * @param {Boolean} [options.recursive=false] - when used with `mkdir`, creates any intermediate directories
+   * @return {Promise} fulfills with the file object
+   */
+  async moveFrom(source, options) {
+    const srcFile = this.dir().file(source)
+    const destDir = this.dir()
+    await destDir.mustExist(options)
+    await rename(srcFile.path(), this.path())
+    return this;
+  }
+
 
   getCodec(type) {
     if (type === AUTO) {
