@@ -41,7 +41,11 @@ const config = dir('config')
 Create a [`File`](files) object using the [`file()`](files#file) function.
 
 ```js
-const hello = dir('config/hello.json')
+const hello = file('config/hello.txt')
+// write to the file
+await hello.write('Hello World!')
+// read from the file
+const message = await hello.read()
 ```
 
 ## Do the Happy Badger Dance
