@@ -31,7 +31,7 @@ export default defineConfig({
     ],
     sidebar: menuItems,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/abw/badger-filesytem-js' }
+      { icon: 'github', link: 'https://github.com/abw/badger-filesystem-js' }
     ],
     footer: {
       message: 'Built by Badgers',
