@@ -14,8 +14,8 @@ const menuItems = [
 export default defineConfig({
   title: "Badger Filesystem",
   description: "Javascript Filesystem Utilities",
-  head: [['link', { rel: 'icon', href: '/badger-filesystem/images/badger3.svg' }]],
-  base: '/badger-filesystem/',
+  head: [['link', { rel: 'icon', href: '/badger-filesystem-js/images/badger3.svg' }]],
+  base: '/badger-filesystem-js/',
   outDir: '../docs',
   lastUpdated: true,
   themeConfig: {
