@@ -19,6 +19,11 @@ Install `badger-filesystem` using your favourite package manager.
 
     yarn add @abw/badger-filesystem
 
+## Documentation
+
+Visit the [website](https://abw.github.io/badger-filesystem-js/) for
+documentation and examples.
+
 ## Example
 
 ```js
@@ -39,16 +44,6 @@ await hello.write({ message: 'Hello World!' });
 // read data from it
 const data = await hello.read();
 ```
-
-## Manual
-
-Read the [Manual](https://abw.github.io/badger-filesystem-js/docs/manual/)
-for an introduction to the utilities and examples of use.
-
-## API Documentation
-
-Read the [API documentation](https://abw.github.io/badger-filesystem-js/docs/)
-for further information about the classes, methods and utility functions provided.
 
 ## Author
 
