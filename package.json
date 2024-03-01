@@ -1,6 +1,6 @@
 {
   "name": "@abw/badger-filesystem",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Filesystem utilities",
   "type": "module",
   "main": "dist/badger-filesystem.cjs.js",
@@ -11,6 +11,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://abw.github.io/badger-filesystem/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abw/badger-filesystem-js.git"
