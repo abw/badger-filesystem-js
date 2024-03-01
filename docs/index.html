@@ -1,100 +1,49 @@
-<!DOCTYPE html><html><head>
-  <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | Badger Filesystem</title>
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
-  <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-badger.css"><meta name="description" content="Filesystem utilities"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Badger Filesystem"><meta property="twitter:description" content="Filesystem utilities"></head>
-<body class="layout-container" data-ice="rootContainer">
-
-<header>
-  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
-  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
-  <a href="identifiers.html">Reference</a>
-  <a href="source.html">Source</a>
-  
-  <div class="search-box">
-  <span>
-    <img src="./image/search.png">
-    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
-  </span>
-    <ul class="search-result"></ul>
-  </div>
-<a style="position:relative; top:3px;" href="https://github.com/abw/badger-filesystem-js"><img width="20px" src="./image/github.png"></a></header>
-
-<nav class="navigation" data-ice="nav"><div>
-  <ul>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Badger Filesystem</title>
+    <meta name="description" content="Javascript Filesystem Utilities">
+    <meta name="generator" content="VitePress v1.0.0-rc.44">
+    <link rel="preload stylesheet" href="/badger-filesystem/assets/style.DNYmu-Hz.css" as="style">
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DirPath.js~DirPath.html">DirPath</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Directory.js~Directory.html">Directory</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/File.js~File.html">File</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Path.js~Path.html">Path</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~DirPath.html">DirPath</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~Directory.html">Directory</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~File.html">File</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~Path.html">Path</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bin">bin</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cwd">cwd</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dir">dir</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-file">file</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bin">bin</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cwd">cwd</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dir">dir</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-file">file</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTO">AUTO</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTO">AUTO</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DIRECTORY">DIRECTORY</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FILE">FILE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATH">PATH</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://nodejs.org/api/path.html#pathparsepath">path.parse(path)</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://nodejs.org/api/path.html#pathparsepath">path.parse(path)</a></span></span></li>
-</ul>
-</div>
-</nav>
-
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="badger-filesystem">Badger Filesystem</h1><p>This provides a number of utility modules to make it easier working with
-directories and files in a node.js project.</p>
-<h2 id="installation">Installation</h2><p>Install <code>badger-filesystem</code> using your favourite package manager.</p>
-<h3 id="npm">npm</h3><pre><code><code class="source-code prettyprint">npm add @abw/badger-filesystem</code></code></pre><h3 id="pnpm">pnpm</h3><pre><code><code class="source-code prettyprint">pnpm add @abw/badger-filesystem</code></code></pre><h3 id="yarn">yarn</h3><pre><code><code class="source-code prettyprint">yarn add @abw/badger-filesystem</code></code></pre><h2 id="example">Example</h2><pre><code class="lang-js"><code class="source-code prettyprint">import { dir } from '@abw/badger-filesystem'
-
-// a config directory
-const config = dir('config');
-
-// check it exists and create it if not
-await config.mustExist({ create: true });
-
-// create a JSON file in the directory
-const hello = config.file('hello.json', { codec: 'json' });
-
-// write some data to it
-await hello.write({ message: 'Hello World!' });
-
-// read data from it
-const data = await hello.read();</code></code></pre>
-<h2 id="manual">Manual</h2><p>Read the <a href="https://abw.github.io/badger-filesystem-js/docs/manual/">Manual</a>
-for an introduction to the utilities and examples of use.</p>
-<h2 id="api-documentation">API Documentation</h2><p>Read the <a href="https://abw.github.io/badger-filesystem-js/docs/">API documentation</a>
-for further information about the classes, methods and utility functions provided.</p>
-<h2 id="author">Author</h2><p>Andy Wardley <a href="https://github.com/abw">https://github.com/abw</a></p>
-</div>
-</div>
-
-<footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
-</footer>
-
-<script src="script/search_index.js"></script>
-<script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
-<script src="script/inherited-summary.js"></script>
-<script src="script/test-summary.js"></script>
-<script src="script/inner-link.js"></script>
-<script src="script/patch-for-local.js"></script>
-
-
-</body></html>
+    <script type="module" src="/badger-filesystem/assets/app.7zXg8U5c.js"></script>
+    <link rel="preload" href="/badger-filesystem/assets/inter-roman-latin.Bu8hRsVA.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/badger-filesystem/assets/chunks/framework.D9vdFLUf.js">
+    <link rel="modulepreload" href="/badger-filesystem/assets/chunks/theme.B_AV6AHI.js">
+    <link rel="modulepreload" href="/badger-filesystem/assets/index.md.CcMqPsQH.lean.js">
+    <link rel="icon" href="/badger-filesystem/images/badger3.svg">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-734217b9><!--[--><!--]--><!--[--><span tabindex="-1" data-v-f78c1263></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-f78c1263> Skip to content </a><!--]--><!----><header class="VPNav" data-v-734217b9 data-v-3e0201d8><div class="VPNavBar top" data-v-3e0201d8 data-v-6586a85a><div class="wrapper" data-v-6586a85a><div class="container" data-v-6586a85a><div class="title" data-v-6586a85a><div class="VPNavBarTitle" data-v-6586a85a data-v-29285982><a class="title" href="/badger-filesystem/" data-v-29285982><!--[--><!--]--><!--[--><img class="VPImage logo" src="/badger-filesystem/images/badger3.svg" alt data-v-9cf6620a><!--]--><span data-v-29285982>Badger Filesystem</span><!--[--><!--]--></a></div></div><div class="content" data-v-6586a85a><div class="content-body" data-v-6586a85a><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6586a85a><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6586a85a data-v-cf62cc71><span id="main-nav-aria-label" class="visually-hidden" data-v-cf62cc71>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink active" href="/badger-filesystem/" tabindex="0" data-v-cf62cc71 data-v-d4814e7a><!--[--><span data-v-d4814e7a>Home</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-cf62cc71 data-v-0b717c22><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-0b717c22><span class="text" data-v-0b717c22><!----><span data-v-0b717c22>Documentation</span><span class="vpi-chevron-down text-icon" data-v-0b717c22></span></span></button><div class="menu" data-v-0b717c22><div class="VPMenu" data-v-0b717c22 data-v-77498765><div class="items" data-v-77498765><!--[--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/getting-started.html" data-v-db5680d9><!--[-->Getting Started<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/directories.html" data-v-db5680d9><!--[-->Directories<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/directory-methods.html" data-v-db5680d9><!--[-->Directory Methods<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/files.html" data-v-db5680d9><!--[-->Files<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/file-methods.html" data-v-db5680d9><!--[-->File Methods<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/path.html" data-v-db5680d9><!--[-->Path Base Class<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-77498765 data-v-db5680d9><a class="VPLink link" href="/badger-filesystem/codecs.html" data-v-db5680d9><!--[-->Codecs<!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/badger-filesystem/reference.html" tabindex="0" data-v-cf62cc71 data-v-d4814e7a><!--[--><span data-v-d4814e7a>Reference</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6586a85a data-v-6196c97b><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-6196c97b data-v-79322c52 data-v-8e9c72b5><span class="check" data-v-8e9c72b5><span class="icon" data-v-8e9c72b5><!--[--><span class="vpi-sun sun" data-v-79322c52></span><span class="vpi-moon moon" data-v-79322c52></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6586a85a data-v-c06f95c4 data-v-37a714c5><!--[--><a class="VPSocialLink no-icon" href="https://github.com/abw/badger-filesytem" aria-label="github" target="_blank" rel="noopener" data-v-37a714c5 data-v-036f7a16><span class="vpi-social-github" /></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6586a85a data-v-f8fe37b2 data-v-0b717c22><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-0b717c22><span class="vpi-more-horizontal icon" data-v-0b717c22></span></button><div class="menu" data-v-0b717c22><div class="VPMenu" data-v-0b717c22 data-v-77498765><!----><!--[--><!--[--><!----><div class="group" data-v-f8fe37b2><div class="item appearance" data-v-f8fe37b2><p class="label" data-v-f8fe37b2>Appearance</p><div class="appearance-action" data-v-f8fe37b2><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-f8fe37b2 data-v-79322c52 data-v-8e9c72b5><span class="check" data-v-8e9c72b5><span class="icon" data-v-8e9c72b5><!--[--><span class="vpi-sun sun" data-v-79322c52></span><span class="vpi-moon moon" data-v-79322c52></span><!--]--></span></span></button></div></div></div><div class="group" data-v-f8fe37b2><div class="item social-links" data-v-f8fe37b2><div class="VPSocialLinks social-links-list" data-v-f8fe37b2 data-v-37a714c5><!--[--><a class="VPSocialLink no-icon" href="https://github.com/abw/badger-filesytem" aria-label="github" target="_blank" rel="noopener" data-v-37a714c5 data-v-036f7a16><span class="vpi-social-github" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6586a85a data-v-fb186f55><span class="container" data-v-fb186f55><span class="top" data-v-fb186f55></span><span class="middle" data-v-fb186f55></span><span class="bottom" data-v-fb186f55></span></span></button></div></div></div></div><div class="divider" data-v-6586a85a><div class="divider-line" data-v-6586a85a></div></div></div><!----></header><!----><!----><div class="VPContent is-home" id="VPContent" data-v-734217b9 data-v-7a1aa57b><div class="VPHome" data-v-7a1aa57b data-v-ada04a83><!--[--><!--]--><div class="VPHero has-image VPHomeHero" data-v-ada04a83 data-v-8f46d817><div class="container" data-v-8f46d817><div class="main" data-v-8f46d817><!--[--><!--]--><!--[--><h1 class="name" data-v-8f46d817><span class="clip" data-v-8f46d817>Badger Filesystem</span></h1><!----><p class="tagline" data-v-8f46d817>Javascript Filesystem Utilities</p><!--]--><!--[--><!--]--><div class="actions" data-v-8f46d817><!--[--><div class="action" data-v-8f46d817><a class="VPButton medium brand" href="/badger-filesystem/getting-started.html" data-v-8f46d817 data-v-073b1da0>Getting Started</a></div><div class="action" data-v-8f46d817><a class="VPButton medium alt" href="/badger-filesystem/directories.html" data-v-8f46d817 data-v-073b1da0>Documentation</a></div><div class="action" data-v-8f46d817><a class="VPButton medium alt" href="/badger-filesystem/reference.html" data-v-8f46d817 data-v-073b1da0>Reference</a></div><!--]--></div><!--[--><!--]--></div><div class="image" data-v-8f46d817><div class="image-container" data-v-8f46d817><div class="image-bg" data-v-8f46d817></div><!--[--><!--[--><img class="VPImage image-src" src="images/badger3.svg" alt="Badger" data-v-9cf6620a><!--]--><!--]--></div></div></div></div><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><div class="vp-doc container" style="--vp-offset:calc(50% - Infinitypx);" data-v-ada04a83 data-v-9f2de81a><!--[--><div style="position:relative;" data-v-ada04a83><div><h2 id="who-ordered-this" tabindex="-1">Who Ordered This? <a class="header-anchor" href="#who-ordered-this" aria-label="Permalink to &quot;Who Ordered This?&quot;">​</a></h2><p>This module implements objects to simplify the process of working with files and directories using Node.js.</p><h2 id="examples" tabindex="-1">Examples <a class="header-anchor" href="#examples" aria-label="Permalink to &quot;Examples&quot;">​</a></h2><h3 id="working-with-files" tabindex="-1">Working With Files <a class="header-anchor" href="#working-with-files" aria-label="Permalink to &quot;Working With Files&quot;">​</a></h3><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { file } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;@abw/badger-filesystem&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// create a JSON file</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> hello</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;hello.json&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, { codec: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;json&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// write some data to it</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> hello.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">write</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">({ message: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;Hello World!&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// read data from it</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> data</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> hello.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">read</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span></code></pre></div><h3 id="working-with-directories" tabindex="-1">Working With Directories <a class="header-anchor" href="#working-with-directories" aria-label="Permalink to &quot;Working With Directories&quot;">​</a></h3><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { dir } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;@abw/badger-filesystem&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// a config directory</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> config</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> dir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;config&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// check it exists and create it if not</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">mustExist</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">({ create: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// create a JSON file in the directory</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> hello</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;hello.json&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, { codec: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;json&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// write some data to it</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> hello.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">write</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">({ message: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;Hello World!&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// read data from it</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> data</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> hello.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">read</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span></code></pre></div></div></div><!--]--></div></div></div><footer class="VPFooter" data-v-734217b9 data-v-43d35923><div class="container" data-v-43d35923><p class="message" data-v-43d35923>Built by Badgers</p><p class="copyright" data-v-43d35923>©️ Andy Wardley 2022-2024</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"codecs.md\":\"ExBrskK4\",\"files.md\":\"WFkAGYeQ\",\"directories.md\":\"ZTQiFb6v\",\"getting-started.md\":\"B5_SD2o6\",\"index.md\":\"CcMqPsQH\",\"directory-methods.md\":\"vWaHCwBM\",\"path.md\":\"BaDhA6Ar\",\"file-methods.md\":\"ClJQgrb0\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Badger Filesystem\",\"description\":\"Javascript Filesystem Utilities\",\"base\":\"/badger-filesystem/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"siteTitle\":\"Badger Filesystem\",\"logo\":\"/images/badger3.svg\",\"nav\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"Documentation\",\"items\":[{\"text\":\"Getting Started\",\"link\":\"/getting-started\"},{\"text\":\"Directories\",\"link\":\"/directories\"},{\"text\":\"Directory Methods\",\"link\":\"/directory-methods\"},{\"text\":\"Files\",\"link\":\"/files\"},{\"text\":\"File Methods\",\"link\":\"/file-methods\"},{\"text\":\"Path Base Class\",\"link\":\"/path\"},{\"text\":\"Codecs\",\"link\":\"/codecs\"}]},{\"text\":\"Reference\",\"link\":\"/reference\"}],\"sidebar\":[{\"text\":\"Getting Started\",\"link\":\"/getting-started\"},{\"text\":\"Directories\",\"link\":\"/directories\"},{\"text\":\"Directory Methods\",\"link\":\"/directory-methods\"},{\"text\":\"Files\",\"link\":\"/files\"},{\"text\":\"File Methods\",\"link\":\"/file-methods\"},{\"text\":\"Path Base Class\",\"link\":\"/path\"},{\"text\":\"Codecs\",\"link\":\"/codecs\"}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/abw/badger-filesytem\"}],\"footer\":{\"message\":\"Built by Badgers\",\"copyright\":\"©️ Andy Wardley 2022-2024\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
