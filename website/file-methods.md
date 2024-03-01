@@ -24,7 +24,7 @@ const data = await file('hello.json', { codec: 'json' }).read();
 const data = await file('hello.json').read({ codec: 'json' });
 ```
 
-## write(options) {#write}
+## write(data, options) {#write}
 
 Asynchronous method to write the file contents.
 

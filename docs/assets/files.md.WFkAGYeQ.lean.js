@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a2 as e}from"./chunks/framework.D9vdFLUf.js";const y=JSON.parse('{"title":"Files","description":"","frontmatter":{},"headers":[],"relativePath":"files.md","filePath":"files.md","lastUpdated":null}'),t={name:"files.md"},l=e("",13),h=[l];function n(p,k,o,r,d,c){return a(),i("div",null,h)}const F=s(t,[["render",n]]);export{y as __pageData,F as default};
