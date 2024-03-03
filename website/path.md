@@ -63,7 +63,7 @@ Asynchronous method to test if the path exists.
 Asynchronous method to fetch stats for the path.  By calling
 [fsPromises.stat()](https://nodejs.org/api/fs.html#fspromisesstatpath-options).
 
-Stats are cached internally.  You can call [unstat()](#unstat) to clear
+Stats are cached internally.  You can call [`unstat()`](#unstat) to clear
 the cache.
 
 ## unstat() {#unstat}
