@@ -183,7 +183,7 @@ const contents = await dir('foo/bar').read()
 ## entries() {#entries}
 
 Asynchronous method to read the directory and return an array of
-[`File`](files) and `Directory`(directories) objects representing the
+[`File`](files) and [`Directory`](directories) objects representing the
 contents.  Only regular files and directories will be returned. Devices,
 FIFOs and sockets will be ignored.
 
