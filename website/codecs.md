@@ -109,8 +109,9 @@ dir('data', { codec: 'yaml' })
 
 If you specify the `codec` as `auto` on either a file or directory then it
 will determine the codec from the file extension.  The extension must be
-`json` or `yaml` but can be in any case, e.g `yaml`, `YAML`,
-`Yaml`.
+`json` or `jsn` for JSON files, and `yaml` or `yml` for YAML files.  The
+extension can be in any case, e.g `yml`, `YML`, `yaml`, `YAML`, `Yaml`, etc.,
+are all recognised as YAML files.
 
 ```js
 const data   = dir('data', { codec: 'auto' });
