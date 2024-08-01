@@ -1,3 +1,5 @@
+// This is a work in progress.  It's not officially part of the distribution.
+/* v8 ignore start */
 import { splitList } from '@abw/badger-utils'
 import { dir as fsDir } from './Directory.js'
 
@@ -57,3 +59,4 @@ export class DirPath {
 }
 
 export default DirPath
+/* v8 ignore stop */
