@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 .pnpm-debug.log
-dist
-website/.vitepress/cache
-test/test_files/tmp
+/dist
+/website/.vitepress/cache
+/test/test-files/tmp
+/test/file/test-files/tmp
+/tmp
