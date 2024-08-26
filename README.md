@@ -21,7 +21,7 @@ Install `badger-filesystem` using your favourite package manager.
 
 ## Documentation
 
-Visit the [website](https://abw.github.io/badger-filesystem-js/) for
+Visit the [website](https://badgerpower.com/badger-filesystem-js/) for
 documentation and examples.
 
 ## Example
