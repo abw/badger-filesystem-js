@@ -1,7 +1,7 @@
 // This is a work in progress.  It's not officially part of the distribution.
 /* v8 ignore start */
 import { splitList } from '@abw/badger-utils'
-import { dir as fsDir } from './Directory.js'
+import { dir as fsDir } from '../src/Directory.js'
 
 /**
  * The DirPath class implements a base class for objects that

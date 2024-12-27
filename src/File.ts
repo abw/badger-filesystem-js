@@ -19,18 +19,21 @@ export class File extends Path {
 
   /**
    * Returns a new {@link Directory} object for the parent directory of the file
-   * @param {Directory} [options] - directory configuration options
-   * @param {String} [options.codec] - codec for encoding/decoding file data
-   * @param {String} [options.encoding=utf8] - character encoding
-   * @return {Object} a {@link Directory} object for the parent
+   * @param {PathOptions} [options] - directory configuration options
+   * @param {string} [options.codec] - codec for encoding/decoding file data
+   * @param {string} [options.encoding=utf8] - character encoding
+   * @return {Directory} a {@link Directory} object for the parent
    */
   directory(options?: PathOptions): Directory {
     return dir(path.dirname(this.state.path), options)
   }
 
   /**
-   * An alias for the {@link directory} method for lazy people
-   * @return {Object} the parent {@link Directory} object
+   * An alias for the directory() method for lazy people
+   * @param {PathOptions} [options] - directory configuration options
+   * @param {string} [options.codec] - codec for encoding/decoding file data
+   * @param {string} [options.encoding=utf8] - character encoding
+   * @return {Directory} the parent {@link Directory} object
    */
   dir(options?: PathOptions): Directory {
     return this.directory(options)
@@ -38,10 +41,10 @@ export class File extends Path {
 
   /**
    * Reads the file content.  If a `codec` has been specified then the content is decoded.
-   * @param {Object} [options] - directory configuration options
-   * @param {String} [options.codec] - codec for encoding/decoding file data
-   * @param {String} [options.encoding=utf8] - character encoding
-   * @return {Promise} fulfills with the file content
+   * @param {PathOptions} [options] - directory configuration options
+   * @param {string} [options.codec] - codec for encoding/decoding file data
+   * @param {string} [options.encoding=utf8] - character encoding
+   * @return {Promise<string|unknown>} fulfills with the file content
    * @example
    * file('myfile.txt').read().then( text => console.log(text) );
    * @example
@@ -49,7 +52,7 @@ export class File extends Path {
    * @example
    * file('myfile.json').read({ codec: 'json' }).then( data => console.log(data) );
    */
-  async read(options?: PathOptions): Promise<string|object> {
+  async read(options?: PathOptions): Promise<string|unknown> {
     const { encoding, codec } = this.options(options)
     const text = await readFile(
       this.state.path as PathLike,
@@ -62,11 +65,11 @@ export class File extends Path {
 
   /**
    * Writes the file content.  If a `codec` has been specified then the content will be encoded.
-   * @param {String|Object} data - directory configuration options
-   * @param {Object} [options] - directory configuration options
-   * @param {String} [options.codec] - codec for encoding/decoding file data
-   * @param {String} [options.encoding=utf8] - character encoding
-   * @return {Promise} fulfills with the file object
+   * @param {string|object} data - directory configuration options
+   * @param {PathOptions} [options] - directory configuration options
+   * @param {string} [options.codec] - codec for encoding/decoding file data
+   * @param {string} [options.encoding=utf8] - character encoding
+   * @return {Promise<File>} fulfills with the File object
    * @example
    * file('myfile.txt').write('Hello World');
    * @example
@@ -88,9 +91,9 @@ export class File extends Path {
 
   /**
    * Delete the file content.
-   * @param {Object} [options] - directory configuration options
-   * @param {Boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist
-   * @return {Promise} fulfills with the file object
+   * @param {DeleteOptions} [options] - directory configuration options
+   * @param {boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist
+   * @return {Promise<File>} fulfills with the file object
    */
   async delete(options?: DeleteOptions): Promise<File> {
     await rm(this.state.path, options)
