@@ -41,7 +41,7 @@ export class File extends Path {
 
   /**
    * Reads the file content.  If a `codec` has been specified then the content is decoded.
-   * @param {PathOptions} [options] - directory configuration options
+   * @param {PathOptions} [options] - file configuration options
    * @param {string} [options.codec] - codec for encoding/decoding file data
    * @param {string} [options.encoding=utf8] - character encoding
    * @return {Promise<string|unknown>} fulfills with the file content
@@ -65,8 +65,8 @@ export class File extends Path {
 
   /**
    * Writes the file content.  If a `codec` has been specified then the content will be encoded.
-   * @param {string|object} data - directory configuration options
-   * @param {PathOptions} [options] - directory configuration options
+   * @param {string|object} data - string or data to write
+   * @param {PathOptions} [options] - file configuration options
    * @param {string} [options.codec] - codec for encoding/decoding file data
    * @param {string} [options.encoding=utf8] - character encoding
    * @return {Promise<File>} fulfills with the File object
@@ -91,7 +91,7 @@ export class File extends Path {
 
   /**
    * Delete the file content.
-   * @param {DeleteOptions} [options] - directory configuration options
+   * @param {DeleteOptions} [options] - delete configuration options
    * @param {boolean} [options.force=false] - when true, exceptions will be ignored if path does not exist
    * @return {Promise<File>} fulfills with the file object
    */
