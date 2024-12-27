@@ -1,16 +1,25 @@
 {
   "name": "@abw/badger-filesystem",
-  "version": "1.1.0",
+  "version": "1.2.0-ts-alpha",
   "description": "Filesystem utilities",
   "type": "module",
-  "main": "dist/badger-filesystem.cjs.js",
-  "module": "dist/badger-filesystem.esm.js",
-  "exports": "./dist/badger-filesystem.esm.js",
-  "author": "Andy Wardley",
-  "license": "MIT",
+  "main": "dist/badger-filesystem.umd.js",
+  "module": "dist/badger-filesystem.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/badger-filesystem.umd.cjs",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/badger-filesystem.js"
+      }
+    }
+  },
   "files": [
     "dist"
   ],
+  "author": "Andy Wardley",
+  "license": "MIT",
   "homepage": "https://badgerpower.com/badger-filesystem-js/",
   "repository": {
     "type": "git",
@@ -20,14 +29,14 @@
     "url": "https://github.com/abw/badger-filesystem-js/issues"
   },
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "lint": "eslint 'src/**/*'",
-    "docs:dev": "vitepress dev website",
-    "docs:build": "vitepress build website",
-    "docs:preview": "vitepress preview website",
+    "dev": "vitepress dev website",
+    "preview": "vitepress preview website",
+    "build": "$npm_execpath build:lib && $npm_execpath build:docs",
+    "build:lib": "tsc && vite build",
+    "build:docs": "vitepress build website",
+    "lint": "eslint 'src/**/*' 'test/**/*'",
     "test": "vitest --ui --coverage",
-    "pretest": "pnpm run build"
+    "pretest": "$npm_execpath build:lib"
   },
   "keywords": [
     "badger",
@@ -36,17 +45,25 @@
   ],
   "dependencies": {
     "@abw/badger-codecs": "^1.0.3",
-    "@abw/badger-utils": "^1.1.1"
+    "@abw/badger-utils": "^1.2.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
-    "@vitest/coverage-v8": "^2.0.5",
-    "@vitest/ui": "^2.0.5",
-    "eslint": "^8.35.0",
+    "@types/node": "^22.10.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "rollup": "^3.18.0",
-    "vitepress": "1.0.0-rc.44",
-    "vitest": "^2.0.5"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.6",
+    "vite-plugin-dts": "^4.4.0",
+    "vitepress": "1.5.0",
+    "vitest": "^2.1.8"
   }
 }
