@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
@@ -10,7 +10,17 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: '@abw/badger-filesystem',
-      fileName: 'badger-filesystem'
+      fileName: 'badger-filesystem',
+      formats: ['es']
+    },
+    rollupOptions: {
+      external: [
+        "node:fs",
+        "node:buffer",
+        "node:path",
+        "node:process",
+        "node:fs/promises",
+      ],
     }
   },
   test: {
