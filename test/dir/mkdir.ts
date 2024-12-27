@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { bin } from '../../src/index.js'
+import { bin } from '../../src/index'
 
 const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')
@@ -43,7 +43,7 @@ test(
 test(
   'make the sub_directory directory recursively with mkdir() and recursive option',
   async () => {
-    await subDir.mkdir({ recursive: true });
+    await subDir.mkdir({ recursive: true })
     expect( await testDir.exists() ).toBe( true )
     expect( await subDir.exists() ).toBe( true )
   }

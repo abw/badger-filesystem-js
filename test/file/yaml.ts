@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { file, bin } from '../../src/index.js'
+import { file, bin } from '../../src/index'
 
 const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')
@@ -102,8 +102,8 @@ test(
 //--------------------------------------------------------------------------
 // Write
 //--------------------------------------------------------------------------
-const rnum   = Math.floor(Math.random() * 1000);
-const string = "I Wrote This!"
+const rnum   = Math.floor(Math.random() * 1000)
+const string = 'I Wrote This!'
 
 test(
   'write and read data with pre-defined yaml codec',

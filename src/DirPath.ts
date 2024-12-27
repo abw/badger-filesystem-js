@@ -14,7 +14,7 @@ export class DirPath {
    * @return {Object} the {@link DirPath} object
    */
   constructor(dir) {
-    const dirs = this.initDirs(dir);
+    const dirs = this.initDirs(dir)
     this.state = {
       dirs
     }
@@ -29,7 +29,7 @@ export class DirPath {
    * @return {Array} an array of {@link Directory} objects
    */
   initDirs(dir) {
-    return splitList(dir).map( dir => fsDir(dir) );
+    return splitList(dir).map( dir => fsDir(dir) )
   }
 
   /**
@@ -41,7 +41,7 @@ export class DirPath {
    */
   async dirs() {
     return this.state.dirsExist
-      || ( this.state.dirsExist = await this.dirsExist() );
+      || ( this.state.dirsExist = await this.dirsExist() )
   }
 
   /**
@@ -50,11 +50,11 @@ export class DirPath {
    * @return {Array} an array of {@link Directory} objects that exist
    */
   async dirsExist() {
-    const dirs = this.state.dirs;
+    const dirs = this.state.dirs
     const exists = await Promise.all(
       dirs.map( d => d.exists() )
-    );
-    return dirs.filter((value, index) => exists[index]);
+    )
+    return dirs.filter((value, index) => exists[index])
   }
 }
 

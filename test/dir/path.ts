@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { dir } from '../../src/index.js'
+import { dir } from '../../src/index'
 
 test(
   'dir path',
@@ -9,7 +9,7 @@ test(
 test(
   'dir sub path',
   () => expect( dir('foo').dir('bar').path() ).toBe( 'foo/bar' )
-);
+)
 
 test(
   'dir path with argument',

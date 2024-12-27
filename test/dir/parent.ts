@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { bin } from '../../src/index.js'
+import { bin } from '../../src/index'
 
 const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')
@@ -11,25 +11,25 @@ test(
   async () => {
     expect( await bar.exists() ).toBe( true )
   }
-);
+)
 
 test(
   'bar parent is foo',
   async () => {
     expect( bar.parent().path() ).toBe( foo.path() )
   }
-);
+)
 
 test(
   'bar up(1) is foo',
   async () => {
     expect( bar.up(1).path() ).toBe( foo.path() )
   }
-);
+)
 
 test(
   'bar up(2) is test_files',
   async () => {
     expect( bar.up(2).path() ).toBe( testFiles.path() )
   }
-);
+)

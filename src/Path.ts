@@ -1,12 +1,13 @@
-import path from 'node:path';
+import path from 'node:path'
+import { Stats } from 'node:fs'
 import { stat } from 'node:fs/promises'
-import { rethrow, doNothing } from '@abw/badger-utils';
-import { PATH } from './Constants.js';
+import { rethrow, doNothing } from '@abw/badger-utils'
+import { Logger, PathOptions, PathSource, PathState, PathType } from './types'
 
 /**
  * Default configuration options.
  */
-const defaults = {
+const defaults: PathOptions = {
   encoding: 'utf8'
 }
 
@@ -15,21 +16,26 @@ const defaults = {
  * classes.  It implements the common functionality for representing a filesystem path.
  */
 export class Path {
+  state: PathState
+  debug: Logger
+
   /**
    * Constructor for filesystem paths.
-   * @param {string} path - file path
-   * @param {Object} [options] - configuration options
-   * @param {String} [options.encoding=utf8] - file encoding
-   * @param {String} [options.codec] - codec for encoding/decoding file data
-   * @return {Object} the {@link Path} object
+   * @param {PathSource} path - file path
+   * @param {PathOptions} [options] - configuration options
+   * @param {string} [options.encoding=utf8] - file encoding
+   * @param {string} [options.codec] - codec for encoding/decoding file data
    */
-  constructor(path, options={}) {
+  constructor(path: PathSource, options: PathOptions = {}) {
     // allow path/file/directory to be constructed from an existing object
     if (path instanceof Path) {
-      path = path.path();
+      path = path.path()
     }
-    this.state = { path, options: { ...defaults, ...options } };
-    this.state.type = PATH;
+    this.state = {
+      path: path as string,
+      options: { ...defaults, ...options },
+      type: PathType.path
+    }
     this.debug = options.debug
       ? console.log.bind(console)
       : doNothing
@@ -37,94 +43,94 @@ export class Path {
 
   /**
    * Accessor method to return the filesystem path.
-   * @return {String} the filesystem path
+   * @return {string} the filesystem path
    */
-  path(...args) {
+  path(...args: string[]): string {
     return args.length
       ? this.relativePath(...args)
-      : this.state.path;
+      : this.state.path
   }
 
   /**
    * Accessor method to return the path type: `path`, `file` or `directory`.
-   * @return {String} the path type
+   * @return {PathType} the path type
    */
-  type() {
-    return this.state.type;
+  type(): PathType {
+    return this.state.type
   }
 
   /**
-   * Parse the full path.  Data is cached until {@link uparse()} is called.
+   * Parse the full path.  Data is cached until {@link unparse()} is called.
    * @external {path.parse(path)} https://nodejs.org/api/path.html#pathparsepath
-   * @return {Object} the parsed path data
+   * @return {path.ParsedPath} the parsed path data
    */
-  parse() {
-    return this.state.parse ||= path.parse(this.state.path);
+  parse(): path.ParsedPath {
+    return this.state.parse ||= path.parse(this.state.path)
   }
   /**
    * Method to clear internal cache of parsed path data.
    */
-  unparse() {
-    delete this.state.parse;
+  unparse(): void {
+    delete this.state.parse
   }
   /**
    * Returns the name of the directory - `dir` returned by {@link parse()}.
    */
-  dirname() {
-    return this.parse().dir;
+  dirname(): string {
+    return this.parse().dir
   }
   /**
    * Returns the complete file name for the path - `base` returned by {@link parse()}.
-   * @return {String} the complete file name.
+   * @return {string} the complete file name.
    */
-  base() {
-    return this.parse().base;
+  base(): string {
+    return this.parse().base
   }
   /**
    * Returns the file name for the path without extension - `name` returned by {@link parse()}.
-   * @return {String} the file name without extension.
+   * @return {string} the file name without extension.
    */
-  name() {
-    return this.parse().name;
+  name(): string {
+    return this.parse().name
   }
   /**
    * Returns the file name extension - `ext` returned by {@link parse()}.
-   * @return {String} the file name extension.
+   * @return {string} the file name extension.
    */
-  ext() {
-    return this.parse().ext;
+  ext(): string {
+    return this.parse().ext
   }
 
   /**
    * Create a path relative to the current path.
-   * @param {String[]} parts - part(s) of the filesystem path
-   * @return {String} the new path
+   * @param {string[]} parts - part(s) of the filesystem path
+   * @return {string} the new path
    * @example
    * const p = new Path('/path/to/here')
    * const q = p.relativePath('there')          // -> /path/to/here/there
    * const r = p.relativePath('and', 'there')   // -> /path/to/here/and/there
    */
-  relativePath(...parts) {
+  relativePath(...parts: Array<Path|string>): string {
     if (parts.length === 1 && parts[0] instanceof Path) {
-      return parts[0].path();
+      return parts[0].path()
     }
-    if (path.isAbsolute(parts[0])) {
-      return path.join(...parts);
+    if (path.isAbsolute(parts[0] as string)) {
+      return path.join(...parts as string[])
     }
-    return path.join(this.state.path, ...parts);
+    return path.join(this.state.path, ...parts as string[])
   }
 
   /**
    * Internal method to merge any options with the pre-defined options passed to the
    * constructor.  Options passed as arguments will take precedence.
-   * @param {Object} options - new options
-   * @return {Object} the merged options
+   * @param {PathOptions} options - new options
+   * @return {PathOptions} the merged options
    * @example
    * const p = new Path('/path/to/here', { option1: 'hello' })
    * const q = p.options({ option2: 'world' })  // -> { option1: 'hello', options2: 'world' }
    */
-  options(options={}) {
-    return { ...this.state.options, ...options };
+  options(options: PathOptions = {}): PathOptions {
+    return { ...this.state.options, ...options }
   }
 
   /**
@@ -136,16 +142,16 @@ export class Path {
    *   .then( console.log('path exists') )
    *   .catch( console.log('path does not exist') )
    */
-  async exists() {
+  async exists(): Promise<boolean> {
     try {
-      this.unstat();
-      await this.stat();
-      return true;
+      this.unstat()
+      await this.stat()
+      return true
     }
     catch (error) {
       return error.code === 'ENOENT'
         ? false
-        : rethrow(error);
+        : rethrow(error)
     }
   }
 
@@ -159,88 +165,88 @@ export class Path {
    *   .then( stats => console.log('path stats:', stats) )
    *   .catch( console.log('path does not exist') )
    */
-  async stat() {
-    const stats = this.state.stats ||= await stat(this.state.path);
-    return stats;
+  async stat(): Promise<Stats> {
+    const stats = this.state.stats ||= await stat(this.state.path)
+    return stats
   }
 
   /**
    * Method to clear internal cache of path stats (subject to change)
    */
-  unstat() {
-    this.state.stats = undefined;
-    return this;
+  unstat(): Path {
+    this.state.stats = undefined
+    return this
   }
 
   /**
    * Returns a boolean flag to indicate if the item is a file.
    */
-  async isFile() {
-    const stats = await this.stat();
-    return stats.isFile();
+  async isFile(): Promise<boolean> {
+    const stats = await this.stat()
+    return stats.isFile()
   }
 
   /**
    * Returns a boolean flag to indicate if the item is a directory.
    */
-  async isDirectory() {
-    const stats = await this.stat();
-    return stats.isDirectory();
+  async isDirectory(): Promise<boolean> {
+    const stats = await this.stat()
+    return stats.isDirectory()
   }
 
   /**
    * Returns the file mode.
    */
-  async mode() {
-    const stats = await this.stat();
-    return stats.mode;
+  async mode(): Promise<number> {
+    const stats = await this.stat()
+    return stats.mode
   }
 
   /**
    * Returns the size of the file in bytes.
    */
-  async size() {
-    const stats = await this.stat();
-    return stats.size;
+  async size(): Promise<number> {
+    const stats = await this.stat()
+    return stats.size
   }
 
   /**
    * Returns a date for when the file was last accessed.
    */
-  async accessed() {
-    const stats = await this.stat();
-    return stats.atime;
+  async accessed(): Promise<Date> {
+    const stats = await this.stat()
+    return stats.atime
   }
 
   /**
    * Returns a date for when the file content was last modified.
    */
-  async modified() {
-    const stats = await this.stat();
-    return stats.mtime;
+  async modified(): Promise<Date> {
+    const stats = await this.stat()
+    return stats.mtime
   }
 
   /**
    * Returns a date for when the file status was last changed.
    */
-  async changed() {
-    const stats = await this.stat();
-    return stats.ctime;
+  async changed(): Promise<Date> {
+    const stats = await this.stat()
+    return stats.ctime
   }
 
   /**
    * Returns a date for when the file was created.
    */
-  async created() {
-    const stats = await this.stat();
-    return stats.birthtime;
+  async created(): Promise<Date> {
+    const stats = await this.stat()
+    return stats.birthtime
   }
 
   /**
    * Stringification method.
    */
-  toString() {
-    return this.path();
+  toString(): string {
+    return this.path()
   }
 }
 

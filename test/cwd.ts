@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { cwd } from '../src/index.js'
+import { cwd } from '../src/index'
 
 const c = cwd()
 

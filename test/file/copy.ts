@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
-import { bin } from '../../src/index.js'
+import { bin } from '../../src/index'
 
-const thisDir = bin(import.meta.url);
+const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')
 const hello = testFiles.file('hello.txt')
 const tmpDir = testFiles.dir('tmp')
@@ -72,7 +72,7 @@ test(
     const text = await destFile.read()
     expect(text, 'Hello World!\n')
   }
-);
+)
 
 test(
   'copyTo to local name',
@@ -90,4 +90,4 @@ test(
     const text = await goodbye.read()
     expect(text).toBe('Hello World!\n')
   }
-);
+)

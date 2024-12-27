@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { bin, dir } from '../../src/index.js'
+import { bin, dir } from '../../src/index'
 
 const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')

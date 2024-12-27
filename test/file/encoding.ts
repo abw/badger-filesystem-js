@@ -1,10 +1,10 @@
 import { test, expect } from 'vitest'
-import { file, bin } from '../../src/index.js'
+import { file, bin } from '../../src/index'
 
 // current directory where this script is located
-const thisDir = bin(import.meta.url);
-const testFiles = thisDir.dir('test-files');
-const tmpFiles = testFiles.dir('tmp');
+const thisDir = bin(import.meta.url)
+const testFiles = thisDir.dir('test-files')
+const tmpFiles = testFiles.dir('tmp')
 
 test(
   'the test_files directory exists',
@@ -17,18 +17,18 @@ test(
 )
 
 // simple text file accessed using file() method of directory
-const hello = testFiles.file('hello.txt');
+const hello = testFiles.file('hello.txt')
 test(
   'accessed the hello.txt file via the directory.file() method',
   async () => expect( await hello.exists() ).toBe(true)
-);
+)
 
 // same file accessed using standalone file() function
 const hello2 = file(hello.path())
 test(
   'accessed the hello.txt file using the file() function',
   async () => expect( await hello2.exists() ).toBe(true)
-);
+)
 
 // file directory() method
 test(

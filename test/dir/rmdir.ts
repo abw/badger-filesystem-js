@@ -1,10 +1,10 @@
 import { test, expect } from 'vitest'
-import { bin } from '../../src/index.js'
+import { bin } from '../../src/index'
 
-const thisDir = bin(import.meta.url);
-const testFiles = thisDir.dir('test-files');
-const testDir = testFiles.dir('test-dir');
-const subDir = testDir.dir('sub-directory');
+const thisDir = bin(import.meta.url)
+const testFiles = thisDir.dir('test-files')
+const testDir = testFiles.dir('test-dir')
+const subDir = testDir.dir('sub-directory')
 
 test(
   'the test_files directory exists',
@@ -79,7 +79,7 @@ test(
 test(
   'delete the test_dir directory recursively using destroy()',
   async () => {
-    await testDir.destroy();
+    await testDir.destroy()
     expect( await subDir.exists() ).toBe( false )
     expect( await testDir.exists() ).toBe( false )
   }

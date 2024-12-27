@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { file } from '../src/index.js'
+import { file } from '../src/index'
 
 const p1 = file('/foo/bar')
 

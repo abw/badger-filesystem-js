@@ -1,11 +1,11 @@
 import { test, expect } from 'vitest'
-import { bin } from '../../src/index.js'
+import { bin } from '../../src/index'
 
 const thisDir = bin(import.meta.url)
 const testFiles = thisDir.dir('test-files')
 const testDir = testFiles.dir('test-dir')
 const subDir = testDir.dir('sub-directory')
-const tmpDir = testFiles.dir('tmp');
+const tmpDir = testFiles.dir('tmp')
 
 test(
   'the test_files directory exists',
@@ -64,7 +64,7 @@ test(
     expect(
       () => testDir.mustExist()
     ).rejects.toThrowError(
-      "Directory does not exist: " + testDir.path()
+      'Directory does not exist: ' + testDir.path()
     )
   }
 )
@@ -76,7 +76,7 @@ test(
     expect( result ).toBe( testDir )
     expect( await testDir.exists() ).toBe( true )
   }
-);
+)
 
 test(
   'delete the test-dir directory again',
@@ -124,7 +124,7 @@ test(
 test(
   'destroy the test-dir directory',
   async () => {
-    await testDir.destroy();
+    await testDir.destroy()
     expect( await testDir.exists() ).toBe( false )
   }
 )
@@ -132,7 +132,7 @@ test(
 test(
   'destroy the tmp directory',
   async () => {
-    await tmpDir.destroy();
+    await tmpDir.destroy()
     expect( await tmpDir.exists() ).toBe( false )
   }
 )
