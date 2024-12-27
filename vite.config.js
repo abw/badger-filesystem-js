@@ -11,7 +11,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: '@abw/badger-filesystem',
       fileName: 'badger-filesystem',
-      formats: ['es']
+      formats: [ 'es', 'cjs']
     },
     rollupOptions: {
       external: [

@@ -3,12 +3,12 @@
   "version": "1.2.0-ts-alpha",
   "description": "Filesystem utilities",
   "type": "module",
-  "main": "dist/badger-filesystem.umd.js",
+  "main": "dist/badger-filesystem.cjs",
   "module": "dist/badger-filesystem.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/badger-filesystem.umd.cjs",
+      "require": "./dist/badger-filesystem.cjs",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/badger-filesystem.js"
