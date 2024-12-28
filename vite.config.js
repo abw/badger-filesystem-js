@@ -27,6 +27,7 @@ export default defineConfig({
     include: ['test/**/*.[jt]s'],
     exclude: ['test/**/test-files/**', 'test/library/*.[jt]s'],
     reporters: ['html'],
+    fileParallelism: false,
     outputFile: './tmp/test/index.html',
     coverage: {
       provider: 'v8',

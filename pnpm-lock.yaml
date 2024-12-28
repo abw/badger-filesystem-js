@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@abw/badger-codecs':
-    specifier: ^1.0.3
-    version: 1.0.3
+    specifier: 1.2.0
+    version: 1.2.0
   '@abw/badger-utils':
     specifier: ^1.2.0
     version: 1.2.0
@@ -55,8 +55,8 @@ devDependencies:
 
 packages:
 
-  /@abw/badger-codecs@1.0.3:
-    resolution: {integrity: sha512-baUQcCcYcnEkTq+LEJotDluwVX2uBA332/u2fPaZrQwp7UhmqxOV7hIJ4sZel6JpaXtp9VWXU9LvZlhOB59+Gw==}
+  /@abw/badger-codecs@1.2.0:
+    resolution: {integrity: sha512-KJpYtFTmXQbivMr27UMZMWLEhtFzcRWhVYEj6Ycrrr08qqtdsk+Vd17H4toSdq1tvEeD8yZV2banjogRADYC2Q==}
     dependencies:
       '@abw/badger-utils': 1.2.0
       js-yaml: 4.1.0

@@ -44,7 +44,7 @@
     "utility"
   ],
   "dependencies": {
-    "@abw/badger-codecs": "^1.0.3",
+    "@abw/badger-codecs": "1.2.0",
     "@abw/badger-utils": "^1.2.0"
   },
   "devDependencies": {

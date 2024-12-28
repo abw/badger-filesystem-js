@@ -59,7 +59,7 @@ export class File extends Path {
       { encoding } as ObjectEncodingOptions
     )
     return codec
-      ? this.getCodec(codec).decode(text)
+      ? this.getCodec(codec).decode(text as string)
       : text
   }
 
@@ -81,7 +81,7 @@ export class File extends Path {
     const { encoding, codec } = this.options(options)
     const text = codec
       ? this.getCodec(codec).encode(data)
-      : data
+      : data as string
     await writeFile(
       this.state.path, text,
       { encoding } as ObjectEncodingOptions
