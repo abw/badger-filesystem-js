@@ -1,9 +1,9 @@
 import path from 'node:path'
 import Path from './Path.js'
-import Directory, { dir } from './Directory.js'
-import { codec } from '@abw/badger-codecs'
-import { readFile, writeFile, copyFile, rename, rm } from 'node:fs/promises'
 import { AUTO } from './Constants.js'
+import { codec } from '@abw/badger-codecs'
+import Directory, { dir } from './Directory.js'
+import { readFile, writeFile, copyFile, rename, rm } from 'node:fs/promises'
 import { CreateOptions, DeleteOptions, PathOptions, PathSource, PathType } from './types.js'
 import { ObjectEncodingOptions, PathLike } from 'node:fs'
 
