@@ -8,6 +8,7 @@ const menuItems = [
   { text: 'File Methods', link: '/file-methods' },
   { text: 'Path Base Class', link: '/path' },
   { text: 'Codecs', link: '/codecs' },
+  { text: 'DirPath', link: '/dirpath' },
 ]
 
 // https://vitepress.dev/reference/site-config

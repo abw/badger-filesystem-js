@@ -17,8 +17,8 @@ const searchPath = dirPath([
 ]);
 ```
 
-If you specify a directory path (i.e. not starting with a leading slash) then
-it is assumed to be relative to the current working directory.
+If you specify a relative directory path (i.e. not starting with a leading
+slash) then it is assumed to be relative to the current working directory.
 
 You can also provide absolute paths to directories.
 
@@ -63,7 +63,7 @@ const cachedFile = await tmpPath.file('saved.json', { codec: 'json' })
 const cachedData = await cachedFile?.read()
 ```
 
-## dir(name, options) {#dirPath-file}
+## dir(name, options) {#dirPath-dir}
 
 Searches for a sub-directory in any of the directory paths.  It returns a
 [Directory](directories) object for the first file that exists in the search
