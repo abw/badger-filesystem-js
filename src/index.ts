@@ -1,5 +1,6 @@
 export * from './Constants'
 export * from './Directory'
+export * from './DirPath'
 export * from './File'
 export * from './Path'
 export * from './types'

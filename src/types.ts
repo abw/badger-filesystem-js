@@ -2,6 +2,7 @@ import Path from './Path'
 import path from 'node:path'
 import { Stats } from 'node:fs'
 import { DIRECTORY, FILE, PATH } from './Constants'
+import Directory from './Directory'
 
 export type PathSource = string | Path
 
@@ -49,5 +50,12 @@ export type CreateOptions = {
   mkdir?: boolean,
   recursive?: boolean,
 }
+
+export type DirPathState = {
+  dirs: Directory[],
+  dirsExist?: Directory[],
+  options?: PathOptions
+}
+export type DirPathSource = string | PathSource[]
 
 export type Logger = (...args: unknown[]) => void
